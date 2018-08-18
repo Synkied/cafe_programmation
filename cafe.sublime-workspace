@@ -1,0 +1,1233 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"case",
+				"case_position\tfunction"
+			],
+			[
+				"floor",
+				"FLOOR_MAP_NAME\tstatement"
+			],
+			[
+				"genera",
+				"generate_from_file\tfunction"
+			],
+			[
+				"items",
+				"TooMuchItems"
+			],
+			[
+				"INV",
+				"INV_LINE_SPACE\tstatement"
+			],
+			[
+				"input",
+				"inputArray\tstatement"
+			],
+			[
+				"random",
+				"random_pos"
+			],
+			[
+				"displa",
+				"display_inventory\tfunction"
+			],
+			[
+				"mcgy",
+				"mcgy_maze"
+			],
+			[
+				"SPRITES",
+				"SPRITE_SIZE\tstatement"
+			],
+			[
+				"list",
+				"list_events\tfunction"
+			],
+			[
+				"filer",
+				"FileNotFoundError\tclass"
+			],
+			[
+				"ITEM",
+				"ITEM_MAP_NAME\tstatement"
+			],
+			[
+				"rand",
+				"random_item_position\tfunction"
+			],
+			[
+				"eter",
+				"ether1\tstatement"
+			],
+			[
+				"lvl",
+				"lvl_file\tparam"
+			],
+			[
+				"mazem",
+				"maze_map\tstatement"
+			],
+			[
+				"control",
+				"CONTROLS_IMG\tstatement"
+			],
+			[
+				"contr",
+				"CONTROLS_IMG\tstatement"
+			],
+			[
+				"Floor",
+				"FLOOR_MAP_NAME\tstatement"
+			],
+			[
+				"dis",
+				"display_bool\tstatement"
+			],
+			[
+				"item",
+				"collect_item\tfunction"
+			],
+			[
+				"cllect",
+				"collect_item"
+			],
+			[
+				"Items",
+				"ITEMS_SPRITES\tstatement"
+			],
+			[
+				"sprite",
+				"ITEMS_SPRITES"
+			],
+			[
+				"WALL",
+				"WALLS_MAP_NAME\tstatement"
+			],
+			[
+				"wall",
+				"wall_sprite\tstatement"
+			],
+			[
+				"mcg",
+				"mcgy_maze\tstatement"
+			],
+			[
+				"NPCS",
+				"NPCS_DIC\tstatement"
+			],
+			[
+				"collect",
+				"collect_item\tfunction"
+			],
+			[
+				"collec",
+				"CollectableItems\tclass"
+			],
+			[
+				"mcgyver",
+				"mcgyver\tstatement"
+			],
+			[
+				"inv_h",
+				"INV_LENGTH\tstatement"
+			],
+			[
+				"spr",
+				"ITEMS_SPRITES"
+			],
+			[
+				"rando",
+				"rand_pos"
+			],
+			[
+				"di",
+				"display_lvl\tfunction"
+			],
+			[
+				"sprites",
+				"ITEMS_SPRITES"
+			],
+			[
+				"max",
+				"max_items"
+			],
+			[
+				"maze",
+				"maze_map"
+			],
+			[
+				"sprit",
+				"SPRITE_SIZE\tstatement"
+			],
+			[
+				"cas",
+				"case_y\tstatement"
+			],
+			[
+				"spri",
+				"sprite_size\tstatement"
+			],
+			[
+				"convert",
+				"convert_alpha"
+			],
+			[
+				"game",
+				"game_bckgrd\tstatement"
+			],
+			[
+				"new",
+				"new_maze\tstatement"
+			],
+			[
+				"menu_",
+				"menu_img\tstatement"
+			],
+			[
+				"conit",
+				"continue_game\tstatement"
+			],
+			[
+				"mcgyv",
+				"mcgyver_char_pos\tstatement"
+			],
+			[
+				"ma",
+				"make_coffee\tfunction"
+			],
+			[
+				"row",
+				"row_index"
+			],
+			[
+				"matp",
+				"matplotlib\tmodule"
+			],
+			[
+				"data_from",
+				"data_from_datafram\tfunction"
+			],
+			[
+				"panda",
+				"panda_family_df\tstatement"
+			],
+			[
+				"famille",
+				"famille_panda_df\tstatement"
+			],
+			[
+				"dec",
+				"decor_title\tstatement"
+			],
+			[
+				"fam",
+				"famille_panda_df\tstatement"
+			],
+			[
+				"famill",
+				"famille_panda_df\tstatement"
+			],
+			[
+				"fami",
+				"famille_panda_df\tstatement"
+			],
+			[
+				"cr",
+				"critical\tfunction"
+			],
+			[
+				"error",
+				"error\tfunction"
+			],
+			[
+				"deb",
+				"DEBUG\tstatement"
+			],
+			[
+				"parse",
+				"parse_arguments\tfunction"
+			],
+			[
+				"par",
+				"parse_args\tfunction"
+			],
+			[
+				"arg",
+				"ArgumentParser\tclass"
+			],
+			[
+				"data",
+				"data_file\tparam"
+			],
+			[
+				"path",
+				"path_to_file"
+			],
+			[
+				"agre",
+				"average_agreeableness"
+			],
+			[
+				"agr",
+				"agreeableness_graph"
+			],
+			[
+				"not",
+				"NotImplementedError\tclass"
+			],
+			[
+				"are",
+				"average_agreeableness"
+			],
+			[
+				"show",
+				"show_grid"
+			],
+			[
+				"y",
+				"y_label"
+			],
+			[
+				"x",
+				"x_label"
+			],
+			[
+				"zone",
+				"zone_agreeableness"
+			],
+			[
+				"corn",
+				"corner2"
+			],
+			[
+				"corner",
+				"corner1"
+			],
+			[
+				"a",
+				"agent-test.json"
+			],
+			[
+				"longitude",
+				"longitude_index\tstatement"
+			],
+			[
+				"ini",
+				"initialize_zones"
+			],
+			[
+				"boi",
+				"__boil_water\tfunction"
+			],
+			[
+				"Agent",
+				"AgentSpecial\tclass"
+			],
+			[
+				"per",
+				"Personne\tclass"
+			],
+			[
+				"Aget",
+				"AgentSpecial\tclass"
+			],
+			[
+				"inp",
+				"inputArray\tstatement"
+			],
+			[
+				"arra",
+				"arrayMaximalAdjacentDifference\tfunction"
+			],
+			[
+				"lat",
+				"latitude_degrees"
+			],
+			[
+				"attr",
+				"attr_value\tstatement"
+			],
+			[
+				"att",
+				"attr_name\tstatement"
+			],
+			[
+				"age",
+				"agent_attributes\tstatement"
+			],
+			[
+				"inpu",
+				"inputString\tparam"
+			],
+			[
+				"dic",
+				"dic_conversion"
+			],
+			[
+				"produc",
+				"Products\tclass"
+			],
+			[
+				"quan",
+				"QUANTITY\tstatement"
+			],
+			[
+				"cand",
+				"candidate_result\tstatement"
+			],
+			[
+				"candi",
+				"candidates_results\tparam"
+			],
+			[
+				"candidates",
+				"candidates_results\tstatement"
+			],
+			[
+				"ca",
+				"candidates_results\tstatement"
+			],
+			[
+				"ment",
+				"MENTIONS\tstatement"
+			],
+			[
+				"print",
+				"print_r"
+			],
+			[
+				"cat",
+				"category_html"
+			],
+			[
+				"pen",
+				"penup\tfunction"
+			],
+			[
+				"mak",
+				"make_inn_square\tfunction"
+			],
+			[
+				"make",
+				"make_square\tfunction"
+			],
+			[
+				"in",
+				"input\tfunction"
+			],
+			[
+				"rw",
+				"rows\tstatement"
+			],
+			[
+				"note",
+				"note3\tstatement"
+			],
+			[
+				"student",
+				"students_2\tstatement"
+			],
+			[
+				"rever",
+				"reverse\tparam"
+			],
+			[
+				"reve",
+				"reverseRecur\tfunction"
+			],
+			[
+				"sort",
+				"sortByHeight\tfunction"
+			],
+			[
+				"lists",
+				"list-style-type"
+			],
+			[
+				"border",
+				"border-radius"
+			],
+			[
+				"bord",
+				"border-radius"
+			],
+			[
+				"sae",
+				"save_score\tfunction"
+			],
+			[
+				"randn",
+				"rand_num"
+			],
+			[
+				"value",
+				"ValueError\tclass"
+			],
+			[
+				"obj",
+				"obj_to_add"
+			],
+			[
+				"cur",
+				"cur_index\tstatement"
+			],
+			[
+				"day",
+				"dayOfCheckOut"
+			],
+			[
+				"compteur",
+				"Compteur\tclass"
+			],
+			[
+				"lett",
+				"found_letters"
+			],
+			[
+				"usern",
+				"user_name\tstatement"
+			],
+			[
+				"get",
+				"get_letter_input\tfunction"
+			],
+			[
+				"contin",
+				"continue_game\tstatement"
+			],
+			[
+				"found",
+				"found_word\tstatement"
+			],
+			[
+				"invet",
+				"inventaire_reverse\tstatement"
+			],
+			[
+				"is",
+				"isdigit\tfunction"
+			],
+			[
+				"i",
+				"i\tstatement"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "cafe_prog/settings/__init__.py",
+			"settings":
+			{
+				"buffer_size": 3206,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Users/quentin/Desktop/evopy/evopy/settings/__init__.py",
+			"settings":
+			{
+				"buffer_size": 4074,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "cafe_prog/urls.py",
+			"settings":
+			{
+				"buffer_size": 916,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Users/quentin/Desktop/evopy/evopy/urls.py",
+			"settings":
+			{
+				"buffer_size": 1284,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+		[
+			[
+				[
+					"Anaconda Python Builder",
+					""
+				],
+				[
+					"Packages/Python/Python.sublime-build",
+					""
+				],
+				[
+					"Packages/Python/Python.sublime-build",
+					"Syntax Check"
+				],
+				[
+					"Packages/SublimeREPL/sublimerepl_build_system_hack.sublime-build",
+					""
+				]
+			],
+			[
+				"Anaconda Python Builder",
+				""
+			]
+		],
+		[
+			[
+				[
+					"Packages/Default/Syntax Tests.sublime-build",
+					""
+				],
+				[
+					"Packages/Default/Syntax Tests.sublime-build",
+					"All Syntaxes"
+				],
+				[
+					"Packages/Default/Syntax Tests.sublime-build",
+					"Performance"
+				],
+				[
+					"Packages/Default/Syntax Tests.sublime-build",
+					"Regex Compatibility"
+				]
+			],
+			[
+				"Packages/Default/Syntax Tests.sublime-build",
+				"Performance"
+			]
+		],
+		[
+			[
+				[
+					"Packages/Python/Python.sublime-build",
+					""
+				],
+				[
+					"Packages/Python/Python.sublime-build",
+					"Syntax Check"
+				]
+			],
+			[
+				"Packages/Python/Python.sublime-build",
+				""
+			]
+		],
+		[
+			[
+				[
+					"Packages/Python/Python.sublime-build",
+					""
+				],
+				[
+					"Packages/Python/Python.sublime-build",
+					"Syntax Check"
+				],
+				[
+					"Packages/SublimeREPL/sublimerepl_build_system_hack.sublime-build",
+					""
+				]
+			],
+			[
+				"Packages/Python/Python.sublime-build",
+				""
+			]
+		]
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 338.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"git push",
+				"Git: Push Current Branch"
+			],
+			[
+				"gp",
+				"Git: Push"
+			],
+			[
+				"gar",
+				"Git: Add Remote"
+			],
+			[
+				"git push ",
+				"Git: Push"
+			],
+			[
+				"qui",
+				"Git: Quick Commit"
+			],
+			[
+				"quick",
+				"Git: Quick Add"
+			],
+			[
+				"git quic",
+				"Git: Quick Add"
+			],
+			[
+				"git add",
+				"Git: Quick Add"
+			],
+			[
+				"inst",
+				"Package Control: Install Package"
+			],
+			[
+				"remove",
+				"Package Control: Remove Package"
+			],
+			[
+				"prv",
+				"PackageResourceViewer: Open Resource"
+			],
+			[
+				"git log",
+				"Git: Log"
+			],
+			[
+				"git status",
+				"Git: Status"
+			],
+			[
+				"git ",
+				"Git: Remote"
+			],
+			[
+				"git quick",
+				"Git: Quick Commit"
+			],
+			[
+				"git",
+				"Git: Quick Status"
+			],
+			[
+				"git repo",
+				"Git: Switch Repo"
+			],
+			[
+				"git ci",
+				"Git: Commit"
+			],
+			[
+				"git quick add",
+				"Git: Quick Add"
+			],
+			[
+				"git qua",
+				"Git: Quick Add"
+			],
+			[
+				"push",
+				"Git: Push Current Branch"
+			],
+			[
+				"remote",
+				"Git: Remote"
+			],
+			[
+				"remote ",
+				"Git: Remote"
+			],
+			[
+				"pull",
+				"Git: Pull"
+			],
+			[
+				"git remote",
+				"Git: Remote"
+			],
+			[
+				"git remote ",
+				"Git: Remote"
+			],
+			[
+				"status",
+				"Git: Status"
+			],
+			[
+				"git quick comit",
+				"Git: Quick Commit"
+			],
+			[
+				"git init",
+				"Git: Init"
+			],
+			[
+				"qu",
+				"Git: Quick Add"
+			],
+			[
+				"re",
+				"Package Control: Remove Package"
+			],
+			[
+				"install ",
+				"Package Control: Install Package"
+			],
+			[
+				"python ",
+				"SublimeREPL: Python - virtualenv"
+			],
+			[
+				"packages",
+				"Preferences: Browse Packages"
+			],
+			[
+				"package",
+				"Package Control: List Packages"
+			]
+		],
+		"width": 544.0
+	},
+	"console":
+	{
+		"height": 165.0,
+		"history":
+		[
+			"import socket; socket.socket(socket.AF_INET, socket.SOCK_STREAM).connect((\"localhost\",53870))",
+			"import urllib.request,os,hashlib; h = 'eb2297e1a458f27d836c04bb0cbaf282' + 'd0e7a3098092775ccb37ca9d6b2e4b7d'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by) ",
+			" import urllib.request,os,hashlib; h = 'eb2297e1a458f27d836c04bb0cbaf282' + 'd0e7a3098092775ccb37ca9d6b2e4b7d'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by) "
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/Users/quentin/Desktop/cafe_prog/templates/index.html",
+		"/Users/quentin/Desktop/cafe_prog/docker-compose.yml",
+		"/Users/quentin/Desktop/evopy/evopy/settings/__init__.py",
+		"/Users/quentin/Desktop/cafe_prog/Makefile",
+		"/Users/quentin/Desktop/cafe_prog/Dockerfile.prod",
+		"/Users/quentin/Desktop/cafe_prog/config/traefik/traefik.toml",
+		"/Users/quentin/Desktop/cafe_prog/config/nginx/nginx.conf",
+		"/Users/quentin/Desktop/cafe_prog/traefik.yml",
+		"/Users/quentin/Desktop/evopy/frontend/src/components/NotFound.vue",
+		"/Users/quentin/Desktop/evopy/frontend/src/router/index.js",
+		"/Users/quentin/Desktop/evopy/frontend/src/components/404.vue",
+		"/Users/quentin/Desktop/evopy/docker-compose.yml",
+		"/Users/quentin/Desktop/evopy/Dockerfile.prod",
+		"/Users/quentin/Desktop/evopy/frontend/index.html",
+		"/Users/quentin/Desktop/evopy.sql",
+		"/Users/quentin/Desktop/style.css",
+		"/Users/quentin/Desktop/functions.php",
+		"/Users/quentin/.ssh/id_rsa.pub",
+		"/private/etc/hosts",
+		"/Users/quentin/Desktop/pokepare/templates/index.html",
+		"/Users/quentin/Documents/cmake.txt",
+		"/Users/quentin/Desktop/pyprojects/cat-face-detector/haarcascade_frontalcatface.xml",
+		"/Users/quentin/Desktop/pyprojects/cat-face-detector/cat_detector.py",
+		"/Users/quentin/Desktop/pyprojects/cat_detection/cat_detector.py",
+		"/Users/quentin/cat_detector.py",
+		"/Users/quentin/Desktop/asem_project/asem/views.py",
+		"/Users/quentin/Desktop/asem_project/templates/index.html",
+		"/Users/quentin/.bash_profile",
+		"/Users/quentin/Desktop/OC_Projet-7-vue/readme.md",
+		"/Users/quentin/Desktop/OC_Projet-7-vue/backend/gpb_app/utils/utils.py",
+		"/Users/quentin/Desktop/OC_Projet-7-vue/backend/gpb_app/controllers/question.py",
+		"/Users/quentin/Desktop/OC_Projet-5/src/install.py",
+		"/Users/quentin/Desktop/pyprojects/PyArmChess/vision/ChessCamera.py",
+		"/Users/quentin/Desktop/pyprojects/PyArmChess/vision/constants.py",
+		"/Users/quentin/.profile",
+		"/Users/quentin/Desktop/prog_proj/PyArmChess/Game.py",
+		"/Users/quentin/Desktop/OC_Projet-5/csv_cleaner.py",
+		"/Users/quentin/Desktop/OC_Projet-5/db_models.py",
+		"/Users/quentin/Desktop/OC_Projet-5/db_file.csv",
+		"/Users/quentin/Desktop/python-learning/sandbox.py",
+		"/Users/quentin/Desktop/test.py",
+		"/Users/quentin/Desktop/OC_Projet-3/mcgyver_maze/main.py",
+		"/Users/quentin/Desktop/OC_Projet-3/mcgyver_maze/core.py",
+		"/C/Users/PC/Desktop/projets_OC/projet_3/mcgyver_maze/exceptions.py",
+		"/Users/quentin/Desktop/OC_Projet-3/mcgyver_maze/game_settings.py",
+		"/Users/quentin/Desktop/OC_Projet-3/mcgyver_maze/exceptions.py",
+		"/Users/quentin/Desktop/OC_Projet-3/mcgyver_maze/views.py",
+		"/C/Users/PC/Desktop/projets_OC/projet_3/mcgyver_maze/game_settings.py",
+		"/C/Users/PC/Desktop/projets_OC/projet_3/mcgyver_maze/views.py",
+		"/C/Users/PC/Desktop/projets_OC/projet_3/mcgyver_maze/core.py",
+		"/C/Users/PC/Desktop/projets_OC/projet_3/mcgyver_maze/main.py",
+		"/C/Users/PC/Desktop/functions.php",
+		"/C/Users/PC/Desktop/portfolio-loop.php",
+		"/C/Users/PC/Desktop/portfolio-navigation.php",
+		"/C/Users/PC/Desktop/Parcours_OC/cours_OC/oop_perfect/parite.py",
+		"/C/Users/PC/Desktop/Parcours_OC/cours_OC/oop_perfect/decorators.py",
+		"/C/Users/PC/Desktop/projets_OC/projet_3/.gitignore",
+		"/C/Users/PC/Desktop/projets_OC/projet_3/resources/map/map1.xsb",
+		"/C/Users/PC/Downloads/MacGyver-master/main.py",
+		"/C/Users/PC/Desktop/projets_OC/projet_3/makefile",
+		"/C/Users/PC/Envs/trydjango10/learn_django/newsletter/models.py",
+		"/C/Users/PC/Envs/trydjango10/learn_django/newsletter/views.py",
+		"/C/Users/PC/Desktop/python_training/python_learning/sandbox.py",
+		"/C/Users/PC/Desktop/projets_OC/projet_3/readme.md",
+		"/C/Users/PC/AppData/Roaming/Sublime Text 3/Packages/Anaconda/Anaconda.sublime-settings",
+		"/C/Users/PC/Desktop/projets_OC/projet_3/mcgyver_maze/test.py",
+		"/C/Users/PC/.ssh/known_hosts",
+		"/C/Users/PC/.ssh/github_rsa",
+		"/C/Users/PC/Desktop/.htaccess",
+		"/C/Users/PC/Desktop/projets_OC/projet_3/test.py",
+		"/C/Users/PC/Desktop/projets_OC/projet_3/mcgyver_maze/classes.py",
+		"/C/Users/PC/Desktop/projets_OC/projet_3/mcgyver_maze/mcgyver_maze.py",
+		"/C/Users/PC/AppData/Roaming/Sublime Text 3/Packages/User/venv_pygames.sublime-build",
+		"/C/Users/PC/AppData/Roaming/Sublime Text 3/Packages/User/conda_mcgyver.sublime-build",
+		"/C/Users/PC/Desktop/projets_OC/projet_3/setup.py",
+		"/C/Users/PC/Desktop/projets_OC/projet_3/LICENSE",
+		"/C/Users/PC/Desktop/game_settings.py",
+		"/C/Users/PC/Desktop/projets_OC/projet_3/mcgyver_maze.py",
+		"/C/Users/PC/Desktop/projets_OC/projet_3/main.py",
+		"/C/Users/PC/Desktop/projets_OC/projet_3/classes.py",
+		"/C/Users/PC/Desktop/projets_OC/projet_3/game_settings.py",
+		"/C/Users/PC/Desktop/projets_OC/projet_3/readme.rst",
+		"/C/Users/PC/Downloads/macgyver-master/constantes_mcgame.py",
+		"/C/Users/PC/Downloads/macgyver-master/Application.py",
+		"/C/Users/PC/Downloads/macgyver-master/script.py",
+		"/C/Users/PC/Downloads/macgyver-master/Gamemaze.py",
+		"/C/Users/PC/Downloads/macgyver-master/Macgy.py",
+		"/C/Users/PC/Desktop/mcgyver-master/mcgyver-master/labyrinth.py",
+		"/C/Users/PC/Desktop/mcgyver-master/mcgyver-master/game_settings.py",
+		"/C/Users/PC/Desktop/mcgyver-master/mcgyver-master/gameobj.py",
+		"/C/Users/PC/AppData/Local/Temp/Rar$DI41.120/pyCanvas.py",
+		"/C/Users/PC/AppData/Local/Temp/Rar$DI23.120/pyMain.py",
+		"/C/Users/PC/AppData/Local/Temp/Rar$DI03.120/pyMenu.py",
+		"/C/Users/PC/AppData/Local/Temp/Rar$DI63.120/pyMap.py",
+		"/C/Users/PC/Desktop/projets_OC/projet_3/constants.py",
+		"/C/Users/PC/Desktop/projets_OC/projet_3/game.py",
+		"/C/Users/PC/Desktop/projets_OC/projet_3/txt.txt",
+		"/C/Users/PC/Desktop/culinier/page-templates/template-recipe.php",
+		"/C/Users/PC/Desktop/culinier/framework-customizations/extensions/shortcodes/shortcodes/recipe/views/view.php",
+		"/C/Users/PC/Desktop/template-recipe.php",
+		"/C/Users/PC/Desktop/header.php",
+		"/C/Users/PC/Desktop/style.css",
+		"/C/Users/PC/Desktop/1508939970index.css",
+		"/C/Users/PC/Desktop/mcgyver-master/mcgyver-master/game.py",
+		"/C/Users/PC/Source/Repos/macgyver/macgyver_game.py",
+		"/C/Users/PC/Desktop/projets_OC/projet_3/classes_bckup.py",
+		"/C/Users/PC/Desktop/python_training/python_learning/OOP/inheritance.py",
+		"/C/Users/PC/AppData/Roaming/Sublime Text 3/Packages/User/Anaconda.sublime-settings",
+		"/C/Users/PC/Desktop/Projets_en_cours/Atelier-de-Roxane/homepage_sliding_vids/index.html",
+		"/C/Users/PC/Desktop/Projets_en_cours/Atelier-de-Roxane/Elements/css/custom.css",
+		"/C/Users/PC/Desktop/homepage_slide_playlists.php",
+		"/C/Users/PC/Desktop/full-width.php",
+		"/C/Users/PC/Desktop/template-home.php",
+		"/C/Users/PC/Desktop/alumnis/content/students/quentin.md",
+		"/C/Users/PC/Desktop/alumnis/content/students/Lorraine.md",
+		"/C/Users/PC/Desktop/alumnis/content/students/christophedurand.md",
+		"/C/Users/PC/Desktop/alumnis/content/students/Driss.md",
+		"/C/Users/PC/AppData/Roaming/Sublime Text 3/Packages/User/Pylinter.sublime-settings",
+		"/C/Users/PC/AppData/Roaming/Sublime Text 3/Packages/Pylinter/Pylinter.sublime-settings",
+		"/C/Users/PC/Desktop/Parcours_OC/cours_OC/pygame/dkmaze.py",
+		"/C/Users/PC/AppData/Roaming/Sublime Text 3/Packages/User/conda_mathplots.sublime-build",
+		"/C/Users/PC/Desktop/projets_OC/mcgyver-master/mcgyver-master/gameobj.py",
+		"/C/Users/PC/Desktop/projets_OC/mcgyver-master/mcgyver-master/labyrinth.py",
+		"/C/Users/PC/Desktop/projets_OC/mcgyver-master/mcgyver-master/game.py",
+		"/C/Users/PC/Desktop/projets_OC/mcgyver-master/mcgyver-master/game_settings.py",
+		"/C/Users/PC/Desktop/Parcours_OC/cours_OC/pygame/constants.py",
+		"/C/Users/PC/Desktop/Parcours_OC/cours_OC/pygame/classes.py",
+		"/C/Users/PC/Desktop/test.py"
+	],
+	"find":
+	{
+		"height": 26.0
+	},
+	"find_in_files":
+	{
+		"height": 104.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": true,
+		"find_history":
+		[
+			"evopy"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "cafe_prog/settings/__init__.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3206,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1672,
+								1672
+							]
+						],
+						"settings":
+						{
+							"git_gutter_is_enabled": false,
+							"syntax": "Packages/Djaneiro/Syntaxes/Python Django.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 417.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "/Users/quentin/Desktop/evopy/evopy/settings/__init__.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 4074,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1908,
+								1963
+							]
+						],
+						"settings":
+						{
+							"git_gutter_is_enabled": false,
+							"syntax": "Packages/Djaneiro/Syntaxes/Python Django.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 828.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "cafe_prog/urls.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 916,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								815,
+								815
+							]
+						],
+						"settings":
+						{
+							"auto_complete_triggers":
+							[
+								{
+									"characters": ".",
+									"selector": "source.python - string - comment - constant.numeric"
+								},
+								{
+									"characters": ".",
+									"selector": "source.python - string - constant.numeric"
+								}
+							],
+							"git_gutter_is_enabled": false,
+							"syntax": "Packages/Djaneiro/Syntaxes/Python Django.tmLanguage",
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "/Users/quentin/Desktop/evopy/evopy/urls.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1284,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								866,
+								866
+							]
+						],
+						"settings":
+						{
+							"git_gutter_is_enabled": false,
+							"syntax": "Packages/Djaneiro/Syntaxes/Python Django.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 26.0
+	},
+	"input":
+	{
+		"height": 37.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 257.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"output.git-commit":
+	{
+		"height": 98.0
+	},
+	"output.git-init":
+	{
+		"height": 98.0
+	},
+	"output.git-push":
+	{
+		"height": 98.0
+	},
+	"output.git-remote":
+	{
+		"height": 98.0
+	},
+	"output.mdpopups":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "Packages/User/python3.sublime-build",
+	"project": "cafe.sublime-project",
+	"replace":
+	{
+		"height": 48.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"get",
+				"C:\\Users\\PC\\Desktop\\python_training\\CodinGame\\CodersStrikeBack.cs"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 188.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

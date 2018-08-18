@@ -1,0 +1,17 @@
+version: '3'
+
+services:
+
+  traefik:
+    container_name: traefik
+    restart: always
+    image: traefik
+    volumes:
+      - ./config/traefik/traefik.toml:/traefik.toml
+      - /var/run/docker.sock:/var/run/docker.sock
+    ports:
+      - '80:80'
+      - '443:443'
+    networks:
+      - pokepare_net
+      - evopy_net
