@@ -12,7 +12,7 @@
       <b-collapse is-nav id="nav_collapse">
 
         <b-navbar-nav>
-          <b-nav-item href="/projects">Projects</b-nav-item>
+          <b-nav-item href="/projects">Projets</b-nav-item>
         </b-navbar-nav>
 
         <!-- Right aligned nav items -->

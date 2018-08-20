@@ -1,0 +1,8 @@
+**/__pycache__
+staticfiles/
+cafe.sublime-project
+cafe.sublime-workspace
+**/migrations/*
+public/media
+cafe/settings/production.py
+**/.DS_Store
