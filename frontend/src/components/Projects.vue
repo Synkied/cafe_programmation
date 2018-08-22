@@ -44,7 +44,7 @@ axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest' // for all 
 export default {
   data () {
     return {
-      moduleTitle: 'Home',
+      moduleTitle: 'Projects',
       nextPage: '',
       projects: []
     }
@@ -57,8 +57,6 @@ export default {
       var thisVm = this
       loadProgressBar()
       axios.get('/projects/').then(response => {
-        console.log(JSON.parse(response.data.projects))
-        console.log(response.data)
         var jsonProject = JSON.parse(response.data.projects)
         for (var i = 0; i < jsonProject.length; i++) {
           thisVm.projects.push(jsonProject[i])
@@ -68,19 +66,19 @@ export default {
           if (error.response) {
             // The request was made and the server responded with a status code
             // that falls out of the range of 2xx
-            console.log(error.response.data)
-            console.log(error.response.status)
-            console.log(error.response.headers)
+            console.log('error', error.response.data)
+            console.log('status', error.response.status)
+            console.log('headers', error.response.headers)
           } else if (error.request) {
             // The request was made but no response was received
             // `error.request` is an instance of XMLHttpRequest in the browser
             // and an instance of http.ClientRequest in node.js
-            console.log(error.request)
+            console.log('request error', error.request)
           } else {
             // Something happened in setting up the request that triggered an Error
             console.log('Error', error.message)
           }
-          console.log(error.config)
+          console.log('config error', error.config)
         })
     }
   },

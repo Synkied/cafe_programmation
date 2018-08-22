@@ -1,20 +1,16 @@
 <template>
-  <div id="home">
+  <div id="intentions">
     <div class="container-fluid">
-      <p>Café</p>
-      <p>programmation d'architectures culturelles</p>
+      <div class="row">
+        <p>Blabla</p>
+      </div>
     </div>
-    <app-projects></app-projects>
   </div>
 </template>
 
 <script>
 /* Imports */
 import RiseLoader from 'vue-spinner/src/RiseLoader.vue'
-import About from './About'
-import Projects from './Projects'
-import Skills from './Skills'
-import Intentions from './Intentions'
 /* import { loadProgressBar } from 'axios-progress-bar'
 import 'axios-progress-bar/dist/nprogress.css' */
 
@@ -22,7 +18,7 @@ import 'axios-progress-bar/dist/nprogress.css' */
 export default {
   data () {
     return {
-      moduleTitle: 'Home'
+      moduleTitle: 'Intentions'
     }
   },
   title () {
@@ -31,11 +27,7 @@ export default {
   methods: {
   },
   components: {
-    'rise-loader': RiseLoader,
-    'app-projects': Projects,
-    'app-skills': Skills,
-    'about-me': About,
-    'intentions-app': Intentions
+    'rise-loader': RiseLoader
   },
   mounted () {
   }
