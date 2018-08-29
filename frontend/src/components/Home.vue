@@ -1,8 +1,10 @@
 <template>
   <div id="home">
     <div class="container-fluid">
-      <p>Café</p>
-      <p>programmation d'architectures culturelles</p>
+      <section class="text-left ">
+        <img class=logo_home src="../assets/cafe_logo.png" alt="">
+        <p class="logo-moto">programmation d'architectures culturelles</p>
+      </section>
     </div>
     <app-projects></app-projects>
   </div>
@@ -46,5 +48,23 @@ export default {
 <style scoped>
   @import url('https://fonts.googleapis.com/css?family=Oxygen');
   @import url('https://fonts.googleapis.com/css?family=Raleway');
+  @import url('https://fonts.googleapis.com/css?family=Poppins');
+
+  @font-face {
+    font-family: 'futuristregular';
+    src: url('../assets/fonts/futr-webfont.woff2') format('woff2'),
+         url('../assets/fonts/futr-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  .logo-home {
+    font-size: 4rem;
+    font-family: 'Raleway', Futura, sans-serif;
+  }
+
+  .logo-moto {
+    font-size:2rem;
+  }
 
 </style>
