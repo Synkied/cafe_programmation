@@ -152,8 +152,8 @@ export default {
 
 .img-project {
   position: relative;
-  top: 0;
-  right: -110%;
+  top: -100;
+  right: -105%;
 }
 
 /* --- decorations --- */

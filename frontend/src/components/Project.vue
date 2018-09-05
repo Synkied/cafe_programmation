@@ -15,11 +15,12 @@
                   <div v-if="showDesc && project.fields.description" class="">
                     <p v-html="project.fields.description"></p>
                     <p>
-                      <a :href="project.fields.external_link"> {{ project.fields.title }} <font-awesome-icon icon="link" size="xs" /> </a>
+                      <a :href="project.fields.external_link"> {{ project.fields.title }} <font-awesome-icon icon="link" size="xs"/> </a>
                     </p>
                     <div class="img-wrapper mb-3 img-project">
                       <img :src="project.fields.image" width="200px" :alt="project.fields.title">
                     </div>
+                    <p> {{ project.fields.description }} </p>
                   </div>
 
                   <div class="text-right more-button">
