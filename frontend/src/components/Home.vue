@@ -1,12 +1,16 @@
 <template>
   <div id="home">
-    <div class="container-fluid">
-      <section class="text-left ">
-        <img class=logo_home src="../assets/cafe_logo.png" alt="">
-        <p class="logo-moto">programmation d'architectures culturelles</p>
+      <section class="text-center s-100 v-align-center">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-xl-12 col-12 mx-auto">
+              <img class="logo-img" src="../assets/cafe_logo_full.svg" alt="cafe logo">
+            </div>
+          </div>
+        </div>
       </section>
-    </div>
-    <app-projects></app-projects>
+    <intentions-app></intentions-app>
+    <projects-app></projects-app>
   </div>
 </template>
 
@@ -15,7 +19,6 @@
 import RiseLoader from 'vue-spinner/src/RiseLoader.vue'
 import About from './About'
 import Projects from './Projects'
-import Skills from './Skills'
 import Intentions from './Intentions'
 /* import { loadProgressBar } from 'axios-progress-bar'
 import 'axios-progress-bar/dist/nprogress.css' */
@@ -28,14 +31,13 @@ export default {
     }
   },
   title () {
-    return `Evopy — ${this.moduleTitle}`
+    return `Café Programmation — ${this.moduleTitle}`
   },
   methods: {
   },
   components: {
     'rise-loader': RiseLoader,
-    'app-projects': Projects,
-    'app-skills': Skills,
+    'projects-app': Projects,
     'about-me': About,
     'intentions-app': Intentions
   },

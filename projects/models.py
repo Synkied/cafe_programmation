@@ -6,17 +6,29 @@ from django.utils.translation import gettext_lazy as _
 class Function(models.Model):
     name = models.CharField(max_length=256)
 
+    def __str__(self):
+        return self.name
+
 
 class Context(models.Model):
     name = models.CharField(max_length=256)
+
+    def __str__(self):
+        return self.name
 
 
 class Dimension(models.Model):
     name = models.CharField(max_length=256)
 
+    def __str__(self):
+        return self.name
+
 
 class Advancement(models.Model):
     name = models.CharField(max_length=256)
+
+    def __str__(self):
+        return self.name
 
 
 class Project(models.Model):

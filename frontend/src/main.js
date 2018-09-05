@@ -11,19 +11,24 @@ import 'bootstrap-vue/dist/bootstrap-vue.css'
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 import titleMixin from './mixins/titleMixin'
+import vueSmoothScroll from 'vue2-smooth-scroll'
 
 // Font awesome icon import and adding
 
 import { faLink } from '@fortawesome/free-solid-svg-icons'
 library.add(faLink)
 
+// mixins
 Vue.mixin(titleMixin)
 
+// components
 Vue.component('font-awesome-icon', FontAwesomeIcon)
 
-Vue.config.productionTip = false
-
 Vue.use(BootstrapVue)
+Vue.use(vueSmoothScroll)
+
+// config
+Vue.config.productionTip = false
 
 require('vue2-animate/dist/vue2-animate.min.css')
 

@@ -17,8 +17,8 @@ class ProjectView(View):
         # return the image url for ajax use
         if projects.exists():
             for project in projects:
-                if project.image_url:
-                    project.image_url = project.image_url.url
+                if project.image:
+                    project.image = project.image.url
 
         projects_json = serializers.serialize("json", projects)
 
@@ -44,8 +44,8 @@ class ProjectViewDetail(View):
         project = Project.objects.get(pk=id)
 
         if project:
-            if project.image_url:
-                project.image_url = project.image_url.url
+            if project.image:
+                project.image = project.image.url
 
         project_json = serializers.serialize("json", [project])
 

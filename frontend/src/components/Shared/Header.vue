@@ -3,16 +3,28 @@
 
 <template>
   <div id="header">
-    <b-navbar toggleable="md" type="light" variant="faded">
+    <b-navbar toggleable="md" type="light" class="white-bg" fixed="top">
 
       <b-navbar-toggle target="nav_collapse"></b-navbar-toggle>
 
-      <b-navbar-brand href="/"><a class="navbar-brand js-scroll-trigger" href="/">Cafe Programmation</a></b-navbar-brand>
+      <b-navbar-brand href="#home">
+        <a class="navbar-brand js-scroll-trigger" href="#home" v-smooth-scroll="{ duration: 1000, offset: -50}">
+          <img id="nav-logo" src="../../assets/cafe_logo_solo.svg" alt="Café logo">
+        </a>
+      </b-navbar-brand>
 
       <b-collapse is-nav id="nav_collapse">
 
         <b-navbar-nav>
-          <b-nav-item href="/projects">Projets</b-nav-item>
+          <a href="#intentions" v-smooth-scroll="{ duration: 1000, offset: -50}"><b-nav-item>Intentions</b-nav-item></a>
+        </b-navbar-nav>
+
+        <b-navbar-nav>
+          <a href="#realisations" v-smooth-scroll="{ duration: 1000, offset: -50}"><b-nav-item>Réalisations</b-nav-item></a>
+        </b-navbar-nav>
+
+        <b-navbar-nav>
+          <a href="#contact" v-smooth-scroll="{ duration: 1000, offset: -50}"><b-nav-item>Contact</b-nav-item></a>
         </b-navbar-nav>
 
         <!-- Right aligned nav items -->

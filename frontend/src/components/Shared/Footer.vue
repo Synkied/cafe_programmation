@@ -3,7 +3,7 @@
 
 <template>
   <footer>
-    <div class="container">
+    <div id="contact" class="container">
       <span>Site web réalisé par Quentin Lathière 2018.</span>
     </div>
   </footer>

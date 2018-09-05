@@ -25,104 +25,85 @@ export default {
 @import url('https://fonts.googleapis.com/css?family=Cabin');
 @import url('https://fonts.googleapis.com/css?family=Open+Sans');
 
+@font-face {
+  font-family: 'avant-garde-md';
+  src: url('./assets/fonts/avantgarde_md_bt_tt0156m-webfont.woff2') format('woff2'),
+       url('./assets/fonts/avantgarde_md_bt_tt0156m-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
 
-  @font-face {
-    font-family: 'futuristregular';
-    src: url('./assets/fonts/futr-webfont.woff2') format('woff2'),
-         url('./assets/fonts/futr-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-  }
+/* *********** GENERAL *********** */
 
 #app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  font-family: 'Avenir', Helvetica, Arial, sans-serif !important;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   background-color: #fff;
 }
 
-  .logo-home {
-    font-size: 4rem;
-    font-family: 'futuristregular';
-  }
-
-
-.container {
-  max-width: 100% !important;
-}
-
-section {
-  min-height: 100%;
-  padding: 4rem;
-}
-
-.card {
-  border: 0 !important;
-}
-
-.card-img-top {
-  width: 100% !important;
-  height: 26vw !important;
-  object-fit: cover !important;
-  border-radius: 0 !important;
-}
-
-.card-body {
-  text-align: left !important;
-  background-color: #fff !important;
-}
-
-.card-body ul {
-  margin: 15px 35px !important;
-}
-
-a {
+#app a {
   text-decoration: none;
-  color: #30415d ! important;
+  color: #30415d;
 }
 
-a:hover {
+#app a:hover {
   text-decoration: none;
 }
 
-.navbar {
-  color: #000;
+#app .no-pad {
+  padding: 0;
 }
 
-nav a, nav a:hover, nav a:active{
-  color: #000;
+#app .hr {
+  border-top: 4px solid #000;
+  width: 5%;
+  margin: -10px 0 20px 0;
 }
 
-.skill-img {
-  height: 50px;
+.s-100 {
+  height: 100vh;
 }
 
-h1{
-  text-align: center;
-  font-family: 'Cabin', sans-serif;
-  font-weight: bold;
-  font-size: 2.5rem;
-  text-transform: uppercase;
-  color: #fff;
+.align-left {
+  text-align: left;
 }
 
-h2 {
-  font-family: 'Cabin', sans-serif;
-  font-size: 2rem;
-  font-weight: 700;
+.align-right {
+  text-align: right;
 }
 
-h3 small {
-  font-size: 60%;
-  color: #6f6f6f;
-  line-height: 0;
+.justif {
+  text-align: justify;
+}
+
+.white-bg {
+  background-color: #fff;
+}
+
+.v-align-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.v-align-left-center {
+  display: flex;
+  align-items: center;
+  justify-content: left;
+}
+
+/* --- lists --- */
+
+#app ul {
+  padding: 0;
 }
 
 .ns-li {
   list-style-type: none;
   font-weight: 500;
-  text-align: left;
+  text-align: center;
 }
 
 .ns-li a {
@@ -144,24 +125,184 @@ h3 small {
   padding: 0 1.5rem;
 }
 
-ul {
-  padding: 0;
+/* --- imgs --- */
+
+#app .skill-img {
+  height: 50px;
 }
 
-.no-pad {
-  padding: 0 !important;
+.about-img {
+  border-radius: 7%;
 }
 
-.hr {
-  border-top: 4px solid #000;
-  width: 5%;
-  margin: -10px 0 20px 0;
+.logo-home {
+  position: relative;
+  text-align: right;
+  top: 200;
+  right: 350;
 }
+
+.logo-img {
+  width: 38%;
+}
+
+#nav-logo {
+  width:80px;
+}
+
+.img-project {
+  position: relative;
+  top: 0;
+  right: -110%;
+}
+
+/* --- decorations --- */
+
+.h5 {
+    overflow: hidden;
+}
+
+.h5:after {
+    content:"";
+    display: inline-block;
+    height: 0.5em;
+    vertical-align: bottom;
+    width: 100%;
+    margin-right: -100%;
+    margin-left: 10px;
+    border-top: 1px solid black;
+}
+
+.h5:before {
+    content:"";
+    display: inline-block;
+    height: 0.5em;
+    vertical-align: bottom;
+    width: 100%;
+    margin-left: -100%;
+    margin-right: 10px;
+    border-top: 1px solid black;
+}
+
+/* --- buttons --- */
+
+.btn-primary-outline {
+  background-color: transparent;
+  border-color: #fff;
+}
+
+/* *********** TITLES *********** */
+
+#app h1{
+  text-align: center;
+  font-family: 'Cabin', sans-serif;
+  font-weight: bold;
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  color: #fff;
+  hyphens: auto;
+}
+
+#app h2 {
+  font-family: 'Cabin', sans-serif;
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+#app h3 small {
+  font-size: 60%;
+  color: #6f6f6f;
+  line-height: 0;
+}
+
+.project-title {
+  text-transform: uppercase;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+/* *********** PROJECTS *********** */
+
+.project-row {
+  text-align: left;
+}
+
+/* *********** BOOTSTRAP *********** */
+
+#app .container {
+  max-width: 100%;
+}
+
+#app section {
+  min-height: 100%;
+  padding: 4rem;
+}
+
+#app .navbar {
+  color: #000;
+}
+
+#app nav a, nav a:hover, nav a:active{
+  color: #000;
+}
+
+/* --- cards --- */
+
+#app .card {
+  border: 0 ;
+}
+
+#app .card-img-top {
+  width: 100%;
+  height: 26vw;
+  object-fit: cover;
+  border-radius: 0;
+}
+
+#app .card-body {
+  text-align: left;
+  background-color: #fff;
+}
+
+#app .card-body ul {
+  margin: 15px 35px;
+}
+
+/* *********** MORE INFO *********** */
+
+#app .more-info {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #138496;
+  font-size: 0.75rem;
+  padding: 15px;
+  overflow: auto;
+  color: #fff;
+}
+
+#app .btn-bottom-right {
+  position: absolute;
+  top: 30%;
+  right: 20;
+  border-radius: 0;
+  width: 38px;
+}
+
+#app .btn-bottom-right:focus {
+  box-shadow: none;
+}
+
+/* *********** MEDIA QUERIES *********** */
 
 @media all and (max-width: 1200px) {
   .img-wrapper {
     overflow: hidden;
     max-height: 250px;
+  }
+  .logo-img {
+    width: 60%;
   }
 }
 
@@ -170,6 +311,49 @@ ul {
     overflow: hidden;
     max-height: 190px;
   }
+
+  .logo-img {
+    width: 100%;
+  }
+
+  .logo-home {
+    position: relative;
+    text-align: right;
+    top: 180;
+    right: 0;
+  }
+
+  #app .more-info {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #138496;
+    font-size: 0.75rem;
+    padding: 15px;
+    overflow: auto;
+    color: #fff;
+  }
+
+  #app h1{
+    font-size: 1.8rem;
+  }
+
+  #app section {
+    min-height: 100%;
+    padding: 4rem 1rem;
+  }
+
+  .img-project {
+    position: relative;
+    top: 0;
+    right: 0;
+  }
+
+/*  #app .more-info {
+    display: none;
+  }*/
 }
 
 </style>
