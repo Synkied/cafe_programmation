@@ -19,7 +19,7 @@ services:
       - 'traefik.enable=true'
       - 'traefik.backend=cafe_nginx'
       - 'traefik.port=80'
-      - 'traefik.frontend.rule=Host:cafe-programmation.com,www.cafe-programmation.com, 188.166.122.200'
+      - 'traefik.frontend.rule=Host:staging.cafe-programmation.fr'
 
   cafe_py:
     container_name: cafe_py
