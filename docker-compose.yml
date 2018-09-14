@@ -2,6 +2,20 @@ version: '3'
 
 services:
 
+  traefik:
+    container_name: traefik
+    restart: always
+    image: traefik
+    volumes:
+      - ./config/traefik/traefik.toml:/traefik.toml
+      - ./config/traefik/acme.json:/acme.json
+      - /var/run/docker.sock:/var/run/docker.sock
+    ports:
+      - '80:80'
+      - '443:443'
+    networks:
+      - cafe_net
+
   cafe_nginx:
     container_name: cafe_nginx
     restart: always
@@ -14,7 +28,7 @@ services:
     ports:
       - '8061:80'
     networks:
-      - traefik
+      - cafe_net
     labels:
       - 'traefik.enable=true'
       - 'traefik.backend=cafe_nginx'
@@ -36,16 +50,15 @@ services:
     volumes:
       - ./:/usr/src/app
     networks:
-      - traefik
+      - cafe_net
 
   cafe_db:
     container_name: cafe_db
     restart: always
     image: postgres
     networks:
-      - traefik
+      - cafe_net
 
 networks:
-  traefik:
-    external:
-      name: proxy
+  cafe_net:
+    driver: bridge
