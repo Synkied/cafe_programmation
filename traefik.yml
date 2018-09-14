@@ -13,5 +13,4 @@ services:
       - '80:80'
       - '443:443'
     networks:
-      - pokepare_net
-      - evopy_net
+      - cafe_net
