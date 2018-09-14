@@ -1,24 +1,29 @@
-defaultEntryPoints = ["http"]
+defaultEntryPoints = ["http", "https"]
+
+[web]
+address = ":8080"
+  [web.auth.basic]
+  users = ["admin:$apr1$lMFLdCKm$Lq.v1.1vFVuc3SkiDiAmt."]
+  # To obtain password:
+  # sudo apt-get install apache2-utils
+  # htpasswd -nb admin secure_password
 
 [entryPoints]
   [entryPoints.http]
   address = ":80"
-#    [entryPoints.http.redirect]
-#      entryPoint = "https"
+    [entryPoints.http.redirect]
+      entryPoint = "https"
   [entryPoints.https]
   address = ":443"
     [entryPoints.https.tls]
 
 [acme]
-email = "xsynkx@gmail.com"
+email = "xsynkx@gmail.com" # input your email here
 storage = "acme.json"
 entryPoint = "https"
 onHostRule = true
-onDemand = true
+onDemand = false
+
 
 [acme.httpChallenge]
-entryPoint = "http"
-
-[docker]
-endpoint = "unix:///var/run/docker.sock"
-exposedbydefault = false
+  entryPoint = "http"

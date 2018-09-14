@@ -11,9 +11,9 @@ RUN pip install -r /requirements.txt
 
 WORKDIR /usr/src/app
 
-EXPOSE 8000
+EXPOSE 8061
 
 # different settings from local dev
 ENV DJANGO_SETTINGS_MODULE=cafe_prog.settings.production
 
-CMD [ "gunicorn", "cafe_prog.wsgi", "-b", "0.0.0.0:8000" ]
+CMD [ "gunicorn", "cafe_prog.wsgi", "-b", "0.0.0.0:8061" ]
