@@ -14,14 +14,12 @@ services:
     ports:
       - '8061:80'
     networks:
-      - internal
-      - proxy
+      - traefik
     labels:
       - 'traefik.enable=true'
       - 'traefik.backend=cafe_nginx'
       - 'traefik.port=80'
       - 'traefik.frontend.rule=Host:staging.cafe-programmation.fr'
-      - traefik.docker.network=proxy
 
   cafe_py:
     container_name: cafe_py
@@ -38,17 +36,16 @@ services:
     volumes:
       - ./:/usr/src/app
     networks:
-      - internal
+      - traefik
 
   cafe_db:
     container_name: cafe_db
     restart: always
     image: postgres
     networks:
-      - internal
+      - traefik
 
 networks:
-  proxy:
-    external: true
-  internal:
-    external: false
+  traefik:
+    external:
+      name: proxy
