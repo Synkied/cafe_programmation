@@ -15,7 +15,7 @@ address = ":8080"
     [entryPoints.https.tls]
 
 [acme]
-email = "synkx@hotmail.fr"
+email = "xsynkx@gmail.com"
 storage = "acme.json"
 entryPoint = "https"
 onHostRule = true
