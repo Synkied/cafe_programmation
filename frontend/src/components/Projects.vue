@@ -1,14 +1,16 @@
 <template>
-  <section id="realisations" class="s-100 v-align-center" v-if="projects.length > 0">
+  <section id="realisations" class="v-align-center" v-if="projects.length > 0">
     <div class="container">
       <div class="row v-align-left-center">
-        <div class="col-xl-1 col-12 text-left">
-          <p>Fonction</p>
-          <p>Contexte</p>
-          <p>Dimension</p>
-          <p>Avancement</p>
+        <div class="col-xl-1 col-12">
+          <ul class="search-terms">
+            <li>Fonction</li>
+            <li>Contexte</li>
+            <li>Dimension</li>
+            <li>Avancement</li>
+          </ul>
         </div>
-        <div class="col-xl-8 col-lg-8 col-md-8 col-sm-12 col-12">
+        <div class="col-xl-7 col-lg-12 col-md-12 col-sm-12 col-12">
           <div v-for="project in projects" :key="project.id">
             <app-project :project="project"></app-project>
           </div>

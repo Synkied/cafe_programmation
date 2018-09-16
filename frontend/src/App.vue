@@ -150,10 +150,16 @@ export default {
   width:80px;
 }
 
-.img-project {
+.img-desc-project {
+  position: absolute;
+  top: 30px;
+  left: 102%;
+}
+
+.desc-project {
   position: relative;
-  top: -100;
-  right: -105%;
+  top: -132px;
+  left: 106%;
 }
 
 /* --- decorations --- */
@@ -188,7 +194,7 @@ export default {
 
 .btn-primary-outline {
   background-color: transparent;
-  border-color: #fff;
+  border-color: #000;
 }
 
 /* *********** TITLES *********** */
@@ -284,7 +290,7 @@ export default {
 
 #app .btn-bottom-right {
   position: absolute;
-  top: 30%;
+  top: 30px;
   right: 20;
   border-radius: 0;
   width: 38px;
@@ -294,22 +300,42 @@ export default {
   box-shadow: none;
 }
 
+.search-terms {
+  text-align: left;
+  list-style-type: none;
+}
+
 /* *********** MEDIA QUERIES *********** */
 
 @media all and (max-width: 1200px) {
   .img-wrapper {
     overflow: hidden;
-    max-height: 250px;
+    max-height: 100%;
   }
   .logo-img {
     width: 60%;
+  }
+
+  .img-desc-project {
+    position: static;
+  }
+
+  .desc-project {
+    position: static;
+  }
+
+  .search-terms {
+    text-align: center;
+  }
+
+  .search-terms li {
+    display: inline;
   }
 }
 
 @media all and (max-width: 900px) {
   .img-wrapper {
     overflow: hidden;
-    max-height: 190px;
   }
 
   .logo-img {
@@ -345,10 +371,12 @@ export default {
     padding: 4rem 1rem;
   }
 
-  .img-project {
-    position: relative;
-    top: 0;
-    right: 0;
+  .img-desc-project {
+    position: static;
+  }
+
+  .desc-project {
+    position: static;
   }
 
 /*  #app .more-info {

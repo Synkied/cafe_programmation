@@ -7,20 +7,23 @@
             <div class="project-row">
                 <hr>
                 <h4 class="project-title" @click="showDescription(project)">
-                  {{ project.fields.title }}
+                  {{ project.fields.titre }}
                 </h4>
                   <p v-html="project.fields.short_description"></p>
 
                   <!-- Hidden description, image... -->
                   <div v-if="showDesc && project.fields.description" class="">
-                    <p v-html="project.fields.description"></p>
-                    <p>
-                      <a :href="project.fields.external_link"> {{ project.fields.title }} <font-awesome-icon icon="link" size="xs"/> </a>
-                    </p>
-                    <div class="img-wrapper mb-3 img-project">
-                      <img :src="project.fields.image" width="200px" :alt="project.fields.title">
+                    <div class="img-wrapper mb-3 img-desc-project">
+                      <img class="mb-2" :src="project.fields.image" width="200px" :alt="project.fields.titre">
+                      <div class="desc-project">
+                        <p> {{ project.fields.description }} </p>
+                      </div>
                     </div>
-                    <p> {{ project.fields.description }} </p>
+                    <div class="info-project">
+                      <p> Commanditaire : {{ project.fields.commanditaire }}</p>
+                      <p> Mission : {{ project.fields.mission }}</p>
+                      <p> Concepteur : {{ project.fields.concepteur }} </p>
+                    </div>
                   </div>
 
                   <div class="text-right more-button">

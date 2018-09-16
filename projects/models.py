@@ -3,14 +3,14 @@ from django.utils.translation import gettext_lazy as _
 # Create your models here.
 
 
-class Function(models.Model):
+class Fonction(models.Model):
     name = models.CharField(max_length=256)
 
     def __str__(self):
         return self.name
 
 
-class Context(models.Model):
+class Contexte(models.Model):
     name = models.CharField(max_length=256)
 
     def __str__(self):
@@ -24,7 +24,7 @@ class Dimension(models.Model):
         return self.name
 
 
-class Advancement(models.Model):
+class Avancement(models.Model):
     name = models.CharField(max_length=256)
 
     def __str__(self):
@@ -32,21 +32,21 @@ class Advancement(models.Model):
 
 
 class Project(models.Model):
-    title = models.CharField(_("title"), max_length=256)
-    sponsor = models.CharField(_("sponsor"), max_length=128)
+    titre = models.CharField(_("titre"), max_length=256)
+    commanditaire = models.CharField(_("commanditaire"), max_length=128)
     mission = models.TextField(_("mission"))
-    architect = models.CharField(_("architect"), max_length=128)
+    concepteur = models.CharField(_("concepteur"), max_length=128)
     description = models.TextField(_("description"), max_length=512)
-    external_link = models.URLField(_("external_link"), blank=True, null=True)
-    pdf_link = models.FileField(_("pdf_link"), blank=True, null=True)
+    lien_externe = models.URLField(_("lien externe"), blank=True, null=True)
+    lien_pdf = models.FileField(_("lien pdf"), blank=True, null=True)
     image = models.ImageField(_("image"), blank=True, null=True)
-    function = models.ForeignKey(Function, on_delete=models.CASCADE)
-    context = models.ForeignKey(Context, on_delete=models.CASCADE)
+    fonction = models.ForeignKey(Fonction, on_delete=models.CASCADE)
+    contexte = models.ForeignKey(Contexte, on_delete=models.CASCADE)
     dimension = models.ForeignKey(Dimension, on_delete=models.CASCADE)
-    advancement = models.ForeignKey(Advancement, on_delete=models.CASCADE)
+    avancement = models.ForeignKey(Avancement, on_delete=models.CASCADE)
 
     def __str__(self):
-        return self.title
+        return self.titre
 
     class Meta:
         verbose_name = _('Project')
