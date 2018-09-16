@@ -14,7 +14,6 @@ services:
     ports:
       - '8061:80'
     networks:
-      - internal
       - proxy
     labels:
       - 'traefik.enable=true'
@@ -38,7 +37,6 @@ services:
     volumes:
       - ./:/usr/src/app
     networks:
-      - internal
       - proxy
 
   cafe_db:
@@ -46,11 +44,9 @@ services:
     restart: always
     image: postgres
     networks:
-      - internal
       - proxy
 
 networks:
-  proxy:
-    external: true
-  internal:
-    external: false
+  traefik:
+    external:
+      name: traefik_webgateway
