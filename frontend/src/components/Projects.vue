@@ -40,7 +40,7 @@ export default {
     }
   },
   title () {
-    return `Evopy — ${this.moduleTitle}`
+    return `Café Programmation — ${this.moduleTitle}`
   },
   methods: {
     viewProjects () {
