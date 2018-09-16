@@ -7,9 +7,6 @@
 <script>
 /* Imports */
 import RiseLoader from 'vue-spinner/src/RiseLoader.vue'
-import About from './About'
-import Projects from './Projects'
-import Skills from './Skills'
 /* import { loadProgressBar } from 'axios-progress-bar'
 import 'axios-progress-bar/dist/nprogress.css' */
 
@@ -26,10 +23,7 @@ export default {
   methods: {
   },
   components: {
-    'rise-loader': RiseLoader,
-    'app-projects': Projects,
-    'app-skills': Skills,
-    'about-me': About
+    'rise-loader': RiseLoader
   },
   mounted () {
   }
