@@ -194,7 +194,7 @@ export default {
 
 .btn-primary-outline {
   background-color: transparent;
-  border-color: #000;
+  border-color: #000 !important;
 }
 
 /* *********** TITLES *********** */
@@ -291,7 +291,7 @@ export default {
 #app .btn-bottom-right {
   position: absolute;
   top: 30px;
-  right: 20;
+  right: 20px;
   border-radius: 0;
   width: 38px;
 }
