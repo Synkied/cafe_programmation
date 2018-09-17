@@ -10,7 +10,7 @@
             <li>Avancement</li>
           </ul>
         </div>
-        <div class="col-xl-7 col-lg-12 col-md-12 col-sm-12 col-12">
+        <div class="col-xl-6 col-lg-12 col-md-12 col-sm-12 col-12">
           <div v-for="project in projects" :key="project.id">
             <app-project :project="project"></app-project>
           </div>

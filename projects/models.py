@@ -36,7 +36,7 @@ class Project(models.Model):
     commanditaire = models.CharField(_("commanditaire"), max_length=128)
     mission = models.TextField(_("mission"))
     concepteur = models.CharField(_("concepteur"), max_length=128)
-    description = models.TextField(_("description"), max_length=512)
+    description = models.TextField(_("description"), max_length=362)
     lien_externe = models.URLField(_("lien externe"), blank=True, null=True)
     lien_pdf = models.FileField(_("lien pdf"), blank=True, null=True)
     image = models.ImageField(_("image"), blank=True, null=True)

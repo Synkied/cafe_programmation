@@ -94,6 +94,19 @@ export default {
   justify-content: left;
 }
 
+::-webkit-scrollbar {
+    width: 0.5em;
+}
+
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: none;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #000;
+  outline: 1px solid slategrey;
+}
+
 /* --- lists --- */
 
 #app ul {
@@ -154,12 +167,24 @@ export default {
   position: absolute;
   top: 30px;
   left: 102%;
+  min-width: 600px;
+  overflow-y: hidden;
+  overflow-x: visible;
+}
+
+.img-project {
+  width: 200px;
 }
 
 .desc-project {
   position: relative;
-  top: -132px;
-  left: 106%;
+  top: -136px;
+  left: 37%;
+  font-size: 0.8rem;
+  max-width: 290px;
+  max-height: 150px;
+  box-sizing: content-box;
+  padding: 0 10px 0 0;
 }
 
 /* --- decorations --- */
@@ -169,25 +194,25 @@ export default {
 }
 
 .h5:after {
-    content:"";
-    display: inline-block;
-    height: 0.5em;
-    vertical-align: bottom;
-    width: 100%;
-    margin-right: -100%;
-    margin-left: 10px;
-    border-top: 1px solid black;
+  content:"";
+  display: inline-block;
+  height: 0.5em;
+  vertical-align: bottom;
+  width: 100%;
+  margin-right: -100%;
+  margin-left: 10px;
+  border-top: 1px solid black;
 }
 
 .h5:before {
-    content:"";
-    display: inline-block;
-    height: 0.5em;
-    vertical-align: bottom;
-    width: 100%;
-    margin-left: -100%;
-    margin-right: 10px;
-    border-top: 1px solid black;
+  content:"";
+  display: inline-block;
+  height: 0.5em;
+  vertical-align: bottom;
+  width: 100%;
+  margin-left: -100%;
+  margin-right: 10px;
+  border-top: 1px solid black;
 }
 
 /* --- buttons --- */
@@ -231,6 +256,11 @@ export default {
 
 .project-row {
   text-align: left;
+}
+
+.info-project {
+  font-size: 0.9rem;
+  max-width: 90%;
 }
 
 /* *********** BOOTSTRAP *********** */
@@ -322,6 +352,7 @@ export default {
 
   .desc-project {
     position: static;
+    min-width: 100%;
   }
 
   .search-terms {
@@ -373,15 +404,35 @@ export default {
 
   .img-desc-project {
     position: static;
+    min-width: 100%;
   }
 
   .desc-project {
     position: static;
+    width: 100%;
+  }
+}
+
+@media all and (max-width: 640px) {
+
+  .btn-primary-outline {
+    background-color: transparent;
+    border-color: transparent !important;
   }
 
-/*  #app .more-info {
-    display: none;
-  }*/
+  #app .btn-bottom-right {
+    position: absolute;
+    top: 20px;
+    right: 10px;
+    border-radius: 0;
+    width: 38px;
+    font-size: 1.2rem;
+  }
+
+  .project-title {
+    max-width: 80%;
+    font-size: 0.9rem;
+  }
 }
 
 </style>

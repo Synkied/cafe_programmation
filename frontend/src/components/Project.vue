@@ -14,7 +14,7 @@
                   <!-- Hidden description, image... -->
                   <div v-if="showDesc && project.fields.description" class="">
                     <div class="img-wrapper mb-3 img-desc-project">
-                      <img class="mb-2" :src="project.fields.image" width="200px" :alt="project.fields.titre">
+                      <img class="mb-2 img-project" :src="project.fields.image" :alt="project.fields.titre">
                       <div class="desc-project">
                         <p> {{ project.fields.description }} </p>
                       </div>
