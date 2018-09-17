@@ -168,8 +168,6 @@ export default {
   top: 30px;
   left: 102%;
   min-width: 600px;
-  overflow-y: hidden;
-  overflow-x: visible;
 }
 
 .img-project {
@@ -177,14 +175,13 @@ export default {
 }
 
 .desc-project {
-  position: relative;
-  top: -136px;
+  position: absolute;
+  top: -3px;
   left: 37%;
   font-size: 0.8rem;
-  max-width: 290px;
-  max-height: 150px;
-  box-sizing: content-box;
+  max-width: 300px;
   padding: 0 10px 0 0;
+  overflow-y: visible;
 }
 
 /* --- decorations --- */
