@@ -63,14 +63,10 @@ export default {
   props: ['project'],
   data () {
     return {
-      moduleTitle: 'Home',
       nextPage: '',
       projectId: '',
       showDesc: false
     }
-  },
-  title () {
-    return `Evopy — ${this.moduleTitle}`
   },
   methods: {
     showDescription (project) {
