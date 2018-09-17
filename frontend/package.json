@@ -22,7 +22,6 @@
     "vue-spinner": "^1.0.3",
     "vue2-animate": "^2.0.0",
     "vue2-smooth-scroll": "^1.0.3",
-    "vuebar": "0.0.20",
     "webpack-bundle-tracker": "^0.3.0"
   },
   "devDependencies": {

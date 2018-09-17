@@ -12,7 +12,6 @@ import { library } from '@fortawesome/fontawesome-svg-core'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 import titleMixin from './mixins/titleMixin'
 import vueSmoothScroll from 'vue2-smooth-scroll'
-import Vuebar from 'vuebar'
 
 // Font awesome icon import and adding
 
@@ -27,7 +26,6 @@ Vue.component('font-awesome-icon', FontAwesomeIcon)
 
 Vue.use(BootstrapVue)
 Vue.use(vueSmoothScroll)
-Vue.use(Vuebar)
 
 // config
 Vue.config.productionTip = false
