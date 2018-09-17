@@ -1,10 +1,10 @@
 <template>
   <div id="home">
-      <section class="text-center s-100 v-align-center">
+      <section class="text-center s-100 v-align-center" id="home-section">
         <div class="container-fluid">
           <div class="row">
             <div class="col-xl-12 col-12 mx-auto">
-              <img class="logo-img" src="../assets/cafe_logo_full.svg" alt="cafe logo">
+              <img class="logo-img" src="../assets/cafe_logo_full.png" alt="cafe logo">
             </div>
           </div>
         </div>
