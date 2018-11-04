@@ -7,32 +7,21 @@
             <div class="project-row">
                 <hr>
                 <h4 class="project-title" @click="showDescription(project)">
-                  {{ project.fields.titre }}
+                  {{ project.titre }}
                 </h4>
-                  <p v-html="project.fields.short_description"></p>
-
+                  <p v-if="project.short_description" v-html="project.short_description"></p>
                   <!-- Hidden description, image... -->
-                  <div v-if="showDesc && project.fields.description" class="">
-                    <div class="img-wrapper mb-3 img-desc-project">
-                      <img class="mb-2 img-project" :src="project.fields.image" :alt="project.fields.titre">
-                      <div class="desc-project">
-                        <p> {{ project.fields.description }} </p>
-                      </div>
-                    </div>
-                    <div class="info-project">
-                      <p> Commanditaire : {{ project.fields.commanditaire }}</p>
-                      <p> Mission : {{ project.fields.mission }}</p>
-                      <p> Concepteur : {{ project.fields.concepteur }} </p>
-                    </div>
+                  <div v-if="showDesc && project.description" class="">
+                    <project-desc :project="project"></project-desc>
                   </div>
 
                   <div class="text-right more-button">
-                    <div v-if="showDesc === false && project.fields.description">
+                    <div v-if="showDesc === false && project.description">
                       <button class="btn btn-primary-outline btn-bottom-right" @click="showDescription(project)">
                         +
                       </button>
                     </div>
-                    <div v-if="showDesc === true && project.fields.description">
+                    <div v-if="showDesc === true && project.description">
                       <button class="btn btn-primary-outline btn-bottom-right" @click="showDescription(project)">
                         -
                       </button>
@@ -55,6 +44,8 @@ import RiseLoader from 'vue-spinner/src/RiseLoader.vue'
 import axios from 'axios'
 import 'axios-progress-bar/dist/nprogress.css'
 
+import ProjectDesc from './ProjectDesc.vue'
+
 // this is to use: https://docs.djangoproject.com/fr/2.0/ref/request-response/#django.http.HttpRequest.is_ajax
 axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest' // for all requests
 
@@ -72,11 +63,11 @@ export default {
     showDescription (project) {
       var thisVm = this
       thisVm.showDesc = !thisVm.showDesc
-      console.log(project.id)
     }
   },
   components: {
-    'rise-loader': RiseLoader
+    'rise-loader': RiseLoader,
+    'project-desc': ProjectDesc
   },
   mounted () {
   }

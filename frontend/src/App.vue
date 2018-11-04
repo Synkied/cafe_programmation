@@ -62,6 +62,10 @@ export default {
   margin: -10px 0 20px 0;
 }
 
+#app hr {
+  margin: 0 0 10px 0;
+}
+
 .s-100 {
   height: 100vh;
 }
@@ -216,7 +220,7 @@ export default {
 
 .btn-primary-outline {
   background-color: transparent;
-  border-color: #000 !important;
+  border-color: transparent !important;
 }
 
 /* *********** TITLES *********** */
@@ -317,10 +321,10 @@ export default {
 
 #app .btn-bottom-right {
   position: absolute;
-  top: 30px;
+  top: 0;
   right: 20px;
   border-radius: 0;
-  width: 38px;
+  width: 15px;
 }
 
 #app .btn-bottom-right:focus {
@@ -419,7 +423,7 @@ export default {
 
   #app .btn-bottom-right {
     position: absolute;
-    top: 20px;
+    top: 5px;
     right: 10px;
     border-radius: 0;
     width: 38px;

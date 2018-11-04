@@ -2,9 +2,42 @@ from django.core import serializers
 from django.http import JsonResponse
 from django.shortcuts import render
 from django.views import View
+
+from rest_framework import viewsets
+from rest_framework import permissions
+from django_filters.rest_framework import DjangoFilterBackend, FilterSet
+from rest_framework.filters import OrderingFilter
+from django_filters import rest_framework as filters
+
+from .serializers import ProjectSerializer
 from .models import Project
 
 # Create your views here.
+
+
+class ProjectFilter(FilterSet):
+    # set a filterset to use filters
+    # you can use: http://django-filter.readthedocs.io/en/latest/guide/rest_framework.html#using-the-filter-fields-shortcut
+    # but it won't let you use "exclude"
+    insensitive_name = filters.CharFilter(field_name="name", lookup_expr='icontains')
+
+    class Meta:
+        model = Project
+        exclude = ['image', 'lien_pdf']
+        fields = '__all__'
+
+
+class ProjectViewSet(viewsets.ModelViewSet):
+    """
+    API endpoint that allows cards to be viewed or edited.
+    """
+    queryset = Project.objects.all()
+    serializer_class = ProjectSerializer
+    permission_classes = (permissions.IsAuthenticatedOrReadOnly,)
+    filter_backends = (DjangoFilterBackend, OrderingFilter,)
+    filter_class = ProjectFilter
+    ordering_fields = '__all__'  # what field can be ordered via the API
+    ordering = ['pk']  # default ordering
 
 
 class ProjectView(View):

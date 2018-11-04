@@ -13,8 +13,10 @@ import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 import titleMixin from './mixins/titleMixin'
 import vueSmoothScroll from 'vue2-smooth-scroll'
 
-// Font awesome icon import and adding
+// Vuex store
+import { store } from './store/store'
 
+// Font awesome icon import and adding
 import { faLink } from '@fortawesome/free-solid-svg-icons'
 library.add(faLink)
 
@@ -36,6 +38,7 @@ require('vue2-animate/dist/vue2-animate.min.css')
 new Vue({
   el: '#app',
   router,
+  store,
   components: {
     App,
     BootstrapVue

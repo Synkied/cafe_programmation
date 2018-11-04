@@ -1,34 +1,8 @@
 from django.db import models
 from django.utils.translation import gettext_lazy as _
+
+from search_filters.models import Fonction, Contexte, Dimension, Avancement
 # Create your models here.
-
-
-class Fonction(models.Model):
-    name = models.CharField(max_length=256)
-
-    def __str__(self):
-        return self.name
-
-
-class Contexte(models.Model):
-    name = models.CharField(max_length=256)
-
-    def __str__(self):
-        return self.name
-
-
-class Dimension(models.Model):
-    name = models.CharField(max_length=256)
-
-    def __str__(self):
-        return self.name
-
-
-class Avancement(models.Model):
-    name = models.CharField(max_length=256)
-
-    def __str__(self):
-        return self.name
 
 
 class Project(models.Model):
@@ -40,10 +14,10 @@ class Project(models.Model):
     lien_externe = models.URLField(_("lien externe"), blank=True, null=True)
     lien_pdf = models.FileField(_("lien pdf"), blank=True, null=True)
     image = models.ImageField(_("image"), blank=True, null=True)
-    fonction = models.ForeignKey(Fonction, on_delete=models.CASCADE)
-    contexte = models.ForeignKey(Contexte, on_delete=models.CASCADE)
-    dimension = models.ForeignKey(Dimension, on_delete=models.CASCADE)
-    avancement = models.ForeignKey(Avancement, on_delete=models.CASCADE)
+    fonction = models.ForeignKey(Fonction, null=True, on_delete=models.SET_NULL)
+    contexte = models.ForeignKey(Contexte, null=True, on_delete=models.SET_NULL)
+    dimension = models.ForeignKey(Dimension, null=True, on_delete=models.SET_NULL)
+    avancement = models.ForeignKey(Avancement, null=True, on_delete=models.SET_NULL)
 
     def __str__(self):
         return self.titre
