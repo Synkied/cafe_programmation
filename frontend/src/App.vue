@@ -185,9 +185,9 @@ export default {
 
 .img-desc-project {
   position: absolute;
-  top: 30px;
+  top: -34px;
   left: 102%;
-  min-width: 600px;
+  min-width: 570px;
 }
 
 .img-project {
@@ -288,9 +288,20 @@ export default {
 /* --- expansion panels --- */
 
 .v-expansion-panel__header {
-  padding: 0;
+  padding: 0 15px;
   min-height: 35px;
 }
+
+.v-expansion-panel {
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+.black-header {
+  background-color: #000 !important;
+  border-color: #000 !important;
+}
+
 
 /* *********** BOOTSTRAP *********** */
 
@@ -364,7 +375,27 @@ export default {
   list-style-type: none;
 }
 
+.info-project p {
+  margin: 0 0 6px 0;
+}
+
+.info-project p:last-child {
+  margin: 0 0 15px 0;
+}
+
 /* *********** MEDIA QUERIES *********** */
+
+@media all and (max-width: 1400px) {
+  .desc-project {
+    position: absolute;
+    top: -3px;
+    left: 37%;
+    font-size: 0.8rem;
+    max-width: 200px;
+    padding: 0 10px 0 0;
+    overflow-y: visible;
+  }
+}
 
 @media all and (max-width: 1200px) {
   .img-wrapper {

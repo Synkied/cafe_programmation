@@ -14,7 +14,6 @@
       <p> Contexte : {{ project.contexte }} </p>
       <p> Dimension : {{ project.dimension }} </p>
       <p> Avancement : {{ project.avancement }} </p>
-      <p>{{ getSearchFilter }}</p>
     </div>
   </div>
 </template>

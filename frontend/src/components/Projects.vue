@@ -2,39 +2,43 @@
   <section id="realisations" class="v-align-center" v-if="projects.length > 0">
     <div class="container">
       <div class="row v-align-left-center">
-        <div class="col-xl-2 col-12">
+        <div class="col-xl-1 col-12">
           <ul class="search-terms">
-            <li v-for="searchFilter in searchFilters" v-bind:key="searchFilter.id" class="search-filter-item" @click="selected = searchFilter.name">
+            <li v-for="searchFilter in searchFilters" v-bind:key="searchFilter.id" class="search-filter-item">
               <div class="shallow-circle" :class="{active:searchFilter.name === selected}">
               </div>
-              <a href="#" @click.prevent="setActiveSearchFilter(searchFilter.name)">{{ capitalizeFirstLetter(searchFilter.name) }}</a>
+              <a href="#" @click.prevent="setActiveSearchFilter(searchFilter.name); selected = searchFilter.name">{{ capitalizeFirstLetter(searchFilter.name) }}</a>
             </li>
           </ul>
         </div>
-        <div class="col-xl-8 col-lg-12 col-md-12 col-sm-12 col-12">
+        <div class="col-xl-7 col-lg-12 col-md-12 col-sm-12 col-12">
 
         <div v-if="getSearchFilter !== 'tout' ">
             <v-expansion-panel
-              v-model="panel"
               v-for="searchFilter in searchFilters" :key="searchFilter.id"
-              expand>
-              <v-expansion-panel-content class="black"
-                v-if="searchFilter.name === getSearchFilter"
+              v-if="searchFilter.name === getSearchFilter">
+              <v-expansion-panel-content class='black'
                 v-for="subFilter in searchFilter.subFilters"
                 :key="subFilter.id"
                 expand-icon="mdi-menu-down">
-                <div slot="header" class="projects-expansion-panel-header text-white">{{ subFilter.name }}</div>
-                <v-card v-for="project in projects" :key="project.id">
-                  <v-card-text><app-project :project="project" :searchFilter="searchFilter" :subFilter="subFilter"></app-project></v-card-text>
-                </v-card>
+                <div slot="header" class="projects-expansion-panel-header black-header text-white">{{ subFilter.name }}</div>
+
+                  <v-expansion-panel>
+                    <div class="container-fluid" v-for="project in projects" :key="project.id">
+                      <div-text><app-project :project="project" :searchFilter="searchFilter" :subFilter="subFilter"></app-project></div-text>
+                    </div>
+                  </v-expansion-panel>
+
               </v-expansion-panel-content>
             </v-expansion-panel>
         </div>
 
-        <div v-else>
-          <div v-for="project in projects" :key="project.id">
-            <app-project :project="project"></app-project>
-          </div>
+        <div v-else-if="getSearchFilter === 'tout' ">
+          <v-expansion-panel>
+            <div class="container-fluid" v-for="project in projects" :key="project.id">
+              <app-project :project="project"></app-project>
+            </div>
+          </v-expansion-panel>
         </div>
 
         </div>
@@ -74,9 +78,8 @@ export default {
         {name: 'dimension', subFilters: []},
         {name: 'avancement', subFilters: []}
       ],
-      panel: [],
       search: '',
-      selected: ''
+      selected: 'tout'
     }
   },
 
@@ -212,6 +215,7 @@ export default {
 
 .projects-expansion-panel-header {
   padding: 0 0 0 10px;
+  background-color: #000;
 }
 
 .v-card__text {

@@ -1,22 +1,47 @@
 <template>
   <div id="project">
     <div v-if="searchFilter">
-      <div class="container-fluid" v-if="project[searchFilter.name] === subFilter.name ">
-        <div class="row">
-          <div class="col-12 project-row">
-            <hr class="hr-line">
-             <v-expansion-panel
-                expand>
-              <v-expansion-panel-content
-                expand-icon="mdi-menu-down">
-                <div slot="header" class="project-title">{{ project.titre }}</div>
-                <v-card>
-                  <v-card-text><project-desc :project="project"></project-desc></v-card-text>
-                </v-card>
-              </v-expansion-panel-content>
+    <hr class="hr-line">
+      <div class="row" v-if="project[searchFilter.name] === subFilter.name ">
+        <div class="col-12 project-row">
+          <v-expansion-panel-content
+            expand-icon="mdi-menu-down">
+            <div slot="header" class="project-title">{{ project.titre }}</div>
+            <v-card>
+              <v-card-text><project-desc :project="project"></project-desc></v-card-text>
+            </v-card>
+          </v-expansion-panel-content>
+        </div>
+      </div>
+    </div>
+<!--       <div class="container-fluid" v-if="project[searchFilter.name] === subFilter.name ">
+  <div class="row">
+    <div class="col-12 project-row">
+      <hr class="hr-line">
+       <v-expansion-panel>
+        <v-expansion-panel-content
+          expand-icon="mdi-menu-down">
+          <div slot="header" class="project-title">{{ project.titre }}</div>
+          <v-card>
+            <v-card-text><project-desc :project="project"></project-desc></v-card-text>
+          </v-card>
+        </v-expansion-panel-content>
 
-            </v-expansion-panel>
-          </div>
+      </v-expansion-panel>
+    </div>
+  </div>
+</div> -->
+    <div v-if="getSearchFilter === 'tout' ">
+      <hr class="hr-line">
+      <div class="row">
+        <div class="col-12 project-row">
+          <v-expansion-panel-content
+            expand-icon="mdi-menu-down">
+            <div slot="header" class="project-title">{{ project.titre }}</div>
+            <v-card>
+              <v-card-text><project-desc :project="project"></project-desc></v-card-text>
+            </v-card>
+          </v-expansion-panel-content>
         </div>
       </div>
     </div>
@@ -28,6 +53,7 @@
 import RiseLoader from 'vue-spinner/src/RiseLoader.vue'
 import axios from 'axios'
 import 'axios-progress-bar/dist/nprogress.css'
+import { mapGetters } from 'vuex'
 
 import ProjectDesc from './ProjectDesc.vue'
 
@@ -43,6 +69,11 @@ export default {
       projectId: '',
       showDesc: false
     }
+  },
+  computed: {
+    ...mapGetters([
+      'getSearchFilter'
+    ])
   },
   methods: {
     showDescription (project) {
@@ -67,13 +98,8 @@ export default {
    box-shadow: none !important;
 }
 
-.v-expansion-panel__header {
-  padding: 0;
-  min-height: 35px;
-}
-
 .v-card__text {
-  padding: 0;
+  padding: 0 15px;
 }
 
 </style>
