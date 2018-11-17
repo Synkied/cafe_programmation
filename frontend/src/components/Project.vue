@@ -1,38 +1,23 @@
 <template>
   <div id="project">
-    <div class="container-fluid" v-if="project">
-      <div class="row">
-        <div class="col-12">
-          <transition appear name="fadeLeft" tag="div">
-            <div class="project-row">
-                <hr>
-                <h4 class="project-title" @click="showDescription(project)">
-                  {{ project.titre }}
-                </h4>
-                  <p v-if="project.short_description" v-html="project.short_description"></p>
-                  <!-- Hidden description, image... -->
-                  <div v-if="showDesc && project.description" class="">
-                    <project-desc :project="project"></project-desc>
-                  </div>
+    <div v-if="searchFilter">
+      <div class="container-fluid" v-if="project[searchFilter.name] === subFilter.name ">
+        <div class="row">
+          <div class="col-12 project-row">
+            <hr class="hr-line">
+             <v-expansion-panel
+                expand>
+              <v-expansion-panel-content
+                expand-icon="mdi-menu-down">
+                <div slot="header" class="project-title">{{ project.titre }}</div>
+                <v-card>
+                  <v-card-text><project-desc :project="project"></project-desc></v-card-text>
+                </v-card>
+              </v-expansion-panel-content>
 
-                  <div class="text-right more-button">
-                    <div v-if="showDesc === false && project.description">
-                      <button class="btn btn-primary-outline btn-bottom-right" @click="showDescription(project)">
-                        +
-                      </button>
-                    </div>
-                    <div v-if="showDesc === true && project.description">
-                      <button class="btn btn-primary-outline btn-bottom-right" @click="showDescription(project)">
-                        -
-                      </button>
-                    </div>
-                  </div>
-            </div>
-          </transition>
+            </v-expansion-panel>
+          </div>
         </div>
-      </div>
-      <div v-if="nextPage">
-        <button class="btn btn-info mt-5" @click="[viewMore()]">View more</button>
       </div>
     </div>
   </div>
@@ -51,7 +36,7 @@ axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest' // for all 
 
 /* data, methods, components... declaration */
 export default {
-  props: ['project'],
+  props: ['project', 'searchFilter', 'subFilter'],
   data () {
     return {
       nextPage: '',
@@ -75,6 +60,20 @@ export default {
 </script>
 
 <!-- scoped styles for this component -->
-<style scoped>
+<style lang="scss" scoped>
+
+.v-expansion-panel {
+  -webkit-box-shadow: none !important;
+   box-shadow: none !important;
+}
+
+.v-expansion-panel__header {
+  padding: 0;
+  min-height: 35px;
+}
+
+.v-card__text {
+  padding: 0;
+}
 
 </style>

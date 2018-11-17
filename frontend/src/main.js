@@ -12,6 +12,9 @@ import { library } from '@fortawesome/fontawesome-svg-core'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 import titleMixin from './mixins/titleMixin'
 import vueSmoothScroll from 'vue2-smooth-scroll'
+import Vuetify from 'vuetify'
+import 'vuetify/dist/vuetify.min.css'
+import 'material-design-icons-iconfont/dist/material-design-icons.css'
 
 // Vuex store
 import { store } from './store/store'
@@ -28,6 +31,7 @@ Vue.component('font-awesome-icon', FontAwesomeIcon)
 
 Vue.use(BootstrapVue)
 Vue.use(vueSmoothScroll)
+Vue.use(Vuetify)
 
 // config
 Vue.config.productionTip = false

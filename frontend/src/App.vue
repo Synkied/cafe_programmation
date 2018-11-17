@@ -56,14 +56,9 @@ export default {
   padding: 0;
 }
 
-#app .hr {
-  border-top: 4px solid #000;
-  width: 5%;
-  margin: -10px 0 20px 0;
-}
-
-#app hr {
-  margin: 0 0 10px 0;
+#app .hr-line {
+  margin: 0;
+  border-top: 2px solid #000;
 }
 
 .s-100 {
@@ -111,7 +106,28 @@ export default {
   outline: 1px solid slategrey;
 }
 
+.shallow-circle {
+  border: 1px solid black;
+  width: 10px;
+  height: 10px;
+  border-radius: 100%;
+  margin: 0 3px 0 0;
+}
+
+.shallow-circle.active {
+  border: 5px solid black;
+  width: 10px;
+  height: 10px;
+  border-radius: 100%;
+  margin: 0 3px 0 0;
+}
+
 /* --- lists --- */
+
+.search-filter-item {
+  display: flex;
+  align-items: center;
+}
 
 #app ul {
   padding: 0;
@@ -257,11 +273,23 @@ export default {
 
 .project-row {
   text-align: left;
+  padding: 0;
+}
+
+.project-row>ul {
+  margin: 0;
 }
 
 .info-project {
   font-size: 0.9rem;
   max-width: 90%;
+}
+
+/* --- expansion panels --- */
+
+.v-expansion-panel__header {
+  padding: 0;
+  min-height: 35px;
 }
 
 /* *********** BOOTSTRAP *********** */
