@@ -16,7 +16,9 @@
         <div v-if="getSearchFilter !== 'tout' ">
             <v-expansion-panel
               v-for="searchFilter in searchFilters" :key="searchFilter.id"
-              v-if="searchFilter.name === getSearchFilter">
+              v-if="searchFilter.name === getSearchFilter"
+              v-model="panels"
+              expand>
               <v-expansion-panel-content class='black'
                 v-for="subFilter in searchFilter.subFilters"
                 :key="subFilter.id"
@@ -79,7 +81,8 @@ export default {
         {name: 'avancement', subFilters: []}
       ],
       search: '',
-      selected: 'tout'
+      selected: 'tout',
+      panels: [true, true, true, true]
     }
   },
 
