@@ -302,7 +302,6 @@ export default {
   border-color: #000 !important;
 }
 
-
 /* *********** BOOTSTRAP *********** */
 
 #app .container {

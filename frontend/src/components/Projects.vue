@@ -7,17 +7,19 @@
             <li v-for="searchFilter in searchFilters" v-bind:key="searchFilter.id" class="search-filter-item">
               <div class="shallow-circle" :class="{active:searchFilter.name === selected}">
               </div>
-              <a href="#" @click.prevent="setActiveSearchFilter(searchFilter.name); selected = searchFilter.name">{{ capitalizeFirstLetter(searchFilter.name) }}</a>
+              <a href="#" @click.prevent="setActiveSearchFilter(searchFilter.name); selected = searchFilter.name; setPanelsVisibility(searchFilter)">{{ capitalizeFirstLetter(searchFilter.name) }}</a>
             </li>
           </ul>
         </div>
         <div class="col-xl-7 col-lg-12 col-md-12 col-sm-12 col-12">
 
+          pouet {{searchFilters}}
+
         <div v-if="getSearchFilter !== 'tout' ">
             <v-expansion-panel
               v-for="searchFilter in searchFilters" :key="searchFilter.id"
               v-if="searchFilter.name === getSearchFilter"
-              v-model="panels"
+              v-model="searchFilter.panels"
               expand>
               <v-expansion-panel-content class='black'
                 v-for="subFilter in searchFilter.subFilters"
@@ -27,7 +29,7 @@
 
                   <v-expansion-panel>
                     <div class="container-fluid" v-for="project in projects" :key="project.id">
-                      <div-text><app-project :project="project" :searchFilter="searchFilter" :subFilter="subFilter"></app-project></div-text>
+                      <div><app-project :project="project" :searchFilter="searchFilter" :subFilter="subFilter"></app-project></div>
                     </div>
                   </v-expansion-panel>
 
@@ -75,14 +77,13 @@ export default {
       projects: [],
       searchFilters: [
         {name: 'tout'},
-        {name: 'fonction', subFilters: []},
-        {name: 'contexte', subFilters: []},
-        {name: 'dimension', subFilters: []},
-        {name: 'avancement', subFilters: []}
+        {name: 'fonction', subFilters: [], panels: []},
+        {name: 'contexte', subFilters: [], panels: []},
+        {name: 'dimension', subFilters: [], panels: []},
+        {name: 'avancement', subFilters: [], panels: []}
       ],
       search: '',
-      selected: 'tout',
-      panels: [true, true, true, true]
+      selected: 'tout'
     }
   },
 
@@ -139,7 +140,6 @@ export default {
         if (searchFilter.name !== 'tout') {
           return axios.get(apiUrl + searchFilter.name + 's')
             .then(response => {
-              console.log('data', response.data)
               searchFilter.subFilters = response.data
               return searchFilter
             })
@@ -185,6 +185,18 @@ export default {
           }
           console.log(error.config)
         })
+    },
+
+    setPanelsVisibility (obj) {
+      console.log(obj)
+      obj.panels = []
+      setTimeout(function () {
+        if (obj.panels && obj.subFilters) {
+          for (let _ of obj.subFilters) {
+            obj.panels.push(true)
+          }
+        }
+      }, 1000)
     }
 
   },
