@@ -13,8 +13,8 @@
         </div>
         <div class="col-xl-7 col-lg-12 col-md-12 col-sm-12 col-12">
 
-          pouet {{searchFilters}}
-
+<!--           pouet {{searchFilters}}
+ -->
         <div v-if="getSearchFilter !== 'tout' ">
             <v-expansion-panel
               v-for="searchFilter in searchFilters" :key="searchFilter.id"
