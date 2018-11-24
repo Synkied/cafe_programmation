@@ -1,5 +1,5 @@
 <template>
-  <section class="s-100 v-align-center" id="intentions">
+  <div class="section" id="intentions_section">
     <div class="container-fluid">
       <div class="row">
         <div class="col-xl-3"></div>
@@ -20,7 +20,7 @@
         <div class="col-xl-3"></div>
       </div>
     </div>
-  </section>
+  </div>
 </template>
 
 <script>

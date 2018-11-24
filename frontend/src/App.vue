@@ -1,8 +1,8 @@
 <template>
   <div id="app">
     <app-header></app-header>
-    <router-view/>
     <app-footer></app-footer>
+    <router-view/>
   </div>
 </template>
 
@@ -41,6 +41,12 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   background-color: #fff;
+}
+
+.fp-tableCell {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 #app a {

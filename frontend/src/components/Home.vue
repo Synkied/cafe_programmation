@@ -1,6 +1,6 @@
 <template>
-  <div id="home">
-      <section class="text-center s-100 v-align-center" id="home-section">
+    <full-page ref="fullpage" :options="options" id="fullpage">
+      <div class="section" id="home_section">
         <div class="container-fluid">
           <div class="row">
             <div class="col-xl-12 col-12 mx-auto">
@@ -8,10 +8,10 @@
             </div>
           </div>
         </div>
-      </section>
+      </div>
     <intentions-app></intentions-app>
     <projects-app></projects-app>
-  </div>
+  </full-page>
 </template>
 
 <script>
@@ -27,13 +27,16 @@ import 'axios-progress-bar/dist/nprogress.css' */
 export default {
   data () {
     return {
-      moduleTitle: 'Home'
+      moduleTitle: 'Home',
+      options: {
+        licenseKey: 'OPEN-SOURCE-GPLV3-LICENSE',
+        menu: '#header',
+        anchors: ['home', 'intentions', 'realisations']
+      }
     }
   },
   title () {
     return `Café Programmation — ${this.moduleTitle}`
-  },
-  methods: {
   },
   components: {
     'rise-loader': RiseLoader,

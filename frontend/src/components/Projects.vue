@@ -1,5 +1,5 @@
 <template>
-  <section id="realisations" class="v-align-center" v-if="projects.length > 0">
+  <div class="section" id="realisations_section">
     <div class="container">
       <div class="row v-align-left-center">
         <div class="col-xl-1 col-12">
@@ -48,7 +48,7 @@
         </div>
       </div>
     </div>
-  </section>
+  </div>
 </template>
 
 <script>

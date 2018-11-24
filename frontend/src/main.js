@@ -15,6 +15,7 @@ import vueSmoothScroll from 'vue2-smooth-scroll'
 import Vuetify from 'vuetify'
 import 'vuetify/dist/vuetify.min.css'
 import 'material-design-icons-iconfont/dist/material-design-icons.css'
+import VueFullPage from 'vue-fullpage.js'
 
 // Vuex store
 import { store } from './store/store'
@@ -32,6 +33,7 @@ Vue.component('font-awesome-icon', FontAwesomeIcon)
 Vue.use(BootstrapVue)
 Vue.use(vueSmoothScroll)
 Vue.use(Vuetify)
+Vue.use(VueFullPage)
 
 // config
 Vue.config.productionTip = false

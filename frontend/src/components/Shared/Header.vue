@@ -15,17 +15,17 @@
 
       <b-collapse is-nav id="nav_collapse">
 
+      <ul id="menu">
         <b-navbar-nav>
-          <a href="#intentions" v-smooth-scroll="{ duration: 1000, offset: -50}"><b-nav-item>Intentions</b-nav-item></a>
+          <li data-menuanchor="home" class="active"><a href="#home">Accueil</a></li>
         </b-navbar-nav>
-
         <b-navbar-nav>
-          <a href="#realisations" v-smooth-scroll="{ duration: 1000, offset: -50}"><b-nav-item>Réalisations</b-nav-item></a>
+          <li data-menuanchor="intentions"><a href="#intentions">Intentions</a></li>
         </b-navbar-nav>
-
         <b-navbar-nav>
-          <a href="#contact" v-smooth-scroll="{ duration: 1000, offset: -50}"><b-nav-item>Contact</b-nav-item></a>
+          <li data-menuanchor="realisations"><a href="#realisations">Réalisations</a></li>
         </b-navbar-nav>
+      </ul>
 
         <!-- Right aligned nav items -->
     <!--     <b-navbar-nav class="ml-auto">
