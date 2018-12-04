@@ -299,8 +299,8 @@ export default {
 }
 
 .v-expansion-panel {
-  -webkit-box-shadow: none;
-  box-shadow: none;
+  -webkit-box-shadow: none !important;
+  box-shadow: none !important;
 }
 
 .black-header {
