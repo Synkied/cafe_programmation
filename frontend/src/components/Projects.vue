@@ -15,7 +15,7 @@
 
 <!--           pouet {{searchFilters}}
  -->
-        <div v-if="getSearchFilter !== 'tout' ">
+        <div class="v-panel-wrapper" v-if="getSearchFilter !== 'tout' ">
             <v-expansion-panel
               v-for="searchFilter in searchFilters" :key="searchFilter.id"
               v-if="searchFilter.name === getSearchFilter"

@@ -293,14 +293,14 @@ export default {
 
 /* --- expansion panels --- */
 
-.v-expansion-panel__header {
+.row .v-expansion-panel__header {
   padding: 0 15px;
   min-height: 35px;
 }
 
-.v-expansion-panel {
-  -webkit-box-shadow: none !important;
-  box-shadow: none !important;
+.row .v-expansion-panel {
+  -webkit-box-shadow: none;
+  box-shadow: none;
 }
 
 .black-header {
