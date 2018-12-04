@@ -223,7 +223,6 @@ export default {
   vertical-align: bottom;
   width: 100%;
   margin-right: -100%;
-  margin-left: 10px;
   border-top: 1px solid black;
 }
 
@@ -234,8 +233,19 @@ export default {
   vertical-align: bottom;
   width: 100%;
   margin-left: -100%;
-  margin-right: 10px;
   border-top: 1px solid black;
+}
+
+.intention-word-left {
+  margin: 0 10px 0 0;
+}
+
+.intention-word-center {
+  margin: 0 10px;
+}
+
+.intention-word-right {
+  margin: 0 0 0 10px;
 }
 
 /* --- buttons --- */

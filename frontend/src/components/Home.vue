@@ -31,7 +31,8 @@ export default {
       options: {
         licenseKey: 'OPEN-SOURCE-GPLV3-LICENSE',
         menu: '#header',
-        anchors: ['home', 'intentions', 'realisations']
+        anchors: ['home', 'intentions', 'realisations'],
+        scrollOverflow: true
       }
     }
   },
