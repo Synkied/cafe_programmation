@@ -319,7 +319,7 @@ export default {
 }
 
 .row .all-projects .v-expansion-panel__header {
-  padding: 0 15px;
+  padding: 0 15px !important;
   min-height: 35px;
 }
 .row .v-expansion-panel {
@@ -335,11 +335,11 @@ export default {
 }
 
 .v-card__text.card-text {
-  padding: 0 0 10px 0;
+  padding: 0 0 10px 0 !important;
 }
 
 .all-projects .v-card__text.card-text {
-  padding: 0 15px;
+  padding: 0 15px !important;
 }
 
 /* *********** BOOTSTRAP *********** */
