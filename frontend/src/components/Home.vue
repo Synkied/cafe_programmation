@@ -10,7 +10,7 @@
         </div>
       </div>
     <intentions-app></intentions-app>
-    <projects-app></projects-app>
+    <projects-app @rebuild="rebuildFullPage()"></projects-app>
   </full-page>
 </template>
 
@@ -45,6 +45,15 @@ export default {
     'about-me': About,
     'intentions-app': Intentions
   },
+
+  methods: {
+    rebuildFullPage () {
+      console.log('test')
+      console.log(this.$refs)
+      this.$refs.fullpage.api.reBuild()
+    }
+  },
+
   mounted () {
   }
 }

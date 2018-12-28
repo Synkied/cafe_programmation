@@ -12,6 +12,8 @@
           </ul>
         </div>
         <div class="col-xl-7 col-lg-12 col-md-12 col-sm-12 col-12">
+        <v-btn @click="$emit('rebuild')">
+        </v-btn>
 
         <div class="v-panel-wrapper" v-if="getSearchFilter !== 'tout' ">
             <v-expansion-panel
@@ -99,11 +101,6 @@ export default {
       if (string) {
         return string[0].toUpperCase() + string.slice(1)
       }
-    },
-
-    rebuildFullPage () {
-      console.log('test')
-      this.$refs.fullpage.api.reBuild()
     },
 
     viewProjects () {
