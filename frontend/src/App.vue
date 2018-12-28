@@ -297,12 +297,12 @@ export default {
 
 /* *********** PROJECTS *********** */
 
-.project-row {
+.row .project-row.col-12 {
   text-align: left;
   padding: 0;
 }
 
-.project-row>ul {
+.row .project-row.col-12>ul {
   margin: 0;
 }
 
@@ -319,7 +319,7 @@ export default {
 }
 
 .row .all-projects .v-expansion-panel__header {
-  padding: 0 15px !important;
+  padding: 0 15px;
   min-height: 35px;
 }
 .row .v-expansion-panel {
@@ -335,11 +335,11 @@ export default {
 }
 
 .v-card__text.card-text {
-  padding: 0 0 10px 0 !important;
+  padding: 0 0 10px 0;
 }
 
 .all-projects .v-card__text.card-text {
-  padding: 0 15px !important;
+  padding: 0 15px;
 }
 
 /* *********** BOOTSTRAP *********** */
