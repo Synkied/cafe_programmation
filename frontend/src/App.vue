@@ -134,6 +134,11 @@ export default {
   margin: 0 3px 0 0;
 }
 
+.list-inline-item.active {
+  font-weight: 600;
+  font-size: 1.5rem;
+}
+
 /* --- lists --- */
 
 .search-filter-item {

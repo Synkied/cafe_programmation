@@ -3,9 +3,9 @@
     <div class="container">
       <div class="row v-align-left-center">
         <div class="col-xl-1 col-12">
-          <ul class="search-terms">
-            <li v-for="searchFilter in searchFilters" v-bind:key="searchFilter.id" class="search-filter-item">
-              <div class="shallow-circle" :class="{active:searchFilter.name === selected}">
+          <ul class="{'search-terms': windowWidth > 1200, 'list-inline': windowWidth < 1200}">
+            <li v-for="searchFilter in searchFilters" v-bind:key="searchFilter.id" :class="{'search-filter-item': windowWidth > 1200, 'list-inline-item': windowWidth < 1200, active:searchFilter.name === selected}">
+              <div :class="{active:searchFilter.name === selected, 'shallow-circle': windowWidth > 1200}">
               </div>
               <a href="#" @click.prevent="setActiveSearchFilter(searchFilter.name); selected = searchFilter.name; setPanelsVisibility(searchFilter)">{{ capitalizeFirstLetter(searchFilter.name) }}</a>
             </li>
@@ -19,7 +19,8 @@
               v-if="searchFilter.name === getSearchFilter"
               v-model="searchFilter.panels"
               expand>
-              <v-expansion-panel-content class='black'
+              <v-expansion-panel-content
+                class="black"
                 v-for="subFilter in searchFilter.subFilters"
                 :key="subFilter.id"
                 expand-icon="mdi-menu-down">
@@ -81,7 +82,9 @@ export default {
         {name: 'avancement', subFilters: [], panels: []}
       ],
       search: '',
-      selected: 'tout'
+      selected: 'tout',
+      windowWidth: 0,
+      windowHeight: 0
     }
   },
 
@@ -96,6 +99,11 @@ export default {
       if (string) {
         return string[0].toUpperCase() + string.slice(1)
       }
+    },
+
+    rebuildFullPage () {
+      console.log('test')
+      this.$refs.fullpage.api.reBuild()
     },
 
     viewProjects () {
@@ -195,6 +203,14 @@ export default {
           }
         }
       }, 1000)
+    },
+
+    getWindowWidth (event) {
+      this.windowWidth = document.documentElement.clientWidth
+    },
+
+    getWindowHeight (event) {
+      this.windowHeight = document.documentElement.clientHeight
     }
 
   },
@@ -206,7 +222,22 @@ export default {
   mounted () {
     var thisVm = this
     thisVm.viewProjects()
+
+    this.$nextTick(() => {
+      window.addEventListener('resize', this.getWindowWidth)
+      window.addEventListener('resize', this.getWindowHeight)
+
+      // Init
+      this.getWindowWidth()
+      this.getWindowHeight()
+    })
+  },
+
+  beforeDestroy () {
+    window.removeEventListener('resize', this.getWindowWidth)
+    window.removeEventListener('resize', this.getWindowHeight)
   }
+
 }
 </script>
 
