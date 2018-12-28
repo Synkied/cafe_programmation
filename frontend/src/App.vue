@@ -24,6 +24,7 @@ export default {
 @import url('https://fonts.googleapis.com/css?family=Oswald');
 @import url('https://fonts.googleapis.com/css?family=Cabin');
 @import url('https://fonts.googleapis.com/css?family=Open+Sans');
+@import url('https://fonts.googleapis.com/css?family=Didact+Gothic');
 
 @font-face {
   font-family: 'avant-garde-md';
@@ -36,7 +37,7 @@ export default {
 /* *********** GENERAL *********** */
 
 #app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif !important;
+  font-family: 'Didact Gothic', Helvetica, Arial, sans-serif !important;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
@@ -64,7 +65,7 @@ export default {
 
 #app .hr-line {
   margin: 0;
-  border-top: 2px solid #000;
+  border-top: 1px solid #000;
 }
 
 .s-100 {
@@ -81,6 +82,11 @@ export default {
 
 .justif {
   text-align: justify;
+}
+
+.intentions {
+  font-size: 1.25rem;
+  font-weight: 600;
 }
 
 .white-bg {
@@ -133,6 +139,9 @@ export default {
 .search-filter-item {
   display: flex;
   align-items: center;
+  padding: 5px 0;
+  font-weight: 600;
+  font-size: 1.1rem;
 }
 
 #app ul {
@@ -156,7 +165,7 @@ export default {
 }
 
 .ns-li p {
-  font-family: 'Avenir', sans-serif;
+  font-family: 'Open Sans', sans-serif;
   font-size: 1rem;
 }
 
@@ -212,11 +221,12 @@ export default {
 
 /* --- decorations --- */
 
-.h5 {
-    overflow: hidden;
+.intentions-title {
+  overflow: hidden;
+  font-size: 1.4rem;
 }
 
-.h5:after {
+.intentions-title:after {
   content:"";
   display: inline-block;
   height: 0.5em;
@@ -226,7 +236,7 @@ export default {
   border-top: 1px solid black;
 }
 
-.h5:before {
+.intentions-title:before {
   content:"";
   display: inline-block;
   height: 0.5em;
@@ -281,8 +291,8 @@ export default {
 
 .project-title {
   text-transform: uppercase;
-  font-size: 1rem;
-  font-weight: 600;
+  font-size: 1.1rem;
+  font-weight: 800;
 }
 
 /* *********** PROJECTS *********** */
@@ -304,10 +314,14 @@ export default {
 /* --- expansion panels --- */
 
 .row .v-expansion-panel__header {
-  padding: 0 15px;
+  padding: 0;
   min-height: 35px;
 }
 
+.row .all-projects .v-expansion-panel__header {
+  padding: 0 15px;
+  min-height: 35px;
+}
 .row .v-expansion-panel {
   -webkit-box-shadow: none;
   box-shadow: none;
@@ -316,6 +330,16 @@ export default {
 .black-header {
   background-color: #000 !important;
   border-color: #000 !important;
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+.v-card__text.card-text {
+  padding: 0 0 10px 0;
+}
+
+.all-projects .v-card__text.card-text {
+  padding: 0 15px;
 }
 
 /* *********** BOOTSTRAP *********** */
@@ -398,6 +422,39 @@ export default {
   margin: 0 0 15px 0;
 }
 
+/* *********** FOOTER *********** */
+
+footer a {
+  color: #000;
+  text-decoration: none;
+}
+
+footer a:hover {
+  color: #17252A;
+  text-decoration: none;
+}
+
+footer {
+  border-top: 1px solid #000;
+  position: fixed;
+  color: #000;
+  background: #fff;
+  height: 50px;
+  display: block;
+  width: 100%;
+  z-index: 9;
+  text-align: center;
+  margin: auto;
+  margin-top: 100px;
+  padding: 10px 0 0 0;
+  bottom: 0;
+  font-size: 1.2rem;
+}
+
+footer .container{
+  padding: 10px 0;
+}
+
 /* *********** MEDIA QUERIES *********** */
 
 @media all and (max-width: 1400px) {
@@ -409,6 +466,11 @@ export default {
     max-width: 200px;
     padding: 0 10px 0 0;
     overflow-y: visible;
+  }
+
+  .intentions {
+    font-size: 1.1rem;
+    font-weight: 600;
   }
 }
 
@@ -436,6 +498,28 @@ export default {
 
   .search-terms li {
     display: inline;
+  }
+
+  .intentions {
+    font-size: 1.2rem;
+    font-weight: 600;
+  }
+
+  footer {
+    border-top: 1px solid #000;
+    position: fixed;
+    color: #000;
+    background: #fff;
+    height: 50px;
+    display: block;
+    width: 100%;
+    z-index: 9;
+    text-align: center;
+    margin: auto;
+    margin-top: 100px;
+    padding: 5px 0 0 0;
+    bottom: 0;
+    font-size: 1.05rem;
   }
 }
 
@@ -486,6 +570,32 @@ export default {
     position: static;
     width: 100%;
   }
+
+  .intentions {
+    font-size: 1.1rem;
+    font-weight: 600;
+  }
+
+  p.intentions {
+    margin: 0 0 5px 0;
+  }
+
+  footer {
+    border-top: 1px solid #000;
+    position: fixed;
+    color: #000;
+    background: #fff;
+    height: 72px;
+    display: block;
+    width: 100%;
+    z-index: 9;
+    text-align: center;
+    margin: auto;
+    margin-top: 100px;
+    padding: 5px 0 0 0;
+    bottom: 0;
+    font-size: 0.95rem;
+  }
 }
 
 @media all and (max-width: 640px) {
@@ -508,6 +618,21 @@ export default {
     max-width: 80%;
     font-size: 0.9rem;
   }
+
+  .intentions-title {
+    overflow: hidden;
+    font-size: 1.1rem;
+  }
+
+  p.intentions-title {
+    margin: 0;
+  }
+
+  .intentions {
+    font-size: 0.9rem;
+    font-weight: 600;
+  }
+
 }
 
 </style>

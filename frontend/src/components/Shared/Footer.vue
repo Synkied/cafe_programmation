@@ -3,11 +3,11 @@
 
 <template>
   <footer class="section fp-auto-height" id="footer">
-      <span class="mr-5">Café Programmation</span>
-      <span class="mr-5">38 rue de la Réunion 75020 Paris</span>
-      <span class="mr-5"><a href="mailto:contact@cafe-programmation.fr">contact@cafe-programmation.fr</a></span>
-      <span class="mr-5"><a href="tel:+33153341040">01.53.34.10.40</a></span>
-      <span class="mr-5">Site web réalisé par <a href="https://evopy.io">Quentin Lathière</a> 2018.</span>
+      <span class="mr-3">Café Programmation</span>
+      <span class="mr-3">38 rue de la Réunion 75020 Paris</span>
+      <span class="mr-3"><a href="mailto:contact@cafe-programmation.fr">contact@cafe-programmation.fr</a></span>
+      <span class="mr-3"><a href="tel:+33153341040">01.53.34.10.40</a></span>
+      <span class="mr-3">Web by <a href="https://evopy.io">Quentin Lathière</a></span>
   </footer>
 </template>
 
@@ -15,41 +15,4 @@
 </script>
 
 <style>
-  footer {
-    width: 100%;
-    margin: auto;
-    margin-top: 100px;
-    padding: 15px;
-    color: #000;
-    text-align: right;
-    font-size: 16px;
-  }
-
-  footer a {
-    color: #000;
-    text-decoration: none;
-  }
-
-  footer a:hover {
-    color: #17252A;
-    text-decoration: none;
-  }
-
-  footer {
-    border-top: 1px solid #000;
-    position: fixed;
-    background: #fff;
-    height: 50px;
-    display: block;
-    width: 100%;
-    z-index: 9;
-    text-align: center;
-    padding: 15px 0 0 0;
-    bottom: 0;
-  }
-
-  footer .container{
-    padding: 10px 0;
-  }
-
 </style>

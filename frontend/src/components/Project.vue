@@ -8,7 +8,7 @@
             expand-icon="mdi-menu-down">
             <div slot="header" class="project-title">{{ project.titre }}</div>
             <v-card>
-              <v-card-text><project-desc :project="project"></project-desc></v-card-text>
+              <v-card-text class="card-text"><project-desc :project="project"></project-desc></v-card-text>
             </v-card>
           </v-expansion-panel-content>
         </div>
@@ -35,11 +35,12 @@
       <hr class="hr-line">
       <div class="row">
         <div class="col-12 project-row">
-          <v-expansion-panel-content
+          <v-expansion-panel-content 
+            class="all-projects"
             expand-icon="mdi-menu-down">
             <div slot="header" class="project-title">{{ project.titre }}</div>
             <v-card>
-              <v-card-text><project-desc :project="project"></project-desc></v-card-text>
+              <v-card-text class="card-text"><project-desc :project="project"></project-desc></v-card-text>
             </v-card>
           </v-expansion-panel-content>
         </div>
@@ -92,14 +93,5 @@ export default {
 
 <!-- scoped styles for this component -->
 <style lang="scss" scoped>
-
-.v-expansion-panel {
-  -webkit-box-shadow: none !important;
-   box-shadow: none !important;
-}
-
-.v-card__text {
-  padding: 0 15px;
-}
 
 </style>

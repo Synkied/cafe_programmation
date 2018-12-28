@@ -13,8 +13,6 @@
         </div>
         <div class="col-xl-7 col-lg-12 col-md-12 col-sm-12 col-12">
 
-<!--           pouet {{searchFilters}}
- -->
         <div class="v-panel-wrapper" v-if="getSearchFilter !== 'tout' ">
             <v-expansion-panel
               v-for="searchFilter in searchFilters" :key="searchFilter.id"
@@ -231,10 +229,6 @@ export default {
 .projects-expansion-panel-header {
   padding: 0 0 0 10px;
   background-color: #000;
-}
-
-.v-card__text {
-  padding: 0;
 }
 
 </style>
