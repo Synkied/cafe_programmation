@@ -48,9 +48,11 @@ export default {
 
   methods: {
     rebuildFullPage () {
-      console.log('test')
-      console.log(this.$refs)
-      this.$refs.fullpage.api.reBuild()
+      setTimeout(() => {
+        console.log('test')
+        console.log(this.$refs)
+        this.$refs.fullpage.api.reBuild()
+      }, 600)
     }
   },
 

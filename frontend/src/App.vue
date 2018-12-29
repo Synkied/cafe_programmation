@@ -219,7 +219,7 @@ export default {
   top: -3px;
   left: 37%;
   font-size: 0.8rem;
-  max-width: 300px;
+  max-width: 260px;
   padding: 0 10px 0 0;
   overflow-y: visible;
 }
@@ -314,6 +314,10 @@ export default {
 .info-project {
   font-size: 0.9rem;
   max-width: 90%;
+}
+
+.projects-container {
+  padding: 70px 10px;
 }
 
 /* --- expansion panels --- */

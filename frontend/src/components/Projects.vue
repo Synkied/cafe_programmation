@@ -1,6 +1,6 @@
 <template>
-  <div class="section" id="realisations_section">
-    <div class="container">
+  <div class="section fp-auto-height" id="realisations_section">
+    <div class="container projects-container">
       <div class="row v-align-left-center">
         <div class="col-xl-1 col-12">
           <ul class="{'search-terms': windowWidth > 1200, 'list-inline': windowWidth < 1200}">
@@ -12,11 +12,10 @@
           </ul>
         </div>
         <div class="col-xl-7 col-lg-12 col-md-12 col-sm-12 col-12">
-        <v-btn @click="$emit('rebuild')">
-        </v-btn>
 
         <div class="v-panel-wrapper" v-if="getSearchFilter !== 'tout' ">
             <v-expansion-panel
+              @click.native="$emit('rebuild')"
               v-for="searchFilter in searchFilters" :key="searchFilter.id"
               v-if="searchFilter.name === getSearchFilter"
               v-model="searchFilter.panels"
@@ -28,9 +27,13 @@
                 expand-icon="mdi-menu-down">
                 <div slot="header" class="projects-expansion-panel-header black-header text-white">{{ subFilter.name }}</div>
 
-                  <v-expansion-panel>
+                  <v-expansion-panel
+                    @click.native="$emit('rebuild')">
                     <div class="container-fluid" v-for="project in projects" :key="project.id">
-                      <div><app-project :project="project" :searchFilter="searchFilter" :subFilter="subFilter"></app-project></div>
+                      <div>
+                        <app-project :project="project" :searchFilter="searchFilter" :subFilter="subFilter">
+                        </app-project>
+                      </div>
                     </div>
                   </v-expansion-panel>
 
@@ -39,7 +42,8 @@
         </div>
 
         <div v-else-if="getSearchFilter === 'tout' ">
-          <v-expansion-panel>
+          <v-expansion-panel
+            @click.native="$emit('rebuild')">
             <div class="container-fluid" v-for="project in projects" :key="project.id">
               <app-project :project="project"></app-project>
             </div>

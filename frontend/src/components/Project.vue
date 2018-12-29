@@ -35,7 +35,7 @@
       <hr class="hr-line">
       <div class="row">
         <div class="col-12 project-row">
-          <v-expansion-panel-content 
+          <v-expansion-panel-content
             class="all-projects"
             expand-icon="mdi-menu-down">
             <div slot="header" class="project-title">{{ project.titre }}</div>
