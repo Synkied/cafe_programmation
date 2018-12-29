@@ -29,10 +29,11 @@ export default {
     return {
       moduleTitle: 'Home',
       options: {
-        licenseKey: 'OPEN-SOURCE-GPLV3-LICENSE',
+        licenseKey: 'C6820AA9-BC954443-A4F97A82-86A455D2',
         menu: '#header',
         anchors: ['home', 'intentions', 'realisations'],
-        scrollOverflow: true
+        scrollOverflow: true,
+        responsiveWidth: 1200 // disable autoscroll on responsive
       }
     }
   },
@@ -57,6 +58,7 @@ export default {
   },
 
   mounted () {
+
   }
 }
 </script>
