@@ -316,7 +316,7 @@ export default {
   max-width: 90%;
 }
 
-.projects-container {
+.section .container.projects-container {
   padding: 70px 10px;
 }
 
