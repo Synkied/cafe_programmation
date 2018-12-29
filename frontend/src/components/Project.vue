@@ -35,14 +35,18 @@
       <hr class="hr-line">
       <div class="row">
         <div class="col-12 project-row">
-          <v-expansion-panel-content
-            class="all-projects"
-            expand-icon="mdi-menu-down">
-            <div slot="header" class="project-title">{{ project.titre }}</div>
-            <v-card>
-              <v-card-text class="card-text"><project-desc :project="project"></project-desc></v-card-text>
-            </v-card>
-          </v-expansion-panel-content>
+          <transition appear name="slideLeft">
+            <v-expansion-panel-content
+              class="all-projects"
+              expand-icon="mdi-menu-down">
+              <div slot="header" class="project-title">{{ project.titre }}</div>
+              <v-card>
+                <v-card-text class="card-text">
+                  <project-desc :project="project"></project-desc>
+                </v-card-text>
+              </v-card>
+            </v-expansion-panel-content>
+          </transition>
         </div>
       </div>
     </div>
