@@ -44,8 +44,8 @@
         <div v-else-if="getSearchFilter === 'tout' ">
           <v-expansion-panel
             @click.native="$emit('rebuild')">
-            <div class="container-fluid" v-for="project in projects" :key="project.id">
-              <app-project :project="project"></app-project>
+            <div class="container-fluid" v-for="(project, index) in projects" :key="project.id">
+              <app-project :animatedProjects="animatedProjects" :project="project" :index="index"></app-project>
             </div>
           </v-expansion-panel>
         </div>
@@ -71,6 +71,8 @@ axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest' // for all 
 
 /* data, methods, components... declaration */
 export default {
+  props: ['animatedProjects'],
+
   components: {
     'rise-loader': RiseLoader,
     'app-project': Project
@@ -170,28 +172,6 @@ export default {
             })
         }
       })
-      Promise.all(promises)
-        .then(response => {
-          console.log(response)
-        })
-        .catch(function (error) {
-          if (error.response) {
-            // The request was made and the server responded with a status code
-            // that falls out of the range of 2xx
-            console.log(error.response.data)
-            console.log(error.response.status)
-            console.log(error.response.headers)
-          } else if (error.request) {
-            // The request was made but no response was received
-            // `error.request` is an instance of XMLHttpRequest in the browser
-            // and an instance of http.ClientRequest in node.js
-            console.log(error.request)
-          } else {
-            // Something happened in setting up the request that triggered an Error
-            console.log('Error', error.message)
-          }
-          console.log(error.config)
-        })
     },
 
     setPanelsVisibility (obj) {

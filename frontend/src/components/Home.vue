@@ -9,8 +9,8 @@
           </div>
         </div>
       </div>
-    <intentions-app></intentions-app>
-    <projects-app @rebuild="rebuildFullPage()"></projects-app>
+    <intentions-app :animatedIntentions="animatedIntentions"></intentions-app>
+    <projects-app :animatedProjects="animatedProjects" @rebuild="rebuildFullPage()"></projects-app>
   </full-page>
 </template>
 
@@ -28,11 +28,15 @@ export default {
   data () {
     return {
       moduleTitle: 'Home',
+      animatedIntentions: false,
+      animatedProjects: false,
       options: {
         licenseKey: 'C6820AA9-BC954443-A4F97A82-86A455D2',
         menu: '#header',
         anchors: ['home', 'intentions', 'realisations'],
         scrollOverflow: true,
+        afterLoad: this.afterLoad,
+        onLeave: this.onLeave,
         responsiveWidth: 1200 // disable autoscroll on responsive
       }
     }
@@ -48,10 +52,30 @@ export default {
   },
 
   methods: {
+    afterLoad (origin, destination, direction) {
+      // do something after a section is loaded
+      // in correlation with fullPage.js
+      if (destination.index === 1) {
+        this.animatedIntentions = true
+      }
+      if (destination.index === 2) {
+        this.animatedProjects = true
+      }
+    },
+    onLeave (origin, destination, direction) {
+      // do something after a section is left
+      // in correlation with fullPage.js
+      if (origin) {
+        if (origin.index === 1) {
+          this.animatedIntentions = false
+        }
+        if (origin.index === 2) {
+          this.animatedProjects = false
+        }
+      }
+    },
     rebuildFullPage () {
       setTimeout(() => {
-        console.log('test')
-        console.log(this.$refs)
         this.$refs.fullpage.api.reBuild()
       }, 600)
     }

@@ -14,28 +14,14 @@
         </div>
       </div>
     </div>
-<!--       <div class="container-fluid" v-if="project[searchFilter.name] === subFilter.name ">
-  <div class="row">
-    <div class="col-12 project-row">
-      <hr class="hr-line">
-       <v-expansion-panel>
-        <v-expansion-panel-content
-          expand-icon="mdi-menu-down">
-          <div slot="header" class="project-title">{{ project.titre }}</div>
-          <v-card>
-            <v-card-text><project-desc :project="project"></project-desc></v-card-text>
-          </v-card>
-        </v-expansion-panel-content>
 
-      </v-expansion-panel>
-    </div>
-  </div>
-</div> -->
     <div v-if="getSearchFilter === 'tout' ">
+      <div
+        :class="{fadeInLeft: animatedProjects}"
+        :style="projectExpansionPanelStyle">
       <hr class="hr-line">
       <div class="row">
         <div class="col-12 project-row">
-          <transition appear name="slideLeft">
             <v-expansion-panel-content
               class="all-projects"
               expand-icon="mdi-menu-down">
@@ -46,7 +32,7 @@
                 </v-card-text>
               </v-card>
             </v-expansion-panel-content>
-          </transition>
+          </div>
         </div>
       </div>
     </div>
@@ -67,12 +53,15 @@ axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest' // for all 
 
 /* data, methods, components... declaration */
 export default {
-  props: ['project', 'searchFilter', 'subFilter'],
+  props: ['project', 'index', 'searchFilter', 'subFilter', 'animatedProjects'],
   data () {
     return {
       nextPage: '',
-      projectId: '',
-      showDesc: false
+      showDesc: false,
+      projectExpansionPanelStyle: {
+        color: 'red',
+        animationDelay: 0.01 * this.index + 's'
+      }
     }
   },
   computed: {
