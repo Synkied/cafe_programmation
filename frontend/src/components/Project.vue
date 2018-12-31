@@ -18,7 +18,7 @@
     <div v-if="getSearchFilter === 'tout' ">
       <div
         :class="{fadeInLeft: animatedProjects}"
-        :style="projectExpansionPanelStyle">
+        :style="{visibility: this.animatedProjects ? 'visible' : 'hidden', animationDelay: 0.01 * this.index + 's'}">
       <hr class="hr-line">
       <div class="row">
         <div class="col-12 project-row">
@@ -57,11 +57,7 @@ export default {
   data () {
     return {
       nextPage: '',
-      showDesc: false,
-      projectExpansionPanelStyle: {
-        color: 'red',
-        animationDelay: 0.01 * this.index + 's'
-      }
+      showDesc: false
     }
   },
   computed: {

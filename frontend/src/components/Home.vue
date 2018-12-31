@@ -47,7 +47,6 @@ export default {
   components: {
     'rise-loader': RiseLoader,
     'projects-app': Projects,
-    'about-me': About,
     'intentions-app': Intentions
   },
 

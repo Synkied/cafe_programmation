@@ -113,7 +113,6 @@ export default {
       var thisVm = this
       loadProgressBar()
       axios.get('/api/projects/').then(response => {
-        console.log(response.data)
         var jsonProject = response.data
         for (var i = 0; i < jsonProject.length; i++) {
           thisVm.projects.push(jsonProject[i])
@@ -175,12 +174,21 @@ export default {
     },
 
     setPanelsVisibility (obj) {
-      console.log(obj)
-      obj.panels = []
+      let thisVm = this
+        thisVm.searchFilters.map(searchFilter => {
+          if (searchFilter.panels) {
+            searchFilter.panels = [false, false, false, false]
+          }
+        })
       setTimeout(function () {
+/*        thisVm.searchFilters.map(searchFilter => {
+          if (searchFilter.panels) {
+            searchFilter.panels = []
+          }
+        })*/
         if (obj.panels && obj.subFilters) {
           for (let _ of obj.subFilters) {
-            obj.panels.push(true)
+            obj.panels = [true, true, true, true]
           }
         }
       }, 1000)
