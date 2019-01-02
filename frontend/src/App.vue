@@ -211,14 +211,15 @@ export default {
 }
 
 .img-project {
-  width: 200px;
+  width: 170px;
+  height: 170px;
 }
 
 .desc-project {
   position: absolute;
   top: -3px;
-  left: 37%;
-  font-size: 0.8rem;
+  left: 33%;
+  font-size: 1rem;
   max-width: 260px;
   padding: 0 10px 0 0;
   overflow-y: visible;
@@ -331,6 +332,11 @@ export default {
   padding: 0 15px;
   min-height: 35px;
 }
+
+/*.row .all-projects.v-expansion-panel__container--active, .row .filtered-projects.v-expansion-panel__container--active {
+  height: 170px;
+}*/
+
 .row .v-expansion-panel {
   -webkit-box-shadow: none;
   box-shadow: none;
@@ -470,8 +476,8 @@ footer .container{
   .desc-project {
     position: absolute;
     top: -3px;
-    left: 37%;
-    font-size: 0.8rem;
+    left: 33%;
+    font-size: 0.9rem;
     max-width: 200px;
     padding: 0 10px 0 0;
     overflow-y: visible;

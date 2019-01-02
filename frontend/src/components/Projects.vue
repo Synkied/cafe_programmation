@@ -175,17 +175,17 @@ export default {
 
     setPanelsVisibility (obj) {
       let thisVm = this
-        thisVm.searchFilters.map(searchFilter => {
-          if (searchFilter.panels) {
-            searchFilter.panels = [false, false, false, false]
-          }
-        })
+      thisVm.searchFilters.map(searchFilter => {
+        if (searchFilter.panels) {
+          searchFilter.panels = [false, false, false, false]
+        }
+      })
       setTimeout(function () {
-/*        thisVm.searchFilters.map(searchFilter => {
+      /* thisVm.searchFilters.map(searchFilter => {
           if (searchFilter.panels) {
             searchFilter.panels = []
           }
-        })*/
+        }) */
         if (obj.panels && obj.subFilters) {
           for (let _ of obj.subFilters) {
             obj.panels = [true, true, true, true]

@@ -5,6 +5,7 @@
       <div class="row" v-if="project[searchFilter.name] === subFilter.name ">
         <div class="col-12 project-row">
           <v-expansion-panel-content
+            class="filtered-projects"
             expand-icon="mdi-menu-down">
             <div slot="header" class="project-title">{{ project.titre }}</div>
             <v-card>

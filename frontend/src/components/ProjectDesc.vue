@@ -10,10 +10,6 @@
       <p> Commanditaire : {{ project.commanditaire }}</p>
       <p> Mission : {{ project.mission }}</p>
       <p> Concepteur : {{ project.concepteur }} </p>
-      <p> Fonction : {{ project.fonction }} </p>
-      <p> Contexte : {{ project.contexte }} </p>
-      <p> Dimension : {{ project.dimension }} </p>
-      <p> Avancement : {{ project.avancement }} </p>
     </div>
   </div>
 </template>
