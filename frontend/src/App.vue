@@ -42,14 +42,6 @@ export default {
   background-color: #fff;
 }
 
-.cafe-logo-line {
-  position: absolute;
-  top: 102px;
-  left: 305px;
-  width: 65%;
-  border: 3px black solid;
-}
-
 .fp-tableCell {
   display: flex;
   align-items: center;
@@ -231,6 +223,13 @@ export default {
   overflow-y: visible;
 }
 
+.fade-enter-active, .fade-leave-active {
+  transition: opacity .5s;
+}
+.fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
+  opacity: 0;
+}
+
 /* --- decorations --- */
 
 .intentions-title {
@@ -285,12 +284,26 @@ export default {
   margin: -15px 0;
 }
 
+.cafe-logo-line {
+  position: absolute;
+  top: 102px;
+  left: 305px;
+  width: 300px;
+  border: 3px black solid;
+}
+
 /* --- buttons --- */
 
 .btn-primary-outline {
   background-color: transparent;
   border-color: transparent !important;
 }
+
+/* --- navbar ----*/
+.navbar-light .navbar-toggler {
+  border-color: #fff;
+}
+
 
 /* *********** TITLES *********** */
 
@@ -480,7 +493,7 @@ footer a:hover {
   z-index: 9;
   text-align: center;
   margin: auto;
-  margin-top: 100px;
+  margin-top: 150px;
   padding: 10px 0 0 0;
   font-size: 1.2rem;
   max-width: 65%;
@@ -516,7 +529,7 @@ footer a:hover {
     z-index: 9;
     text-align: center;
     margin: auto;
-    margin-top: 100px;
+    margin-top: 150px;
     padding: 10px 0 0 0;
     font-size: 1.2rem;
     max-width: 75%;
@@ -588,7 +601,7 @@ footer a:hover {
     z-index: 9;
     text-align: center;
     margin: auto;
-    margin-top: 100px;
+    margin-top: 150px;
     padding: 10px 0 0 0;
     font-size: 1.2rem;
     max-width: 100%;
@@ -687,7 +700,7 @@ footer a:hover {
     z-index: 9;
     text-align: center;
     margin: auto;
-    margin-top: 100px;
+    margin-top: 150px;
     padding: 10px 40px;
     font-size: 1.2rem;
     max-width: 100%;
@@ -754,7 +767,7 @@ footer a:hover {
     z-index: 9;
     text-align: center;
     margin: auto;
-    margin-top: 100px;
+    margin-top: 150px;
     padding: 10px 40px;
     font-size: 1.2rem;
     max-width: 100%;

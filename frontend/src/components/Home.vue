@@ -3,14 +3,15 @@
       <div class="section" id="home_section">
         <div class="container-fluid">
           <div class="row row-home justify-content-center">
-            <div class="col-xl-6 col-lg-8 col-md-10 col-sm-9 col-12">
+            <v-spacer></v-spacer>
+            <div class="col-xl-9 col-lg-8 col-md-10 col-sm-9 col-12">
               <p class="cafe-title align-left">
                 <span class="intention-word-left">
                   <img class="logo-img" src="../assets/cafe_logo_solo.png" alt="cafe logo">
                 </span>
               </p>
-              <p :class="{fadeOut: !animatedHome, fadeIn: animatedHome}" class="cafe-logo-line"></p>
-              <p :class="{fadeOut: !animatedHome, fadeIn: animatedHome}" class="cafe-sub-title align-left">programmation d'architectures culturelles</p>
+              <p :class="{fadeOut: !animatedHome, fadeIn: animatedHome}" style="animation-delay: 1.6s;" class="cafe-logo-line"></p>
+              <p :class="{fadeOut: !animatedHome, fadeIn: animatedHome}" style="animation-delay: 1.4s; animation-duration: 0.6s;" class="cafe-sub-title align-left">programmation d'architectures culturelles</p>
             </div>
           </div>
         </div>
