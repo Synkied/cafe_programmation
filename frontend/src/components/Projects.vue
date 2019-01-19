@@ -13,7 +13,7 @@
         </div>
         <div class="col-xl-7 col-lg-12 col-md-12 col-sm-12 col-12">
 
-        <div class="v-panel-wrapper" v-if="getSearchFilter !== 'tout' ">
+        <div class="v-panel-wrapper" v-if="getSearchFilter !== 'sans filtre' ">
             <v-expansion-panel
               @click.native="$emit('rebuild')"
               v-for="searchFilter in searchFilters" :key="searchFilter.id"
@@ -41,7 +41,7 @@
             </v-expansion-panel>
         </div>
 
-        <div v-else-if="getSearchFilter === 'tout' ">
+        <div v-else-if="getSearchFilter === 'sans filtre' ">
           <v-expansion-panel
             @click.native="$emit('rebuild')">
             <div class="container-fluid" v-for="(project, index) in projects" :key="project.id">
@@ -83,14 +83,14 @@ export default {
       nextPage: '',
       projects: [],
       searchFilters: [
-        {name: 'tout'},
+        {name: 'sans filtre'},
         {name: 'fonction', subFilters: [], panels: []},
         {name: 'contexte', subFilters: [], panels: []},
         {name: 'dimension', subFilters: [], panels: []},
         {name: 'avancement', subFilters: [], panels: []}
       ],
       search: '',
-      selected: 'tout',
+      selected: 'sans filtre',
       windowWidth: 0,
       windowHeight: 0
     }
@@ -145,7 +145,7 @@ export default {
     appendSubFilters () {
       let apiUrl = '/api/'
       let promises = this.searchFilters.map(searchFilter => {
-        if (searchFilter.name !== 'tout') {
+        if (searchFilter.name !== 'sans filtre') {
           return axios.get(apiUrl + searchFilter.name + 's')
             .then(response => {
               searchFilter.subFilters = response.data

@@ -22,8 +22,8 @@ import VueFullPage from 'vue-fullpage.js'
 import { store } from './store/store'
 
 // Font awesome icon import and adding
-import { faLink } from '@fortawesome/free-solid-svg-icons'
-library.add(faLink)
+import { faChevronUp } from '@fortawesome/free-solid-svg-icons'
+library.add(faChevronUp)
 
 // mixins
 Vue.mixin(titleMixin)

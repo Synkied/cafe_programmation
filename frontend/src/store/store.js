@@ -7,7 +7,10 @@ export const store = new Vuex.Store({
   state: {
     'projects': null,
     'searchFilter': '' || 'tout',
-    'filteredProjects': []
+    'filteredProjects': [],
+    'FPSectionInfos': {
+      index: -1
+    }
   },
   getters: {
     getSearchFilter: state => {
@@ -15,6 +18,9 @@ export const store = new Vuex.Store({
     },
     getFilterdProjects: state => {
       return state.filteredProjects
+    },
+    getFPSectionInfos: state => {
+      return state.FPSectionInfos
     }
   },
   mutations: {
@@ -23,6 +29,9 @@ export const store = new Vuex.Store({
     },
     setFilteredProjects: (state, payload) => {
       state.filteredProjects = payload
+    },
+    setFPSectionInfos: (state, payload) => {
+      state.FPSectionInfos = payload
     }
   }
 })
