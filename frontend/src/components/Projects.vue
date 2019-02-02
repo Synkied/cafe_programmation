@@ -4,7 +4,7 @@
       <div class="row v-align-left-center">
 
         <!-- Side Menu -->
-        <div class="col-xl-1 col-12" :class="{fadeIn: true}" style="animation-delay: 3s">
+        <div class="col-xl-1 col-12" v-show="animatedProjects" :class="{fadeIn: animatedProjects}" style="animation-delay: 3s">
           <ul class="{'search-terms': windowWidth > 1200, 'list-inline': windowWidth < 1200}">
             <li v-for="searchFilter in searchFilters" v-bind:key="searchFilter.id" :class="{'search-filter-item': windowWidth > 1200, 'list-inline-item': windowWidth < 1200, active: searchFilter.name === selected}">
               <div :class="{active: searchFilter.name === selected, 'shallow-circle': windowWidth > 1200}">

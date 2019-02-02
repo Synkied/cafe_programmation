@@ -224,9 +224,13 @@ export default {
   opacity: 0;
 }
 
-.shiftx-enter-active, .shiftx-leave-active {
-  transition: all 0.6s ease-in-out;
+.shiftx-enter-active {
+  transition: all .6s ease-in-out;
 }
+.shiftx-leave-active {
+    transition: all .1s ease-in-out;
+}
+
 .shiftx-enter, .shiftx-leave-to {
   transform:  translateX(-100px);
   opacity: 0;
