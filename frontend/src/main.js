@@ -18,7 +18,6 @@ import 'material-design-icons-iconfont/dist/material-design-icons.css'
 import 'fullpage.js/vendors/scrolloverflow'
 import VueFullPage from 'vue-fullpage.js'
 import './styles/_fonts.scss'
-import VueVisible from 'vue-visible'
 // Vuex store
 import { store } from './store/store'
 
@@ -36,7 +35,6 @@ Vue.use(BootstrapVue)
 Vue.use(vueSmoothScroll)
 Vue.use(Vuetify)
 Vue.use(VueFullPage)
-Vue.use(VueVisible)
 
 // config
 Vue.config.productionTip = false
