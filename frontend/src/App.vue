@@ -215,10 +215,42 @@ export default {
   overflow-y: visible;
 }
 
+/* --- animations --- */
+
 .fade-enter-active, .fade-leave-active {
   transition: opacity .5s;
 }
-.fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
+.fade-enter, .fade-leave-to {
+  opacity: 0;
+}
+
+.shiftx-enter-active, .shiftx-leave-active {
+  transition: all 0.6s ease-in-out;
+}
+.shiftx-enter, .shiftx-leave-to {
+  transform:  translateX(-100px);
+  opacity: 0;
+}
+
+.slide-fade-left-enter-active {
+  transition: all 1s ease;
+}
+.slide-fade-left-leave-active {
+  transition: all 2s cubic-bezier(1.0, 0.5, 0.8, 1.0);
+}
+.slide-fade-left-enter, .slide-fade-left-leave-to {
+  transform: translateX(-150px);
+  opacity: 0;
+}
+
+.slide-fade-right-enter-active {
+  transition: all 1s ease;
+}
+.slide-fade-right-leave-active {
+  transition: all 2s cubic-bezier(1.0, 0.5, 0.8, 1.0);
+}
+.slide-fade-right-enter, .slide-fade-right-leave-to {
+  transform: translateX(150px);
   opacity: 0;
 }
 
@@ -261,7 +293,7 @@ export default {
   margin: 0 0 0 10px;
 }
 
-.row-home {
+.container-fluid .row.row-home {
   margin: 0 0 0 300px;
 }
 
@@ -292,13 +324,14 @@ export default {
 }
 
 /* --- navbar ----*/
-.navbar-light .navbar-toggler {
-  border-color: #fff;
+#header .navbar-light .navbar-toggler {
+  border-color: #fff !important;
 }
 
 .navbar-collapse {
   font-family: FuturaBT-CondMedium;
   font-size: 1.3rem;
+  flex-basis: 0;
 }
 
 /* *********** TITLES *********** */
@@ -543,7 +576,7 @@ footer a:hover {
     max-height: 100%;
   }
 
-  .row-home {
+  .container-fluid .row.row-home {
     margin: 0;
   }
 
@@ -616,7 +649,7 @@ footer a:hover {
     overflow: hidden;
   }
 
-  .row-home {
+  .container-fluid .row.row-home {
     margin: 0;
   }
 

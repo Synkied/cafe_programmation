@@ -11,7 +11,9 @@
                 </span>
               </p>
               <p :class="{fadeOut: !animatedHome, fadeIn: animatedHome}" style="animation-delay: 1.6s;" class="cafe-logo-line"></p>
-              <p :class="{fadeOut: !animatedHome, fadeIn: animatedHome}" style="animation-delay: 1.4s; animation-duration: 0.6s;" class="cafe-sub-title align-left">programmation d'architectures culturelles</p>
+              <transition name="shiftx">
+                <p v-show="showLogoText" style="transition-delay: 1.4s;" class="cafe-sub-title align-left">programmation d'architectures culturelles</p>
+              </transition>
             </div>
           </div>
         </div>
@@ -40,6 +42,8 @@ export default {
       animatedHome: false,
       animatedIntentions: false,
       animatedProjects: false,
+      showLogoText: false,
+      showIntentions: false,
       options: {
         licenseKey: 'C6820AA9-BC954443-A4F97A82-86A455D2',
         menu: '#header',
@@ -67,6 +71,7 @@ export default {
       // in correlation with fullPage.js
       if (destination.index === 0) {
         this.animatedHome = true
+        this.showLogoText = true
       }
       if (destination.index === 1) {
         this.animatedIntentions = true
@@ -82,6 +87,7 @@ export default {
       if (origin) {
         if (origin.index === 0) {
           this.animatedHome = false
+          this.showLogoText = false
         }
         if (origin.index === 1) {
           this.animatedIntentions = false
