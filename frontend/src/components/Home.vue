@@ -110,14 +110,6 @@ export default {
   @import url('https://fonts.googleapis.com/css?family=Raleway');
   @import url('https://fonts.googleapis.com/css?family=Poppins');
 
-  @font-face {
-    font-family: 'futuristregular';
-    src: url('../assets/fonts/futr-webfont.woff2') format('woff2'),
-         url('../assets/fonts/futr-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-  }
-
   .logo-home {
     font-size: 4rem;
     font-family: 'Raleway', Futura, sans-serif;

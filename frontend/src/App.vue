@@ -24,14 +24,6 @@ export default {
 @import url('https://fonts.googleapis.com/css?family=Open+Sans');
 @import url('https://fonts.googleapis.com/css?family=Didact+Gothic');
 
-@font-face {
-  font-family: 'avant-garde-md';
-  src: url('./assets/fonts/avantgarde_md_bt_tt0156m-webfont.woff2') format('woff2'),
-       url('./assets/fonts/avantgarde_md_bt_tt0156m-webfont.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
-}
-
 /* *********** GENERAL *********** */
 
 #app {
@@ -303,7 +295,6 @@ export default {
 .navbar-light .navbar-toggler {
   border-color: #fff;
 }
-
 
 /* *********** TITLES *********** */
 
