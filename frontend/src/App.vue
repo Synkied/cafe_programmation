@@ -296,6 +296,11 @@ export default {
   border-color: #fff;
 }
 
+.navbar-collapse {
+  font-family: FuturaBT-CondMedium;
+  font-size: 1.3rem;
+}
+
 /* *********** TITLES *********** */
 
 #app h1{
