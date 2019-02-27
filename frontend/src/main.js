@@ -17,13 +17,13 @@ import 'vuetify/dist/vuetify.min.css'
 import 'material-design-icons-iconfont/dist/material-design-icons.css'
 import 'fullpage.js/vendors/scrolloverflow'
 import VueFullPage from 'vue-fullpage.js'
-
+import './styles/_fonts.scss'
 // Vuex store
 import { store } from './store/store'
 
 // Font awesome icon import and adding
-import { faLink } from '@fortawesome/free-solid-svg-icons'
-library.add(faLink)
+import { faChevronUp } from '@fortawesome/free-solid-svg-icons'
+library.add(faChevronUp)
 
 // mixins
 Vue.mixin(titleMixin)

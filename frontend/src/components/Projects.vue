@@ -2,53 +2,55 @@
   <div class="section fp-auto-height" id="realisations_section">
     <div class="container projects-container">
       <div class="row v-align-left-center">
-        <div class="col-xl-1 col-12">
+
+        <!-- Side Menu -->
+        <div class="col-xl-1 col-12" v-show="animatedProjects" :class="{fadeIn: animatedProjects}" style="animation-delay: 3s">
           <ul class="{'search-terms': windowWidth > 1200, 'list-inline': windowWidth < 1200}">
-            <li v-for="searchFilter in searchFilters" v-bind:key="searchFilter.id" :class="{'search-filter-item': windowWidth > 1200, 'list-inline-item': windowWidth < 1200, active:searchFilter.name === selected}">
-              <div :class="{active:searchFilter.name === selected, 'shallow-circle': windowWidth > 1200}">
+            <li v-for="searchFilter in searchFilters" v-bind:key="searchFilter.id" :class="{'search-filter-item': windowWidth > 1200, 'list-inline-item': windowWidth < 1200, active: searchFilter.name === selected}">
+              <div :class="{active: searchFilter.name === selected, 'shallow-circle': windowWidth > 1200}">
               </div>
               <a href="#" @click.prevent="setActiveSearchFilter(searchFilter.name); selected = searchFilter.name; setPanelsVisibility(searchFilter)">{{ capitalizeFirstLetter(searchFilter.name) }}</a>
             </li>
           </ul>
         </div>
+
         <div class="col-xl-7 col-lg-12 col-md-12 col-sm-12 col-12">
+          <div class="v-panel-wrapper" v-if="getSearchFilter !== 'sans filtre' ">
+              <v-expansion-panel
+                @click.native="$emit('rebuild')"
+                v-for="searchFilter in searchFilters" :key="searchFilter.id"
+                v-if="searchFilter.name === getSearchFilter"
+                v-model="searchFilter.panels"
+                expand>
+                <v-expansion-panel-content
+                  class="black"
+                  v-for="subFilter in searchFilter.subFilters"
+                  :key="subFilter.id"
+                  expand-icon="mdi-menu-down">
+                  <div slot="header" class="projects-expansion-panel-header black-header text-white">{{ subFilter.name }}</div>
 
-        <div class="v-panel-wrapper" v-if="getSearchFilter !== 'tout' ">
-            <v-expansion-panel
-              @click.native="$emit('rebuild')"
-              v-for="searchFilter in searchFilters" :key="searchFilter.id"
-              v-if="searchFilter.name === getSearchFilter"
-              v-model="searchFilter.panels"
-              expand>
-              <v-expansion-panel-content
-                class="black"
-                v-for="subFilter in searchFilter.subFilters"
-                :key="subFilter.id"
-                expand-icon="mdi-menu-down">
-                <div slot="header" class="projects-expansion-panel-header black-header text-white">{{ subFilter.name }}</div>
-
-                  <v-expansion-panel
-                    @click.native="$emit('rebuild')">
-                    <div class="container-fluid" v-for="project in projects" :key="project.id">
-                      <div>
-                        <app-project :project="project" :searchFilter="searchFilter" :subFilter="subFilter">
-                        </app-project>
+                    <v-expansion-panel
+                      @click.native="$emit('rebuild')">
+                      <div class="container-fluid" v-for="project in projects" :key="project.id">
+                        <div>
+                          <app-project :project="project" :searchFilter="searchFilter" :subFilter="subFilter">
+                          </app-project>
+                        </div>
                       </div>
-                    </div>
-                  </v-expansion-panel>
+                    </v-expansion-panel>
 
-              </v-expansion-panel-content>
+                </v-expansion-panel-content>
+              </v-expansion-panel>
+          </div>
+
+          <div v-else-if="getSearchFilter === 'sans filtre' ">
+            <v-expansion-panel
+              @click.native="$emit('rebuild')">
+              <div class="container-fluid" v-for="(project, index) in projects" :key="project.id">
+                <app-project :animatedProjects="animatedProjects" :project="project" :index="index"></app-project>
+              </div>
             </v-expansion-panel>
-        </div>
-
-        <div v-else-if="getSearchFilter === 'tout' ">
-          <v-expansion-panel
-            @click.native="$emit('rebuild')">
-            <div class="container-fluid" v-for="(project, index) in projects" :key="project.id">
-              <app-project :animatedProjects="animatedProjects" :project="project" :index="index"></app-project>
-            </div>
-          </v-expansion-panel>
-        </div>
+          </div>
 
         </div>
       </div>
@@ -83,14 +85,14 @@ export default {
       nextPage: '',
       projects: [],
       searchFilters: [
-        {name: 'tout'},
+        {name: 'sans filtre'},
         {name: 'fonction', subFilters: [], panels: []},
         {name: 'contexte', subFilters: [], panels: []},
         {name: 'dimension', subFilters: [], panels: []},
         {name: 'avancement', subFilters: [], panels: []}
       ],
       search: '',
-      selected: 'tout',
+      selected: 'sans filtre',
       windowWidth: 0,
       windowHeight: 0
     }
@@ -145,7 +147,7 @@ export default {
     appendSubFilters () {
       let apiUrl = '/api/'
       let promises = this.searchFilters.map(searchFilter => {
-        if (searchFilter.name !== 'tout') {
+        if (searchFilter.name !== 'sans filtre') {
           return axios.get(apiUrl + searchFilter.name + 's')
             .then(response => {
               searchFilter.subFilters = response.data

@@ -1,7 +1,6 @@
 <template>
   <div id="app">
     <app-header></app-header>
-    <app-footer></app-footer>
     <router-view/>
   </div>
 </template>
@@ -13,8 +12,7 @@ import Footer from './components/Shared/Footer.vue'
 export default {
   name: 'App',
   components: {
-    'app-header': Header,
-    'app-footer': Footer
+    'app-header': Header
   }
 }
 </script>
@@ -25,14 +23,6 @@ export default {
 @import url('https://fonts.googleapis.com/css?family=Cabin');
 @import url('https://fonts.googleapis.com/css?family=Open+Sans');
 @import url('https://fonts.googleapis.com/css?family=Didact+Gothic');
-
-@font-face {
-  font-family: 'avant-garde-md';
-  src: url('./assets/fonts/avantgarde_md_bt_tt0156m-webfont.woff2') format('woff2'),
-       url('./assets/fonts/avantgarde_md_bt_tt0156m-webfont.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
-}
 
 /* *********** GENERAL *********** */
 
@@ -196,7 +186,7 @@ export default {
 }
 
 .logo-img {
-  width: 38%;
+  width: 280px;
 }
 
 #nav-logo {
@@ -223,6 +213,49 @@ export default {
   max-width: 260px;
   padding: 0 10px 0 0;
   overflow-y: visible;
+}
+
+/* --- animations --- */
+
+.fade-enter-active, .fade-leave-active {
+  transition: opacity .5s;
+}
+.fade-enter, .fade-leave-to {
+  opacity: 0;
+}
+
+.shiftx-enter-active {
+  transition: all .6s ease-in-out;
+}
+.shiftx-leave-active {
+    transition: all .1s ease-in-out;
+}
+
+.shiftx-enter, .shiftx-leave-to {
+  transform:  translateX(-100px);
+  opacity: 0;
+}
+
+.slide-fade-left-enter-active {
+  transition: all 1s ease;
+}
+.slide-fade-left-leave-active {
+  transition: all 2s cubic-bezier(1.0, 0.5, 0.8, 1.0);
+}
+.slide-fade-left-enter, .slide-fade-left-leave-to {
+  transform: translateX(-150px);
+  opacity: 0;
+}
+
+.slide-fade-right-enter-active {
+  transition: all 1s ease;
+}
+.slide-fade-right-leave-active {
+  transition: all 2s cubic-bezier(1.0, 0.5, 0.8, 1.0);
+}
+.slide-fade-right-enter, .slide-fade-right-leave-to {
+  transform: translateX(150px);
+  opacity: 0;
 }
 
 /* --- decorations --- */
@@ -264,11 +297,45 @@ export default {
   margin: 0 0 0 10px;
 }
 
+.container-fluid .row.row-home {
+  margin: 0 0 0 300px;
+}
+
+.cafe-title {
+  overflow: hidden;
+  font-size: 1.4rem;
+}
+
+.cafe-sub-title {
+  overflow: hidden;
+  font-size: 2.4rem;
+  margin: -15px 0;
+}
+
+.cafe-logo-line {
+  position: absolute;
+  top: 102px;
+  left: 305px;
+  width: 300px;
+  border: 3px black solid;
+}
+
 /* --- buttons --- */
 
 .btn-primary-outline {
   background-color: transparent;
   border-color: transparent !important;
+}
+
+/* --- navbar ----*/
+#header .navbar-light .navbar-toggler {
+  border-color: #fff !important;
+}
+
+.navbar-collapse {
+  font-family: FuturaBT-CondMedium;
+  font-size: 1.3rem;
+  flex-basis: 0;
 }
 
 /* *********** TITLES *********** */
@@ -449,9 +516,8 @@ footer a:hover {
   text-decoration: none;
 }
 
-footer {
+.footer-text {
   border-top: 1px solid #000;
-  position: fixed;
   color: #000;
   background: #fff;
   height: 50px;
@@ -460,14 +526,17 @@ footer {
   z-index: 9;
   text-align: center;
   margin: auto;
-  margin-top: 100px;
+  margin-top: 150px;
   padding: 10px 0 0 0;
-  bottom: 0;
   font-size: 1.2rem;
+  max-width: 65%;
 }
 
-footer .container{
-  padding: 10px 0;
+.back-to-top {
+  position: relative;
+  width: 20px;
+  top: 0;
+  left: -22%;
 }
 
 /* *********** MEDIA QUERIES *********** */
@@ -483,6 +552,22 @@ footer .container{
     overflow-y: visible;
   }
 
+  .footer-text {
+    border-top: 1px solid #000;
+    color: #000;
+    background: #fff;
+    height: 50px;
+    display: block;
+    width: 100%;
+    z-index: 9;
+    text-align: center;
+    margin: auto;
+    margin-top: 150px;
+    padding: 10px 0 0 0;
+    font-size: 1.2rem;
+    max-width: 75%;
+  }
+
   .intentions {
     font-size: 1.1rem;
     font-weight: 600;
@@ -494,8 +579,27 @@ footer .container{
     overflow: hidden;
     max-height: 100%;
   }
+
+  .container-fluid .row.row-home {
+    margin: 0;
+  }
+
   .logo-img {
-    width: 60%;
+    width: 250px;
+  }
+
+  .cafe-sub-title {
+    overflow: hidden;
+    font-size: 1.8rem;
+    margin: -15px 0;
+  }
+
+  .cafe-logo-line {
+    position: absolute;
+    top: 91px;
+    left: 280px;
+    width: 50%;
+    border: 3px black solid;
   }
 
   .img-desc-project {
@@ -520,9 +624,8 @@ footer .container{
     font-weight: 600;
   }
 
-  footer {
+  .footer-text {
     border-top: 1px solid #000;
-    position: fixed;
     color: #000;
     background: #fff;
     height: 50px;
@@ -531,10 +634,17 @@ footer .container{
     z-index: 9;
     text-align: center;
     margin: auto;
-    margin-top: 100px;
-    padding: 5px 0 0 0;
-    bottom: 0;
-    font-size: 1.05rem;
+    margin-top: 150px;
+    padding: 10px 0 0 0;
+    font-size: 1.2rem;
+    max-width: 100%;
+  }
+
+  .back-to-top {
+    position: relative;
+    width: 20px;
+    top: 0;
+    left: -40px;
   }
 }
 
@@ -543,8 +653,26 @@ footer .container{
     overflow: hidden;
   }
 
+  .container-fluid .row.row-home {
+    margin: 0;
+  }
+
   .logo-img {
-    width: 100%;
+    width: 150px;
+  }
+
+  .cafe-sub-title {
+    overflow: hidden;
+    font-size: 1.5rem;
+    margin: -15px 0;
+  }
+
+  .cafe-logo-line {
+    position: absolute;
+    top: 54px;
+    left: 180px;
+    width: 50%;
+    border: 2px black solid;
   }
 
   .logo-home {
@@ -595,21 +723,27 @@ footer .container{
     margin: 0 0 5px 0;
   }
 
-  footer {
+  .footer-text {
     border-top: 1px solid #000;
-    position: fixed;
     color: #000;
     background: #fff;
-    height: 72px;
+    height: 50px;
     display: block;
     width: 100%;
     z-index: 9;
     text-align: center;
     margin: auto;
-    margin-top: 100px;
-    padding: 5px 0 0 0;
-    bottom: 0;
-    font-size: 0.95rem;
+    margin-top: 150px;
+    padding: 10px 40px;
+    font-size: 1.2rem;
+    max-width: 100%;
+  }
+
+  .back-to-top {
+    position: relative;
+    width: 20px;
+    top: 0;
+    left: -30px;
   }
 }
 
@@ -629,6 +763,14 @@ footer .container{
     font-size: 1.2rem;
   }
 
+  .cafe-logo-line {
+    position: absolute;
+    top: 54px;
+    left: 180px;
+    width: 50%;
+    border: 2px black solid;
+  }
+
   .project-title {
     max-width: 80%;
     font-size: 0.9rem;
@@ -646,6 +788,41 @@ footer .container{
   .intentions {
     font-size: 0.9rem;
     font-weight: 600;
+  }
+
+  .footer-text {
+    border-top: 1px solid #000;
+    color: #000;
+    background: #fff;
+    height: 50px;
+    display: block;
+    width: 100%;
+    z-index: 9;
+    text-align: center;
+    margin: auto;
+    margin-top: 150px;
+    padding: 10px 40px;
+    font-size: 1.2rem;
+    max-width: 100%;
+  }
+
+  .back-to-top {
+    position: relative;
+    width: 20px;
+    top: 20px;
+    left: -25px;
+  }
+
+}
+
+@media all and (max-width: 440px) {
+
+  .cafe-logo-line {
+    position: absolute;
+    top: 54px;
+    left: 180px;
+    width: 40%;
+    border: 2px black solid;
   }
 
 }

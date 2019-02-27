@@ -16,10 +16,10 @@
       </div>
     </div>
 
-    <div v-if="getSearchFilter === 'tout' ">
+    <div v-if="getSearchFilter === 'sans filtre' ">
       <div
         :class="{fadeInLeft: animatedProjects}"
-        :style="{visibility: this.animatedProjects ? 'visible' : 'hidden', animationDelay: 0.01 * this.index + 's'}">
+        :style="{visibility: this.animatedProjects ? 'visible' : 'hidden', animationDelay: 0.5 * this.index + 's'}">
       <hr class="hr-line">
       <div class="row">
         <div class="col-12 project-row">
