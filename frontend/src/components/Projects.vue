@@ -4,7 +4,7 @@
       <div class="row v-align-left-center">
 
         <!-- Side Menu -->
-        <div class="col-xl-1 col-12 ml-4" :class="{fadeIn: animatedProjects}" style="animation-delay: 3s">
+        <div class="col-xl-1 col-12 ml-4" :style="{visibility: animatedProjects ? 'visible' : 'hidden'}" :class="{fadeIn: animatedProjects}" style="animation-delay: .8s">
           <ul :class="{'search-terms': windowWidth > 1200, 'list-inline': windowWidth < 1200}">
             <li
               v-for="searchFilter in searchFilters"
