@@ -1,17 +1,4 @@
 <template>
-<!--   <div>
-  <div class="img-wrapper mb-3 img-desc-project">
-    <img class="mb-2 img-project" :src="project.image" :alt="project.titre">
-    <div class="desc-project">
-      <p> {{ project.description }} </p>
-    </div>
-  </div>
-  <div class="info-project">
-    <p> Commanditaire : {{ project.commanditaire }}</p>
-    <p> Mission : {{ project.mission }}</p>
-    <p> Concepteur : {{ project.concepteur }} </p>
-  </div>
-</div> -->
   <div>
     <v-layout wrap class="img-desc-project" :class="{fadeIn: true}" style="animation-delay: .2s">
       <v-flex xs5 sm4 md2 lg3 xl3 :class="{'mr-5': $vuetify.breakpoint.lg, 'mr-4': $vuetify.breakpoint.md}">

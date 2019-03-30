@@ -301,15 +301,6 @@ export default {
 
 /* *********** PROJECTS *********** */
 
-.row .project-row.col-12 {
-  text-align: left;
-  padding: 0;
-}
-
-.row .project-row.col-12>ul {
-  margin: 0;
-}
-
 .section .container.projects-container {
   padding: 70px 10px;
 }
@@ -504,7 +495,7 @@ footer a:hover {
 
 @media all and (max-width: 1264px) {
   .img-desc-project {
-    min-width: 550px !important;
+    position: static;
   }
 }
 
@@ -534,10 +525,6 @@ footer a:hover {
     left: 280px;
     width: 250px;
     border: 3px black solid;
-  }
-
-  .img-desc-project {
-    position: static;
   }
 
   .search-terms {

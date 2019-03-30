@@ -20,7 +20,9 @@
 
     <!-- Projects without filters -->
     <div v-if="getSearchFilter === 'sans filtre' ">
-      <div>
+      <div
+        :class="{fadeInLeft: animatedProjects}"
+        :style="{visibility: this.animatedProjects ? 'visible' : 'hidden', animationDelay: 0.1 * this.index + 's'}">
       <hr class="hr-line">
       <div class="row">
         <div class="col-12 project-row">
@@ -88,6 +90,15 @@ export default {
   text-transform: uppercase;
   font-size: 1.2rem;
   font-weight: 800;
+}
+
+.row .project-row.col-12 {
+  text-align: left;
+  padding: 0;
+}
+
+.row .project-row.col-12>ul {
+  margin: 0;
 }
 
 </style>

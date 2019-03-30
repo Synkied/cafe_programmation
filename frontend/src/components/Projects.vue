@@ -1,17 +1,18 @@
 <template>
   <div class="section fp-auto-height" id="realisations_section">
     <div class="container projects-container">
-      <div class="row v-align-left-center">
+      <v-layout row wrap>
 
         <!-- Side Menu -->
-        <div class="col-xl-1 col-12 ml-4" :style="{visibility: animatedProjects ? 'visible' : 'hidden'}" :class="{fadeIn: animatedProjects}" style="animation-delay: .8s">
-          <ul :class="{'search-terms': windowWidth > 1200, 'list-inline': windowWidth < 1200}">
+        <v-flex xs12 lg1 class="ml-4" :style="{visibility: animatedProjects ? 'visible' : 'hidden'}" :class="{fadeIn: animatedProjects}" style="animation-delay: .8s">
+          <ul :class="{'search-terms': windowWidth > 1264, 'list-inline': windowWidth < 1264}">
             <li
+              v-if="searchFilter.name !== 'sans filtre'"
               v-for="searchFilter in searchFilters"
               v-bind:key="searchFilter.id"
-              :class="{'search-filter-item': windowWidth > 1200, 'list-inline-item': windowWidth < 1200, active: searchFilter.name === selected}">
+              :class="{'search-filter-item': windowWidth > 1264, 'list-inline-item': windowWidth < 1264, active: searchFilter.name === selected}">
               <div
-                :class="{active: searchFilter.name === selected, 'shallow-circle': windowWidth > 1200}">
+                :class="{active: searchFilter.name === selected, 'shallow-circle': windowWidth > 1264}">
               </div>
               <a
                 href="#"
@@ -20,10 +21,10 @@
               </a>
             </li>
           </ul>
-        </div>
+        </v-flex>
 
         <!-- Projects lines -->
-        <div class="col-xl-5 col-lg-12 col-md-12 col-sm-12 col-12">
+        <v-flex xs12 lg5 class="mx-3">
 
           <div class="v-panel-wrapper" v-if="getSearchFilter !== 'sans filtre' ">
               <v-expansion-panel
@@ -67,10 +68,10 @@
             </v-expansion-panel>
           </div>
 
-        </div>
+        </v-flex>
         <!-- !!END Projects lines -->
 
-      </div>
+      </v-layout>
     </div>
   </div>
 </template>
@@ -90,7 +91,7 @@ axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest' // for all 
 
 /* data, methods, components... declaration */
 export default {
-  props: ['animatedProjects'],
+  props: ['animatedProjects', 'filter'],
 
   components: {
     'rise-loader': RiseLoader,
@@ -109,7 +110,7 @@ export default {
         {name: 'avancement', subFilters: [], panels: []}
       ],
       search: '',
-      selected: 'sans filtre',
+      selected: '',
       windowWidth: 0,
       windowHeight: 0
     }
@@ -228,6 +229,7 @@ export default {
   },
 
   mounted () {
+    this.selected = this.filter
     var thisVm = this
     thisVm.viewProjects()
 
@@ -286,6 +288,15 @@ export default {
 .search-filter-item.active {
   font-weight: 600;
 }
+
+/*
+.search-terms-vertical {
+  text-align: right;
+  transform: rotate(180deg);
+  writing-mode: vertical-rl;
+  -webkit-writing-mode: vertical-rl;
+  -ms-writing-mode: vertical-rl;
+}*/
 
 >>>.projects-expansion-panel-header {
   font-family: Futura-Bol;

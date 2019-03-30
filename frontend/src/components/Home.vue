@@ -31,6 +31,7 @@
       :animatedIntentions="animatedIntentions">
     </intentions-app>
     <projects-app
+      :filter="filter"
       :animatedProjects="animatedProjects"
       :animatedProjectsMenu="animatedProjectsMenu"
       @rebuild="rebuildFullPage()">
@@ -59,6 +60,7 @@ export default {
       animatedProjects: false,
       animatedProjectsMenu: false,
       showIntentions: false,
+      filter: '',
       options: {
         licenseKey: 'C6820AA9-BC954443-A4F97A82-86A455D2',
         menu: '#header',
@@ -86,12 +88,15 @@ export default {
       // in correlation with fullPage.js
       if (destination.index === 0) {
         this.animatedHome = true
+        this.filter = 'sans filtre'
       }
       if (destination.index === 1) {
         this.animatedIntentions = true
+        this.filter = 'sans filtre'
       }
       if (destination.index === 2) {
         this.animatedProjects = true
+        this.filter = 'sans filtre'
       }
     },
     onLeave (origin, destination, direction) {
@@ -101,12 +106,15 @@ export default {
       if (origin) {
         if (origin.index === 0) {
           this.animatedHome = false
+          this.filter = 'sans filtre'
         }
         if (origin.index === 1) {
           this.animatedIntentions = false
+          this.filter = 'sans filtre'
         }
         if (origin.index === 2) {
           this.animatedProjects = false
+          this.filter = 'sans filtre'
         }
       }
     },
