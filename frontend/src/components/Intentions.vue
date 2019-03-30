@@ -4,15 +4,15 @@
       <div class="row">
         <div class="col-xl-3"></div>
         <div class="col-xl-6 col-12">
-            <p class="intentions-title align-right" :class="{fadeInLeft: animatedIntentions}" :style="{visibility: animatedIntentions ? 'visible' : 'hidden'}"><span class="intention-word-right">culturelles</span></p>
+            <p class="intentions-title align-right" :class="{fadeInDownBig: animatedIntentions}" :style="{visibility: animatedIntentions ? 'visible' : 'hidden'}"><span class="intention-word-right">culturelles</span></p>
             <p class="justif intentions">
               Nous sommes convaincus de l’utilité des projets à vocation culturelle. Aujourd’hui peut-être plus encore, des projets inventifs, qui soient à la fois plus pragmatiques et plus ambitieux. Café conçoit, avec les porteurs de ceux-ci, des projets qui font sens.
             </p>
-            <p class="intentions-title text-center" :class="{bounceIn: animatedIntentions}" :style="{visibility: animatedIntentions ? 'visible' : 'hidden'}"><span class="intention-word-center">d'architectures</span></p>
+            <p class="intentions-title text-center" :class="{fadeInDownBig: animatedIntentions}" :style="{visibility: animatedIntentions ? 'visible' : 'hidden'}"><span class="intention-word-center">d'architectures</span></p>
             <p class="justif intentions">
               Nous sommes également passionnés d’architecture. Où l’architecture est vue comme un art de commande, la qualité de l’une étant conditionnée par celle de l’autre. Café installe, auprès des commanditaires, les conditions d’une architecture créative et juste.
             </p>
-            <p class="intentions-title align-left" :class="{fadeInRight: animatedIntentions}" :style="{visibility: animatedIntentions ? 'visible' : 'hidden'}"><span class="intention-word-left">programmation</span></p>
+            <p class="intentions-title align-left" :class="{fadeInDownBig: animatedIntentions}" :style="{visibility: animatedIntentions ? 'visible' : 'hidden'}" ><span class="intention-word-left">programmation</span></p>
             <p class="justif intentions">
               Nous ne nous reconnaissons que relativement sous le terme de programmation, tel qu’il désigne notre métier. Il y a une part illusoire dans son ambition catégorique. Café étudie la relation dialectique - c’est elle qui fera véritablement projet - entre des usages évolutifs et des espaces structurants.
             </p>
@@ -55,6 +55,15 @@ export default {
 .intentions-title {
   overflow: hidden;
   font-size: 1.1rem;
+  animation-duration: 1.3s
+}
+
+.intentions-title.align-right {
+  animation-delay: .8s
+}
+
+.intentions-title.text-center {
+  animation-delay: .4s
 }
 
 .intentions-title:after {
