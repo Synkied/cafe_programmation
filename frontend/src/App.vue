@@ -181,7 +181,7 @@ export default {
   position: absolute;
   top: -34px;
   left: 102%;
-  min-width: 750px;
+  min-width: 750px !important;
 }
 
 .img-project {
@@ -449,13 +449,13 @@ footer a:hover {
 
 @media all and (max-width: 1904px) {
   .img-desc-project {
-    min-width: 600px;
+    min-width: 600px !important;
   }
 }
 
 @media all and (max-width: 1264px) {
   .img-desc-project {
-    min-width: 550px;
+    min-width: 550px !important;
   }
 }
 
