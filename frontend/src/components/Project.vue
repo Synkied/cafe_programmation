@@ -89,7 +89,6 @@ export default {
   font-family: FuturaBT-CondMedium;
   text-transform: uppercase;
   font-size: 1.2rem;
-  font-weight: 800;
 }
 
 .row .project-row.col-12 {

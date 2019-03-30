@@ -305,7 +305,7 @@ export default {
 .black-header {
   background-color: #000 !important;
   border-color: #000 !important;
-  font-size: 1.1rem;
+  font-size: 1.2rem;
 }
 
 </style>
