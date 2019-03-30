@@ -467,7 +467,8 @@ footer a:hover {
     display: block;
     width: 100%;
     z-index: 9;
-    margin: 150px auto auto auto;
+    margin: auto;
+    margin-top: 150px;
     padding: 10px 0 0 0;
     max-width: 80%;
   }
@@ -489,7 +490,7 @@ footer a:hover {
 
   .intentions {
     font-size: 1.1rem;
-    font-weight: 600;
+    font-weight: 500;
   }
 }
 
@@ -537,7 +538,7 @@ footer a:hover {
 
   .intentions {
     font-size: 1.2rem;
-    font-weight: 600;
+    font-weight: 500;
   }
 
   .footer {
@@ -546,7 +547,8 @@ footer a:hover {
     display: block;
     width: 100%;
     z-index: 9;
-    margin: 150px auto auto auto;
+    margin: auto;
+    margin-top: 150px;
     padding: 10px 0 0 0;
     max-width: 100%;
   }
@@ -622,14 +624,20 @@ footer a:hover {
     padding: 4rem 1rem;
   }
 
+  .list-inline-item.active {
+    font-weight: 600;
+    font-size: 1.2rem;
+  }
+
+
   .img-desc-project {
     position: static;
     min-width: 100%;
   }
 
   .intentions {
-    font-size: 1.1rem;
-    font-weight: 600;
+    font-size: 1rem;
+    font-weight: 500;
   }
 
   p.intentions {
@@ -642,7 +650,8 @@ footer a:hover {
     display: block;
     width: 100%;
     z-index: 9;
-    margin: 150px auto auto auto;
+    margin: auto;
+    margin-top: 150px;
     padding: 10px 0 0 40px;
     max-width: 100%;
   }
@@ -703,18 +712,42 @@ footer a:hover {
 
   .intentions {
     font-size: 0.9rem;
-    font-weight: 600;
+    font-weight: 500;
   }
 
 }
 
 @media all and (max-width: 440px) {
 
+  .cafe-sub-title {
+    overflow: hidden;
+    font-size: 1.2rem;
+    margin: -15px 0;
+  }
+
   .cafe-logo-line {
     position: absolute;
     top: 54px;
     left: 180px;
-    width: 40%;
+    width: 182px;
+    border: 2px black solid;
+  }
+
+}
+
+@media all and (max-width: 360px) {
+
+  .cafe-sub-title {
+    overflow: hidden;
+    font-size: .9rem;
+    margin: -15px 0;
+  }
+
+  .cafe-logo-line {
+    position: absolute;
+    top: 54px;
+    left: 180px;
+    width: 95px;
     border: 2px black solid;
   }
 

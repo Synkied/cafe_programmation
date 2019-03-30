@@ -124,9 +124,4 @@ export default {
   margin: 0 0 0 10px;
 }
 
-.intentions {
-  font-family: AvantGardeGothicITCW02Md;
-  font-size: 1.11rem;
-}
-
 </style>
