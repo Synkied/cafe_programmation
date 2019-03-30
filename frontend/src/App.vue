@@ -1,7 +1,9 @@
 <template>
   <div id="app">
-    <app-header></app-header>
-    <router-view/>
+    <v-app>
+      <app-header></app-header>
+      <router-view/>
+    </v-app>
   </div>
 </template>
 
@@ -18,16 +20,11 @@ export default {
 </script>
 
 <style>
-@import url('https://fonts.googleapis.com/css?family=Avenir');
-@import url('https://fonts.googleapis.com/css?family=Oswald');
-@import url('https://fonts.googleapis.com/css?family=Cabin');
-@import url('https://fonts.googleapis.com/css?family=Open+Sans');
-@import url('https://fonts.googleapis.com/css?family=Didact+Gothic');
 
 /* *********** GENERAL *********** */
 
 #app {
-  font-family: 'Didact Gothic', Helvetica, Arial, sans-serif !important;
+  font-family: AvantGardeGothicITCW02Md, Helvetica, Arial, sans-serif !important;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
@@ -131,14 +128,6 @@ export default {
 
 /* --- lists --- */
 
-.search-filter-item {
-  display: flex;
-  align-items: center;
-  padding: 5px 0;
-  font-weight: 600;
-  font-size: 1.1rem;
-}
-
 #app ul {
   padding: 0;
 }
@@ -197,22 +186,12 @@ export default {
   position: absolute;
   top: -34px;
   left: 102%;
-  min-width: 570px;
+  min-width: 750px;
 }
 
 .img-project {
   width: 170px;
   height: 170px;
-}
-
-.desc-project {
-  position: absolute;
-  top: -3px;
-  left: 33%;
-  font-size: 1rem;
-  max-width: 260px;
-  padding: 0 10px 0 0;
-  overflow-y: visible;
 }
 
 /* --- animations --- */
@@ -362,12 +341,6 @@ export default {
   line-height: 0;
 }
 
-.project-title {
-  text-transform: uppercase;
-  font-size: 1.1rem;
-  font-weight: 800;
-}
-
 /* *********** PROJECTS *********** */
 
 .row .project-row.col-12 {
@@ -377,11 +350,6 @@ export default {
 
 .row .project-row.col-12>ul {
   margin: 0;
-}
-
-.info-project {
-  font-size: 0.9rem;
-  max-width: 90%;
 }
 
 .section .container.projects-container {
@@ -491,19 +459,6 @@ export default {
   box-shadow: none;
 }
 
-.search-terms {
-  text-align: left;
-  list-style-type: none;
-}
-
-.info-project p {
-  margin: 0 0 6px 0;
-}
-
-.info-project p:last-child {
-  margin: 0 0 15px 0;
-}
-
 /* *********** FOOTER *********** */
 
 footer a {
@@ -541,16 +496,19 @@ footer a:hover {
 
 /* *********** MEDIA QUERIES *********** */
 
-@media all and (max-width: 1400px) {
-  .desc-project {
-    position: absolute;
-    top: -3px;
-    left: 33%;
-    font-size: 0.9rem;
-    max-width: 200px;
-    padding: 0 10px 0 0;
-    overflow-y: visible;
+@media all and (max-width: 1904px) {
+  .img-desc-project {
+    min-width: 600px;
   }
+}
+
+@media all and (max-width: 1264px) {
+  .img-desc-project {
+    min-width: 550px;
+  }
+}
+
+@media all and (max-width: 1400px) {
 
   .footer-text {
     border-top: 1px solid #000;
@@ -566,6 +524,9 @@ footer a:hover {
     padding: 10px 0 0 0;
     font-size: 1.2rem;
     max-width: 75%;
+  }
+
+  .img-desc-project {
   }
 
   .intentions {
@@ -604,11 +565,6 @@ footer a:hover {
 
   .img-desc-project {
     position: static;
-  }
-
-  .desc-project {
-    position: static;
-    min-width: 100%;
   }
 
   .search-terms {
@@ -709,11 +665,6 @@ footer a:hover {
     min-width: 100%;
   }
 
-  .desc-project {
-    position: static;
-    width: 100%;
-  }
-
   .intentions {
     font-size: 1.1rem;
     font-weight: 600;
@@ -769,11 +720,6 @@ footer a:hover {
     left: 180px;
     width: 50%;
     border: 2px black solid;
-  }
-
-  .project-title {
-    max-width: 80%;
-    font-size: 0.9rem;
   }
 
   .intentions-title {

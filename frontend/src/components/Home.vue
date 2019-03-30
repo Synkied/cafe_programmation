@@ -10,16 +10,31 @@
                   <img class="logo-img" src="../assets/cafe_logo_solo.png" alt="cafe logo">
                 </span>
               </p>
-              <p :class="{fadeOut: !animatedHome, fadeIn: animatedHome}" v-show="animatedHome" style="animation-delay: 1.6s;" class="cafe-logo-line"></p>
+              <p
+                :class="{fadeOut: !animatedHome, fadeIn: animatedHome}"
+                v-show="animatedHome" style="animation-delay: 1.6s;"
+                class="cafe-logo-line">
+              </p>
               <transition name="shiftx">
-                <p v-show="animatedHome" style="transition-delay: 1.4s;" class="cafe-sub-title align-left">programmation d'architectures culturelles</p>
+                <p
+                  v-show="animatedHome"
+                  style="transition-delay: 1.4s;"
+                  class="cafe-sub-title align-left">
+                  programmation d'architectures culturelles
+                </p>
               </transition>
             </div>
           </div>
         </div>
       </div>
-    <intentions-app :animatedIntentions="animatedIntentions"></intentions-app>
-    <projects-app :animatedProjects="animatedProjects" @rebuild="rebuildFullPage()"></projects-app>
+    <intentions-app
+      :animatedIntentions="animatedIntentions">
+    </intentions-app>
+    <projects-app
+      :animatedProjects="animatedProjects"
+      :animatedProjectsMenu="animatedProjectsMenu"
+      @rebuild="rebuildFullPage()">
+    </projects-app>
     <app-footer></app-footer>
   </full-page>
 </template>
@@ -42,6 +57,7 @@ export default {
       animatedHome: false,
       animatedIntentions: false,
       animatedProjects: false,
+      animatedProjectsMenu: false,
       showIntentions: false,
       options: {
         licenseKey: 'C6820AA9-BC954443-A4F97A82-86A455D2',

@@ -1,5 +1,7 @@
 <template>
   <div id="project">
+
+    <!-- Projects filtered -->
     <div v-if="searchFilter">
     <hr class="hr-line">
       <div class="row" v-if="project[searchFilter.name] === subFilter.name ">
@@ -16,10 +18,9 @@
       </div>
     </div>
 
+    <!-- Projects without filters -->
     <div v-if="getSearchFilter === 'sans filtre' ">
-      <div
-        :class="{fadeInLeft: animatedProjects}"
-        :style="{visibility: this.animatedProjects ? 'visible' : 'hidden', animationDelay: 0.5 * this.index + 's'}">
+      <div>
       <hr class="hr-line">
       <div class="row">
         <div class="col-12 project-row">
@@ -75,13 +76,18 @@ export default {
   components: {
     'rise-loader': RiseLoader,
     'project-desc': ProjectDesc
-  },
-  mounted () {
   }
 }
 </script>
 
 <!-- scoped styles for this component -->
-<style lang="scss" scoped>
+<style scoped>
+
+.project-title {
+  font-family: FuturaBT-CondMedium;
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  font-weight: 800;
+}
 
 </style>

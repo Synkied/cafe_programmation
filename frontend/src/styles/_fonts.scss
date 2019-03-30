@@ -8,3 +8,57 @@ $font_path: '~@/assets/fonts/';
   font-weight    : 400;
   text-rendering : optimizeLegibility;
 }
+
+@font-face{
+  font-family    : 'AvantGardeGothicITCW02BkObl';
+  src            : url($font_path +'38C079_0_0.eot'); /* IE9 Compat; Modes */
+  src            : url($font_path +'38C079_0_0.woff'); /* IE9 Compat; Modes */
+  font-style     : normal;
+  font-weight    : 400;
+  text-rendering : optimizeLegibility;
+}
+
+@font-face{
+  font-family    : 'AvantGardeGothicITCW02Md';
+  src            : url($font_path +'38C079_1_0.eot'); /* IE9 Compat; Modes */
+  src            : url($font_path +'38C079_1_0.woff'); /* IE9 Compat; Modes */
+  font-style     : normal;
+  font-weight    : 400;
+  text-rendering : optimizeLegibility;
+}
+
+@font-face{
+  font-family    : 'Futura-Med';
+  src            : url($font_path +'38C079_2_0.eot'); /* IE9 Compat; Modes */
+  src            : url($font_path +'38C079_2_0.woff'); /* IE9 Compat; Modes */
+  font-style     : normal;
+  font-weight    : 400;
+  text-rendering : optimizeLegibility;
+}
+
+@font-face{
+  font-family    : 'Futura-Bol';
+  src            : url($font_path +'38C079_3_0.eot'); /* IE9 Compat; Modes */
+  src            : url($font_path +'38C079_3_0.woff'); /* IE9 Compat; Modes */
+  font-style     : normal;
+  font-weight    : 400;
+  text-rendering : optimizeLegibility;
+}
+
+@font-face{
+  font-family    : 'FuturaCon-Lig';
+  src            : url($font_path +'38C079_4_0.eot'); /* IE9 Compat; Modes */
+  src            : url($font_path +'38C079_4_0.woff'); /* IE9 Compat; Modes */
+  font-style     : normal;
+  font-weight    : 400;
+  text-rendering : optimizeLegibility;
+}
+
+@font-face{
+  font-family    : 'FuturaCon-Med';
+  src            : url($font_path +'38C079_5_0.eot'); /* IE9 Compat; Modes */
+  src            : url($font_path +'38C079_5_0.woff'); /* IE9 Compat; Modes */
+  font-style     : normal;
+  font-weight    : 400;
+  text-rendering : optimizeLegibility;
+}

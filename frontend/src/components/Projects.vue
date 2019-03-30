@@ -4,21 +4,32 @@
       <div class="row v-align-left-center">
 
         <!-- Side Menu -->
-        <div class="col-xl-1 col-12" v-show="animatedProjects" :class="{fadeIn: animatedProjects}" style="animation-delay: 3s">
-          <ul class="{'search-terms': windowWidth > 1200, 'list-inline': windowWidth < 1200}">
-            <li v-for="searchFilter in searchFilters" v-bind:key="searchFilter.id" :class="{'search-filter-item': windowWidth > 1200, 'list-inline-item': windowWidth < 1200, active: searchFilter.name === selected}">
-              <div :class="{active: searchFilter.name === selected, 'shallow-circle': windowWidth > 1200}">
+        <div class="col-xl-1 col-12 ml-4" :class="{fadeIn: animatedProjects}" style="animation-delay: 3s">
+          <ul :class="{'search-terms': windowWidth > 1200, 'list-inline': windowWidth < 1200}">
+            <li
+              v-for="searchFilter in searchFilters"
+              v-bind:key="searchFilter.id"
+              :class="{'search-filter-item': windowWidth > 1200, 'list-inline-item': windowWidth < 1200, active: searchFilter.name === selected}">
+              <div
+                :class="{active: searchFilter.name === selected, 'shallow-circle': windowWidth > 1200}">
               </div>
-              <a href="#" @click.prevent="setActiveSearchFilter(searchFilter.name); selected = searchFilter.name; setPanelsVisibility(searchFilter)">{{ capitalizeFirstLetter(searchFilter.name) }}</a>
+              <a
+                href="#"
+                @click.prevent="setActiveSearchFilter(searchFilter.name); selected = searchFilter.name; setPanelsVisibility(searchFilter)">
+                {{ capitalizeFirstLetter(searchFilter.name) }}
+              </a>
             </li>
           </ul>
         </div>
 
-        <div class="col-xl-7 col-lg-12 col-md-12 col-sm-12 col-12">
+        <!-- Projects lines -->
+        <div class="col-xl-5 col-lg-12 col-md-12 col-sm-12 col-12">
+
           <div class="v-panel-wrapper" v-if="getSearchFilter !== 'sans filtre' ">
               <v-expansion-panel
                 @click.native="$emit('rebuild')"
-                v-for="searchFilter in searchFilters" :key="searchFilter.id"
+                v-for="searchFilter in searchFilters"
+                :key="searchFilter.id"
                 v-if="searchFilter.name === getSearchFilter"
                 v-model="searchFilter.panels"
                 expand>
@@ -47,12 +58,18 @@
             <v-expansion-panel
               @click.native="$emit('rebuild')">
               <div class="container-fluid" v-for="(project, index) in projects" :key="project.id">
-                <app-project :animatedProjects="animatedProjects" :project="project" :index="index"></app-project>
+                <app-project
+                  :animatedProjects="animatedProjects"
+                  :project="project"
+                  :index="index">
+                </app-project>
               </div>
             </v-expansion-panel>
           </div>
 
         </div>
+        <!-- !!END Projects lines -->
+
       </div>
     </div>
   </div>
@@ -251,6 +268,20 @@ export default {
 .projects-expansion-panel-header {
   padding: 0 0 0 10px;
   background-color: #000;
+}
+
+.search-terms {
+  text-align: left;
+  list-style-type: none;
+}
+
+.search-filter-item {
+  font-family: FuturaBT-CondMedium;
+  display: flex;
+  align-items: center;
+  padding: 5px 0;
+  font-weight: 600;
+  font-size: 1.2rem;
 }
 
 </style>
