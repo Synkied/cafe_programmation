@@ -280,8 +280,21 @@ export default {
   display: flex;
   align-items: center;
   padding: 5px 0;
-  font-weight: 600;
   font-size: 1.2rem;
+}
+
+.search-filter-item.active {
+  font-weight: 600;
+}
+
+>>>.projects-expansion-panel-header {
+  font-family: Futura-Bol;
+}
+
+.black-header {
+  background-color: #000 !important;
+  border-color: #000 !important;
+  font-size: 1.1rem;
 }
 
 </style>

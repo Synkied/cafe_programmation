@@ -71,11 +71,6 @@ export default {
   text-align: justify;
 }
 
-.intentions {
-  font-size: 1.25rem;
-  font-weight: 600;
-}
-
 .white-bg {
   background-color: #fff;
 }
@@ -239,43 +234,6 @@ export default {
 
 /* --- decorations --- */
 
-.intentions-title {
-  overflow: hidden;
-  font-size: 1.4rem;
-}
-
-.intentions-title:after {
-  content:"";
-  display: inline-block;
-  height: 0.5em;
-  vertical-align: bottom;
-  width: 100%;
-  margin-right: -100%;
-  border-top: 1px solid black;
-}
-
-.intentions-title:before {
-  content:"";
-  display: inline-block;
-  height: 0.5em;
-  vertical-align: bottom;
-  width: 100%;
-  margin-left: -100%;
-  border-top: 1px solid black;
-}
-
-.intention-word-left {
-  margin: 0 10px 0 0;
-}
-
-.intention-word-center {
-  margin: 0 10px;
-}
-
-.intention-word-right {
-  margin: 0 0 0 10px;
-}
-
 .container-fluid .row.row-home {
   margin: 0 0 0 300px;
 }
@@ -287,7 +245,7 @@ export default {
 
 .cafe-sub-title {
   overflow: hidden;
-  font-size: 2.4rem;
+  font-size: 2.05rem;
   margin: -15px 0;
 }
 
@@ -375,13 +333,6 @@ export default {
 .row .v-expansion-panel {
   -webkit-box-shadow: none;
   box-shadow: none;
-}
-
-.black-header {
-  background-color: #000 !important;
-  border-color: #000 !important;
-  font-weight: 600;
-  font-size: 1.1rem;
 }
 
 .v-card__text.card-text {
@@ -559,7 +510,7 @@ footer a:hover {
     position: absolute;
     top: 91px;
     left: 280px;
-    width: 50%;
+    width: 250px;
     border: 3px black solid;
   }
 
@@ -619,7 +570,7 @@ footer a:hover {
 
   .cafe-sub-title {
     overflow: hidden;
-    font-size: 1.5rem;
+    font-size: 1.45rem;
     margin: -15px 0;
   }
 
@@ -627,7 +578,7 @@ footer a:hover {
     position: absolute;
     top: 54px;
     left: 180px;
-    width: 50%;
+    width: 250px;
     border: 2px black solid;
   }
 
@@ -714,17 +665,23 @@ footer a:hover {
     font-size: 1.2rem;
   }
 
+  .cafe-sub-title {
+    overflow: hidden;
+    font-size: 1.3rem;
+    margin: -15px 0;
+  }
+
   .cafe-logo-line {
     position: absolute;
     top: 54px;
     left: 180px;
-    width: 50%;
+    width: 210px;
     border: 2px black solid;
   }
 
   .intentions-title {
     overflow: hidden;
-    font-size: 1.1rem;
+    font-size: 1rem;
   }
 
   p.intentions-title {

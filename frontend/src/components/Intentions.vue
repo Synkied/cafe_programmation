@@ -52,5 +52,46 @@ export default {
 
 <!-- scoped styles for this component -->
 <style scoped>
+.intentions-title {
+  overflow: hidden;
+  font-size: 1.1rem;
+}
+
+.intentions-title:after {
+  content:"";
+  display: inline-block;
+  height: 0.5em;
+  vertical-align: bottom;
+  width: 100%;
+  margin-right: -100%;
+  border-top: 1px solid black;
+}
+
+.intentions-title:before {
+  content:"";
+  display: inline-block;
+  height: 0.5em;
+  vertical-align: bottom;
+  width: 100%;
+  margin-left: -100%;
+  border-top: 1px solid black;
+}
+
+.intention-word-left {
+  margin: 0 10px 0 0;
+}
+
+.intention-word-center {
+  margin: 0 10px;
+}
+
+.intention-word-right {
+  margin: 0 0 0 10px;
+}
+
+.intentions {
+  font-family: AvantGardeGothicITCW02Md;
+  font-size: 1.11rem;
+}
 
 </style>
