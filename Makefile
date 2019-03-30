@@ -36,7 +36,7 @@ collectstatic:
 	docker exec cafe_py /bin/sh -c "python manage.py collectstatic --noinput"
 
 prod:
-	cd ~/cafe_programmation/frontend && yarn build && cd .. && collectstatic
+	cd ~/cafe_programmation/frontend && yarn build && cd .. && $(MAKE) collectstatic
 
 bash_nginx:
 	docker exec -ti cafe_nginx bash
