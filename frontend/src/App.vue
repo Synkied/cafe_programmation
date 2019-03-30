@@ -414,6 +414,7 @@ footer a:hover {
 }
 
 .footer {
+  font-family: Futura-Med;
   border-top: 1px solid #000;
   height: 50px;
   display: block;
@@ -428,7 +429,7 @@ footer a:hover {
   color: #000;
   background: #fff;
   text-align: center;
-  font-size: 1.2rem;
+  font-size: 1.5rem;
 }
 
 .fixed-elem-wrap {
@@ -462,6 +463,7 @@ footer a:hover {
 @media all and (max-width: 1400px) {
 
   .footer {
+    font-family: Futura-Med;
     border-top: 1px solid #000;
     height: 50px;
     display: block;
@@ -477,7 +479,7 @@ footer a:hover {
     color: #000;
     background: #fff;
     text-align: center;
-    font-size: 1.2rem;
+    font-size: 1.4rem;
   }
 
   .back-to-top {
@@ -542,6 +544,7 @@ footer a:hover {
   }
 
   .footer {
+    font-family: Futura-Med;
     border-top: 1px solid #000;
     height: 50px;
     display: block;
@@ -557,7 +560,7 @@ footer a:hover {
     color: #000;
     background: #fff;
     text-align: center;
-    font-size: 1.05rem;
+    font-size: 1.2rem;
   }
 
   .back-to-top {
@@ -645,6 +648,7 @@ footer a:hover {
   }
 
   .footer {
+    font-family: Futura-Med;
     border-top: 1px solid #000;
     height: 50px;
     display: block;
