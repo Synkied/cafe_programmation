@@ -1,5 +1,5 @@
 <template>
-  <div class="section fp-auto-height" id="realisations_section">
+  <div class="section" id="realisations_section">
     <div class="container projects-container">
       <v-layout row wrap>
 
@@ -45,7 +45,11 @@
                       @click.native="$emit('rebuild')">
                       <div class="container-fluid" v-for="project in projects" :key="project.id">
                         <div>
-                          <app-project :project="project" :searchFilter="searchFilter" :subFilter="subFilter">
+                          <app-project
+                            v-if="project[searchFilter.name] === subFilter.name"
+                            :project="project"
+                            :searchFilter="searchFilter"
+                            :subFilter="subFilter">
                           </app-project>
                         </div>
                       </div>

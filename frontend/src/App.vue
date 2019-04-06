@@ -31,6 +31,10 @@ export default {
   background-color: #fff;
 }
 
+/*#realisations_section {
+  height: 2000px !important;
+}
+*/
 .fp-tableCell {
   display: flex;
   align-items: center;
@@ -342,7 +346,6 @@ export default {
 
 #app section {
   min-height: 100%;
-  padding: 4rem;
 }
 
 #app .navbar {
@@ -416,13 +419,12 @@ footer a:hover {
 .footer {
   font-family: Futura-Med;
   border-top: 1px solid #000;
-  height: 50px;
   display: block;
   width: 100%;
-  z-index: 9;
-  margin: 150px auto auto auto;
   padding: 10px 0 0 0;
+  margin-top: 250px;
   max-width: 80%;
+
 }
 
 .footer-text {
@@ -465,12 +467,10 @@ footer a:hover {
   .footer {
     font-family: Futura-Med;
     border-top: 1px solid #000;
-    height: 50px;
     display: block;
     width: 100%;
     z-index: 9;
-    margin: auto;
-    margin-top: 150px;
+    margin-top: 250px;
     padding: 10px 0 0 0;
     max-width: 80%;
   }
@@ -546,12 +546,10 @@ footer a:hover {
   .footer {
     font-family: Futura-Med;
     border-top: 1px solid #000;
-    height: 50px;
     display: block;
     width: 100%;
     z-index: 9;
-    margin: auto;
-    margin-top: 150px;
+    margin-top: 250px;
     padding: 10px 0 0 0;
     max-width: 100%;
   }
@@ -624,14 +622,12 @@ footer a:hover {
 
   #app section {
     min-height: 100%;
-    padding: 4rem 1rem;
   }
 
   .list-inline-item.active {
     font-weight: 600;
     font-size: 1.2rem;
   }
-
 
   .img-desc-project {
     position: static;
@@ -650,12 +646,10 @@ footer a:hover {
   .footer {
     font-family: Futura-Med;
     border-top: 1px solid #000;
-    height: 50px;
     display: block;
     width: 100%;
     z-index: 9;
-    margin: auto;
-    margin-top: 150px;
+    margin-top: 250px;
     padding: 10px 0 0 40px;
     max-width: 100%;
   }

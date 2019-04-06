@@ -60,6 +60,7 @@ export default {
       animatedProjects: false,
       animatedProjectsMenu: false,
       showIntentions: false,
+      autoScrolling:false,
       filter: '',
       options: {
         licenseKey: 'C6820AA9-BC954443-A4F97A82-86A455D2',
@@ -68,7 +69,9 @@ export default {
         scrollOverflow: true,
         afterLoad: this.afterLoad,
         onLeave: this.onLeave,
-        responsiveWidth: 1200 // disable autoscroll on responsive
+        responsiveWidth: 1024, // disable autoscroll on responsive
+        paddingTop: '50px',
+        paddingBottom: '50px'
       }
     }
   },
@@ -97,6 +100,7 @@ export default {
       if (destination.index === 2) {
         this.animatedProjects = true
         this.filter = 'sans filtre'
+        /*this.$refs.fullpage.api.setAutoScrolling(false)*/
       }
     },
     onLeave (origin, destination, direction) {
@@ -115,6 +119,7 @@ export default {
         if (origin.index === 2) {
           this.animatedProjects = false
           this.filter = 'sans filtre'
+          /*this.$refs.fullpage.api.setAutoScrolling(true)*/
         }
       }
     },

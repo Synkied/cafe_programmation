@@ -7,9 +7,9 @@ from search_filters.models import Fonction, Contexte, Dimension, Avancement
 
 class Project(models.Model):
     titre = models.CharField(_("titre"), max_length=256)
-    commanditaire = models.CharField(_("commanditaire"), max_length=128)
+    commanditaire = models.CharField(_("commanditaire"), max_length=256)
     mission = models.TextField(_("mission"))
-    concepteur = models.CharField(_("concepteur"), max_length=128)
+    concepteur = models.CharField(_("concepteur"), max_length=256)
     description = models.TextField(_("description"), max_length=362)
     lien_externe = models.URLField(_("lien externe"), blank=True, null=True)
     lien_pdf = models.FileField(_("lien pdf"), blank=True, null=True)
