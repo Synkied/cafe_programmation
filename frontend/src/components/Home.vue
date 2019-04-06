@@ -60,7 +60,6 @@ export default {
       animatedProjects: false,
       animatedProjectsMenu: false,
       showIntentions: false,
-      autoScrolling:false,
       filter: '',
       options: {
         licenseKey: 'C6820AA9-BC954443-A4F97A82-86A455D2',
@@ -100,7 +99,6 @@ export default {
       if (destination.index === 2) {
         this.animatedProjects = true
         this.filter = 'sans filtre'
-        /*this.$refs.fullpage.api.setAutoScrolling(false)*/
       }
     },
     onLeave (origin, destination, direction) {
@@ -119,7 +117,6 @@ export default {
         if (origin.index === 2) {
           this.animatedProjects = false
           this.filter = 'sans filtre'
-          /*this.$refs.fullpage.api.setAutoScrolling(true)*/
         }
       }
     },
@@ -138,9 +135,6 @@ export default {
 
 <!-- scoped styles for this component -->
 <style scoped>
-  @import url('https://fonts.googleapis.com/css?family=Oxygen');
-  @import url('https://fonts.googleapis.com/css?family=Raleway');
-  @import url('https://fonts.googleapis.com/css?family=Poppins');
 
   .logo-home {
     font-size: 4rem;

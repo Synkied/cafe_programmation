@@ -43,7 +43,6 @@ export default {
 </script>
 
 <style>
-  @import url('https://fonts.googleapis.com/css?family=Noto+Sans');
   .logo_txt {
     font-family: 'Noto Sans', sans-serif;
     font-weight: bold;

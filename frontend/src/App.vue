@@ -31,10 +31,6 @@ export default {
   background-color: #fff;
 }
 
-/*#realisations_section {
-  height: 2000px !important;
-}
-*/
 .fp-tableCell {
   display: flex;
   align-items: center;
@@ -346,6 +342,7 @@ export default {
 
 #app section {
   min-height: 100%;
+  padding: 4rem;
 }
 
 #app .navbar {

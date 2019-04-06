@@ -32,7 +32,4 @@ export default {
 
 <!-- scoped styles for this component -->
 <style scoped>
-  @import url('https://fonts.googleapis.com/css?family=Oxygen');
-  @import url('https://fonts.googleapis.com/css?family=Raleway');
-
 </style>
