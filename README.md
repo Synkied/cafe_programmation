@@ -12,8 +12,8 @@
 - `make create_proxy`
 - `make up`
 - `make create_user_db`
-- `make create_cache_table`
 - `make migrate_db`
+- `make create_cache_table`
 - `cd frontend`
 - `yarn` or `npm install`
 - `yarn dev` or `npm run dev`
