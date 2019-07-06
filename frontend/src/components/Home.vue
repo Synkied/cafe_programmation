@@ -27,16 +27,15 @@
           </div>
         </div>
       </div>
-    <intentions-app
-      :animatedIntentions="animatedIntentions">
-    </intentions-app>
-    <projects-app
-      :filter="filter"
-      :animatedProjects="animatedProjects"
-      :animatedProjectsMenu="animatedProjectsMenu"
-      @rebuild="rebuildFullPage()">
-    </projects-app>
-    <app-footer></app-footer>
+      <intentions-app
+        :animatedIntentions="animatedIntentions">
+      </intentions-app>
+      <projects-app
+        :filter="filter"
+        :animatedProjects="animatedProjects"
+        :animatedProjectsMenu="animatedProjectsMenu"
+        @rebuild="rebuildFullPage()">
+      </projects-app>
   </full-page>
 </template>
 

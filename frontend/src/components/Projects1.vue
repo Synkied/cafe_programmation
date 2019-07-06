@@ -1,5 +1,5 @@
 <template>
-  <div class="section" id="realisations_section">
+  <div class="section fp-auto-height" id="realisations_section">
     <div class="container projects-container">
       <v-layout row wrap>
 
@@ -39,24 +39,21 @@
                   v-for="subFilter in searchFilter.subFilters"
                   :key="subFilter.id"
                   expand-icon="mdi-menu-down">
+                  <div slot="header" class="projects-expansion-panel-header black-header text-white">{{ subFilter.name }}</div>
 
-                  <template v-slot:header>
-                    <div slot="header" class="projects-expansion-panel-header black-header text-white">{{ subFilter.name }}</div>
-                  </template>
-
-                  <v-expansion-panel
-                    @click.native="$emit('rebuild')">
-                    <div class="container-fluid" v-for="project in projects" :key="project.id">
-                      <div>
-                        <app-project
-                          v-if="project[searchFilter.name] === subFilter.name"
-                          :project="project"
-                          :searchFilter="searchFilter"
-                          :subFilter="subFilter">
-                        </app-project>
+                    <v-expansion-panel
+                      @click.native="$emit('rebuild')">
+                      <div class="container-fluid" v-for="project in projects" :key="project.id">
+                        <div>
+                          <app-project
+                            v-if="project[searchFilter.name] === subFilter.name"
+                            :project="project"
+                            :searchFilter="searchFilter"
+                            :subFilter="subFilter">
+                          </app-project>
+                        </div>
                       </div>
-                    </div>
-                  </v-expansion-panel>
+                    </v-expansion-panel>
 
                 </v-expansion-panel-content>
               </v-expansion-panel>
@@ -89,6 +86,7 @@ import RiseLoader from 'vue-spinner/src/RiseLoader.vue'
 import axios from 'axios'
 import { loadProgressBar } from 'axios-progress-bar'
 import 'axios-progress-bar/dist/nprogress.css'
+import jsonData from '../data.json'
 
 import Project from './Project.vue'
 import { mapGetters } from 'vuex'
@@ -108,7 +106,7 @@ export default {
   data () {
     return {
       nextPage: '',
-      projects: [],
+      projects: jsonData,
       searchFilters: [
         {name: 'sans filtre'},
         {name: 'fonction', subFilters: [], panels: []},
@@ -139,7 +137,7 @@ export default {
     viewProjects () {
       var thisVm = this
       loadProgressBar()
-      axios.get('https://staging.cafe-programmation.fr/api/projects/').then(response => {
+      axios.get('/api/projects/').then(response => {
         var jsonProject = response.data
         for (var i = 0; i < jsonProject.length; i++) {
           thisVm.projects.push(jsonProject[i])
@@ -170,7 +168,6 @@ export default {
     },
 
     appendSubFilters () {
-      const thisVm = this
       let apiUrl = 'https://staging.cafe-programmation.fr/api/'
       let promises = this.searchFilters.map(searchFilter => {
         if (searchFilter.name !== 'sans filtre') {
@@ -202,30 +199,24 @@ export default {
     },
 
     setPanelsVisibility (obj) {
-      // let thisVm = this
-      // thisVm.searchFilters.map(searchFilter => {
-      //   if (searchFilter.panels) {
-      //     searchFilter.panels = [...Array(searchFilter.subFilters.length)].map(_ => false)
-      //   }
-      // })
-      if (obj.panels && obj.subFilters) {
-        setTimeout(function () {
-          obj.panels = [...Array(obj.subFilters.length)].map(_ => true)
-        }, 1)
-      }
-
-      // setTimeout(function () {
-      // /* thisVm.searchFilters.map(searchFilter => {
-      //     if (searchFilter.panels) {
-      //       searchFilter.panels = []
-      //     }
-      //   }) */
-      //   if (obj.panels && obj.subFilters) {
-      //     for (let _ of obj.subFilters) {
-      //       obj.panels = [true, true, true, true]
-      //     }
-      //   }
-      // }, 1000)
+      let thisVm = this
+      thisVm.searchFilters.map(searchFilter => {
+        if (searchFilter.panels) {
+          searchFilter.panels = [false, false, false, false]
+        }
+      })
+      setTimeout(function () {
+      /* thisVm.searchFilters.map(searchFilter => {
+          if (searchFilter.panels) {
+            searchFilter.panels = []
+          }
+        }) */
+        if (obj.panels && obj.subFilters) {
+          for (let _ of obj.subFilters) {
+            obj.panels = [true, true, true, true]
+          }
+        }
+      }, 1000)
     },
 
     getWindowWidth (event) {
@@ -239,13 +230,13 @@ export default {
   },
 
   beforeMount () {
-    this.appendSubFilters()
+    // this.appendSubFilters()
   },
 
   mounted () {
     this.selected = this.filter
     var thisVm = this
-    thisVm.viewProjects()
+    // thisVm.viewProjects()
 
     this.$nextTick(() => {
       window.addEventListener('resize', this.getWindowWidth)

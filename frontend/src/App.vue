@@ -2,6 +2,7 @@
   <div id="app">
     <v-app>
       <app-header></app-header>
+      <app-footer></app-footer>
       <router-view/>
     </v-app>
   </div>
@@ -14,7 +15,8 @@ import Footer from './components/Shared/Footer.vue'
 export default {
   name: 'App',
   components: {
-    'app-header': Header
+    'app-header': Header,
+    'app-footer': Footer
   }
 }
 </script>
@@ -181,7 +183,7 @@ export default {
   position: absolute;
   top: -34px;
   left: 102%;
-  min-width: 750px !important;
+  /*min-width: 750px !important;*/
 }
 
 .img-project {
@@ -448,7 +450,7 @@ footer a:hover {
 
 @media all and (max-width: 1904px) {
   .img-desc-project {
-    min-width: 600px !important;
+    min-width: 340px !important;
   }
   .back-to-top {
     position: absolute;
