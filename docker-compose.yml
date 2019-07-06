@@ -27,7 +27,7 @@ services:
     restart: always
     build:
       context: ./
-      dockerfile: Dockerfile.prod
+      dockerfile: Dockerfile.dev
     depends_on:
       - cafe_db
     links:
@@ -42,7 +42,7 @@ services:
   cafe_db:
     container_name: cafe_db
     restart: always
-    image: postgres
+    image: postgres:10.5
     networks:
       - traefik
 

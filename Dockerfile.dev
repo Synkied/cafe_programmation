@@ -1,0 +1,19 @@
+FROM python:3
+
+# Update with new repo
+RUN apt-get update
+
+# Install software 
+RUN apt-get install -y git
+
+COPY requirements.txt ./requirements.txt
+RUN pip install -r /requirements.txt
+
+WORKDIR /usr/src/app
+
+EXPOSE 8061
+
+# different settings from local dev
+ENV DJANGO_SETTINGS_MODULE=cafe_prog.settings
+
+CMD [ "gunicorn", "cafe_prog.wsgi", "-b", "0.0.0.0:8061" ]

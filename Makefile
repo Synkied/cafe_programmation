@@ -23,6 +23,9 @@ build:
 build_no_cache:
 	docker-compose build --no-cache
 
+create_proxy:
+	docker network create proxy
+
 up:
 	docker-compose up -d
 
@@ -35,7 +38,7 @@ restart:
 collectstatic:
 	docker exec cafe_py /bin/sh -c "python manage.py collectstatic --noinput"
 
-prod:
+frontend_prod:
 	cd ~/cafe_programmation/frontend && yarn build && cd .. && $(MAKE) collectstatic
 
 bash_nginx:
