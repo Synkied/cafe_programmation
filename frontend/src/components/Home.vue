@@ -43,7 +43,7 @@
 /* Imports */
 import RiseLoader from 'vue-spinner/src/RiseLoader.vue'
 import About from './About'
-import Projects from './Projects1'
+import Projects from './Projects'
 import Intentions from './Intentions'
 import Footer from './Shared/Footer.vue'
 /* import { loadProgressBar } from 'axios-progress-bar'
