@@ -27,16 +27,15 @@
           </div>
         </div>
       </div>
-    <intentions-app
-      :animatedIntentions="animatedIntentions">
-    </intentions-app>
-    <projects-app
-      :filter="filter"
-      :animatedProjects="animatedProjects"
-      :animatedProjectsMenu="animatedProjectsMenu"
-      @rebuild="rebuildFullPage()">
-    </projects-app>
-    <app-footer></app-footer>
+      <intentions-app
+        :animatedIntentions="animatedIntentions">
+      </intentions-app>
+      <projects-app
+        :filter="filter"
+        :animatedProjects="animatedProjects"
+        :animatedProjectsMenu="animatedProjectsMenu"
+        @rebuild="rebuildFullPage()">
+      </projects-app>
   </full-page>
 </template>
 
@@ -44,7 +43,7 @@
 /* Imports */
 import RiseLoader from 'vue-spinner/src/RiseLoader.vue'
 import About from './About'
-import Projects from './Projects'
+import Projects from './Projects1'
 import Intentions from './Intentions'
 import Footer from './Shared/Footer.vue'
 /* import { loadProgressBar } from 'axios-progress-bar'

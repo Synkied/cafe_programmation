@@ -2,7 +2,7 @@
 <!--  Quentin Lathiere - synkx@hotmail.fr -->
 
 <template>
-  <footer class="section fp-auto-height" id="footer">
+  <footer id="footer">
     <div class="footer">
       <div class="fixed-elem-wrap">
         <span class="back-to-top"><a href="#home"><font-awesome-icon icon="chevron-up" size="lg"></font-awesome-icon></a></span>
@@ -21,4 +21,14 @@
 </script>
 
 <style scoped>
+  #footer {
+    position: fixed !important;
+    bottom: 0 !important;
+    width: 100%;
+    z-index: 999;
+    background-color: #ffffff;
+  }
+  .footer {
+    margin: 0 auto;
+  }
 </style>

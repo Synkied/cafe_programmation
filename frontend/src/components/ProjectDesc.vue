@@ -1,10 +1,10 @@
 <template>
   <div>
-    <v-layout wrap class="img-desc-project" :class="{fadeIn: true}" style="animation-delay: .2s">
-      <v-flex xs5 sm4 md2 lg3 xl3 :class="{'mr-5': $vuetify.breakpoint.lg, 'mr-4': $vuetify.breakpoint.md}">
+    <v-layout wrap class="img-desc-project" :class="{fadeIn: true}" style="animation-delay: .1s">
+      <v-flex xs11 sm4 md2 lg3 xl3 :class="{'mr-5': $vuetify.breakpoint.lg, 'mr-4': $vuetify.breakpoint.md}">
         <img class="mb-2 img-project" :src="project.image" :alt="project.titre">
       </v-flex>
-      <v-flex xs7 sm8 md9 lg8 xl9 >
+      <v-flex xs11 sm7 md9 lg8 xl9 >
         <div class="desc-project">
           <p> {{ project.description }} </p>
         </div>
