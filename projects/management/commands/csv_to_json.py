@@ -22,7 +22,7 @@ class Command(BaseCommand):
             )
             csv_file_df['dimension'] = csv_file_df['dimension'].replace(['3A'], 1)
             csv_file_df['dimension'] = csv_file_df['dimension'].replace(['3B'], 2)
-            csv_file_df['dimension'] = csv_file_df['dimension'].replace(['4C'], 3)
+            csv_file_df['dimension'] = csv_file_df['dimension'].replace(['3C'], 3)
 
             csv_file_df['avancement'] = csv_file_df['avancement'].replace(['4A'], 1)
             csv_file_df['avancement'] = csv_file_df['avancement'].replace(['4B'], 2)
