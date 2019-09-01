@@ -1,6 +1,6 @@
-import os, getopt, sys
-import pandas as pd
 import json
+import os
+import pandas as pd
 
 from django.core.management.base import BaseCommand
 
@@ -18,7 +18,7 @@ class Command(BaseCommand):
             csv_file_df = pd.read_csv(
                 input_file,
                 sep=",",
-                encoding="ISO-8859-1",
+                encoding="UTF-8",
             )
             csv_file_df['dimension'] = csv_file_df['dimension'].replace(['3A'], 1)
             csv_file_df['dimension'] = csv_file_df['dimension'].replace(['3B'], 2)
