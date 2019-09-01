@@ -1,6 +1,6 @@
-import json
-import os
+import os, getopt, sys
 import pandas as pd
+import json
 
 from django.core.management.base import BaseCommand
 
@@ -34,9 +34,9 @@ class Command(BaseCommand):
             csv_file_df['fonction'] = csv_file_df['fonction'].replace(['1C'], 3)
             csv_file_df['fonction'] = csv_file_df['fonction'].replace(['1D'], 4)
 
-            csv_file_df['contexte'] = csv_file_df['contexte'].replace(['2B'], 1)
-            csv_file_df['contexte'] = csv_file_df['contexte'].replace(['2C'], 3)
-            csv_file_df['contexte'] = csv_file_df['contexte'].replace(['2A'], 2)
+            csv_file_df['contexte'] = csv_file_df['contexte'].replace(['2B'], 4)
+            csv_file_df['contexte'] = csv_file_df['contexte'].replace(['2C'], 1)
+            csv_file_df['contexte'] = csv_file_df['contexte'].replace(['2A'], 3)
 
             json_file = csv_file_df.to_json(orient="records")
             fixture_list = []
