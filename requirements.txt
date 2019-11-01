@@ -6,6 +6,6 @@ django-jet==1.0.7
 django-webpack-loader==0.6.0
 djangorestframework==3.8.2
 gunicorn==19.8.1
-Pillow==5.2.0
+Pillow==6.2.0
 psycopg2==2.7.5
 pytz==2018.5
